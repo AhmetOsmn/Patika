@@ -4,9 +4,16 @@ namespace ConsoleProgramlama
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
+        public static void Main(string[] args)
+        {   
+            Console.WriteLine("İsminizi girin: ");
+            string name = Console.ReadLine();
+
+            System.Console.WriteLine("Soyadınızı girin: ");
+            string surname = Console.ReadLine();
+
+            System.Console.WriteLine("Merhaba " + name + " " + surname);
+
         }
     }
 }
