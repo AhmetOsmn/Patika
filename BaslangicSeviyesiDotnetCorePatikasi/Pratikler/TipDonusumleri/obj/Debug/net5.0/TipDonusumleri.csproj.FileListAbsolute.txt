@@ -1,0 +1,16 @@
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\bin\Debug\net5.0\TipDonusumleri.exe
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\bin\Debug\net5.0\TipDonusumleri.deps.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\bin\Debug\net5.0\TipDonusumleri.runtimeconfig.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\bin\Debug\net5.0\TipDonusumleri.runtimeconfig.dev.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\bin\Debug\net5.0\TipDonusumleri.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\bin\Debug\net5.0\ref\TipDonusumleri.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\bin\Debug\net5.0\TipDonusumleri.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\obj\Debug\net5.0\TipDonusumleri.csproj.AssemblyReference.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\obj\Debug\net5.0\TipDonusumleri.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\obj\Debug\net5.0\TipDonusumleri.AssemblyInfoInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\obj\Debug\net5.0\TipDonusumleri.AssemblyInfo.cs
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\obj\Debug\net5.0\TipDonusumleri.csproj.CoreCompileInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\obj\Debug\net5.0\TipDonusumleri.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\obj\Debug\net5.0\ref\TipDonusumleri.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\obj\Debug\net5.0\TipDonusumleri.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\TipDonusumleri\obj\Debug\net5.0\TipDonusumleri.genruntimeconfig.cache
