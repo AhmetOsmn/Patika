@@ -54,7 +54,7 @@ namespace Degiskenler
             int i3 = i1 * i2;
 
             // boolean
-            bool bool1 = 10>2; //true
+            bool bool1 = 10 > 2; //true
 
             //Değişken dönüşümleri
             string str20 = "20";
@@ -64,15 +64,15 @@ namespace Degiskenler
 
             int i40 = i20 + Convert.ToInt32(str20);
             System.Console.WriteLine("toplam = " + i40); // Çıktısı: 40
-             
+
             int i41 = i20 + int.Parse(str20);
             System.Console.WriteLine(i41); // Çıktısı: 40
 
             //datetime
-            string dt2 = DateTime.Now.ToString("dd.MM.yyyy"); 
-            string dt3 = DateTime.Now.ToString("dd'/'MM'/'yyyy"); 
+            string dt2 = DateTime.Now.ToString("dd.MM.yyyy");
+            string dt3 = DateTime.Now.ToString("dd'/'MM'/'yyyy");
             string dt4 = DateTime.Now.ToString("HH:mm");
-            System.Console.WriteLine(dt2+"--"+dt3+"--"+dt4); // Çıktısı: 01.02.2022--01/02/2022--21:14
+            System.Console.WriteLine(dt2 + "--" + dt3 + "--" + dt4); // Çıktısı: 01.02.2022--01/02/2022--21:14
 
         }
     }
