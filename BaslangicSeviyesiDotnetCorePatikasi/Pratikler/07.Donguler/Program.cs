@@ -62,10 +62,6 @@ namespace _07.Donguler
             {
                 System.Console.WriteLine("Araba: " + araba);
             }
-
-
-
-
         }
     }
 }
