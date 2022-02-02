@@ -1,0 +1,16 @@
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\bin\Debug\net5.0\09.Metotlar.exe
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\bin\Debug\net5.0\09.Metotlar.deps.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\bin\Debug\net5.0\09.Metotlar.runtimeconfig.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\bin\Debug\net5.0\09.Metotlar.runtimeconfig.dev.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\bin\Debug\net5.0\09.Metotlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\bin\Debug\net5.0\ref\09.Metotlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\bin\Debug\net5.0\09.Metotlar.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\obj\Debug\net5.0\09.Metotlar.csproj.AssemblyReference.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\obj\Debug\net5.0\09.Metotlar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\obj\Debug\net5.0\09.Metotlar.AssemblyInfoInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\obj\Debug\net5.0\09.Metotlar.AssemblyInfo.cs
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\obj\Debug\net5.0\09.Metotlar.csproj.CoreCompileInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\obj\Debug\net5.0\09.Metotlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\obj\Debug\net5.0\ref\09.Metotlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\obj\Debug\net5.0\09.Metotlar.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\09.Metotlar\obj\Debug\net5.0\09.Metotlar.genruntimeconfig.cache
