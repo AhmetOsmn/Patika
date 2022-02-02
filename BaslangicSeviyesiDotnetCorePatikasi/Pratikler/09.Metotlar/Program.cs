@@ -8,32 +8,36 @@ namespace _09.Metotlar
         {
             Metotlar metotlar = new Metotlar();
 
-            // Metotlar1();
+            // Metotlar1(metotlar);
+            // Metotlar2(metotlar);
 
-            // out parametreler
-            string sayi = "999";
-            int outSayi;
-
-            bool sonuc = int.TryParse(sayi, out outSayi);
-
-            if (sonuc)
+            // Rekürsif - öz yinelemeli
+            
+            // 3^4
+            int result = 1;
+            for (int i = 1; i < 5; i++)
             {
-                System.Console.WriteLine("Başarılı!");
-                System.Console.WriteLine(outSayi);
+                result = result*3;
             }
-            else
-            {
-                System.Console.WriteLine();
+            System.Console.WriteLine("3^4: " + result);
+            System.Console.WriteLine("Expo: " + metotlar.Expo(3,3));
+
+            //Extension Metotlar
+            string ifade = "Ahmet Osman Sezgin";
+            bool sonuc = ifade.CheckSpaces();
+            System.Console.WriteLine("bosluk var mı: " + sonuc);
+
+            if(sonuc){
+                System.Console.WriteLine(ifade.RemoveWhiteSpaces());
+                System.Console.WriteLine(ifade.MakeUpperCase());
             }
 
-            metotlar.Topla(2, 3, out int toplamSonuc);
-            System.Console.WriteLine(toplamSonuc);
+            int[] dizi = {5,67,23,3,99,7,40};
+            dizi.SortArray();
+            dizi.IntDiziyiEkranaYazdir();
 
-            //Metot aşırı yükleme - Overloading
-            int ifade = 123;
-            metotlar.EkranaYazdir(ifade.ToString());
-            metotlar.EkranaYazdir(ifade);
-
+            string deneme = "ahmetosmansezgin";
+            System.Console.WriteLine("İlk karakter: " + deneme.GetFirstChar());
         }
 
 
@@ -57,6 +61,33 @@ namespace _09.Metotlar
 
             System.Console.WriteLine("metot --a: {0}, b: {1}, toplam: {2}", a, b, metotlar.ArttirVeTopla2(ref a, ref b));
             System.Console.WriteLine("a: {0}, b: {1}", a, b);
+        }
+
+        static void Metotlar2(Metotlar metotlar)
+        {
+            // out parametreler
+            string sayi = "999";
+            int outSayi;
+
+            bool sonuc = int.TryParse(sayi, out outSayi);
+
+            if (sonuc)
+            {
+                System.Console.WriteLine("Başarılı!");
+                System.Console.WriteLine(outSayi);
+            }
+            else
+            {
+                System.Console.WriteLine();
+            }
+
+            metotlar.Topla(2, 3, out int toplamSonuc);
+            System.Console.WriteLine(toplamSonuc);
+
+            //Metot aşırı yükleme - Overloading
+            int ifade = 123;
+            metotlar.EkranaYazdir(ifade.ToString());
+            metotlar.EkranaYazdir(ifade);
         }
     }
 
@@ -94,6 +125,47 @@ namespace _09.Metotlar
             deger1 += 1;
             deger2 += 1;
             return deger1 + deger2;
+        }
+    
+        public int Expo(int sayi, int us){
+            if(us<2){
+                return sayi;
+            }
+            return Expo(sayi,us-1) * sayi;
+        }
+    }
+
+    public static class Extension{
+        public static bool CheckSpaces(this string param){
+            return param.Contains(" ");
+        }
+
+        public static string RemoveWhiteSpaces(this string param){
+            string[] dizi = param.Split(" ");
+
+            return string.Join("",dizi);
+        }
+
+        public static string MakeUpperCase(this string param){
+            return param.ToUpper();
+        }
+
+        public static int[] SortArray(this int[] arr){
+            Array.Sort(arr);
+            return arr;
+        }
+
+        public static void IntDiziyiEkranaYazdir(this int[] arr){
+            string elements = "";
+            foreach (var item in arr)
+            {   
+                elements += item + " ";
+            }
+            System.Console.WriteLine(elements);
+        }
+
+        public static string GetFirstChar(this string param){
+            return param.Substring(0,1);
         }
     }
 }
