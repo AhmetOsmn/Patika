@@ -1,0 +1,16 @@
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\bin\Debug\net5.0\08.Diziler.exe
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\bin\Debug\net5.0\08.Diziler.deps.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\bin\Debug\net5.0\08.Diziler.runtimeconfig.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\bin\Debug\net5.0\08.Diziler.runtimeconfig.dev.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\bin\Debug\net5.0\08.Diziler.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\bin\Debug\net5.0\ref\08.Diziler.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\bin\Debug\net5.0\08.Diziler.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\obj\Debug\net5.0\08.Diziler.csproj.AssemblyReference.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\obj\Debug\net5.0\08.Diziler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\obj\Debug\net5.0\08.Diziler.AssemblyInfoInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\obj\Debug\net5.0\08.Diziler.AssemblyInfo.cs
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\obj\Debug\net5.0\08.Diziler.csproj.CoreCompileInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\obj\Debug\net5.0\08.Diziler.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\obj\Debug\net5.0\ref\08.Diziler.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\obj\Debug\net5.0\08.Diziler.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\08.Diziler\obj\Debug\net5.0\08.Diziler.genruntimeconfig.cache
