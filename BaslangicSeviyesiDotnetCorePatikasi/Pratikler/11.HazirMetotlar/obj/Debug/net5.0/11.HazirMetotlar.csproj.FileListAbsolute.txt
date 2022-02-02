@@ -1,0 +1,16 @@
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\bin\Debug\net5.0\11.HazirMetotlar.exe
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\bin\Debug\net5.0\11.HazirMetotlar.deps.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\bin\Debug\net5.0\11.HazirMetotlar.runtimeconfig.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\bin\Debug\net5.0\11.HazirMetotlar.runtimeconfig.dev.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\bin\Debug\net5.0\11.HazirMetotlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\bin\Debug\net5.0\ref\11.HazirMetotlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\bin\Debug\net5.0\11.HazirMetotlar.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\obj\Debug\net5.0\11.HazirMetotlar.csproj.AssemblyReference.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\obj\Debug\net5.0\11.HazirMetotlar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\obj\Debug\net5.0\11.HazirMetotlar.AssemblyInfoInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\obj\Debug\net5.0\11.HazirMetotlar.AssemblyInfo.cs
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\obj\Debug\net5.0\11.HazirMetotlar.csproj.CoreCompileInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\obj\Debug\net5.0\11.HazirMetotlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\obj\Debug\net5.0\ref\11.HazirMetotlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\obj\Debug\net5.0\11.HazirMetotlar.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\11.HazirMetotlar\obj\Debug\net5.0\11.HazirMetotlar.genruntimeconfig.cache
