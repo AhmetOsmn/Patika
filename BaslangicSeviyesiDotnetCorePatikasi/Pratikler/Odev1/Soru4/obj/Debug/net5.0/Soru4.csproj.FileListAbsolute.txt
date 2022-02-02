@@ -1,0 +1,16 @@
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\bin\Debug\net5.0\Soru4.exe
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\bin\Debug\net5.0\Soru4.deps.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\bin\Debug\net5.0\Soru4.runtimeconfig.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\bin\Debug\net5.0\Soru4.runtimeconfig.dev.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\bin\Debug\net5.0\Soru4.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\bin\Debug\net5.0\ref\Soru4.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\bin\Debug\net5.0\Soru4.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\obj\Debug\net5.0\Soru4.csproj.AssemblyReference.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\obj\Debug\net5.0\Soru4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\obj\Debug\net5.0\Soru4.AssemblyInfoInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\obj\Debug\net5.0\Soru4.AssemblyInfo.cs
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\obj\Debug\net5.0\Soru4.csproj.CoreCompileInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\obj\Debug\net5.0\Soru4.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\obj\Debug\net5.0\ref\Soru4.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\obj\Debug\net5.0\Soru4.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\Odev1\Soru4\obj\Debug\net5.0\Soru4.genruntimeconfig.cache
