@@ -1,0 +1,16 @@
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\bin\Debug\net5.0\12.Koleksiyonlar.exe
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\bin\Debug\net5.0\12.Koleksiyonlar.deps.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\bin\Debug\net5.0\12.Koleksiyonlar.runtimeconfig.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\bin\Debug\net5.0\12.Koleksiyonlar.runtimeconfig.dev.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\bin\Debug\net5.0\12.Koleksiyonlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\bin\Debug\net5.0\ref\12.Koleksiyonlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\bin\Debug\net5.0\12.Koleksiyonlar.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\obj\Debug\net5.0\12.Koleksiyonlar.csproj.AssemblyReference.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\obj\Debug\net5.0\12.Koleksiyonlar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\obj\Debug\net5.0\12.Koleksiyonlar.AssemblyInfoInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\obj\Debug\net5.0\12.Koleksiyonlar.AssemblyInfo.cs
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\obj\Debug\net5.0\12.Koleksiyonlar.csproj.CoreCompileInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\obj\Debug\net5.0\12.Koleksiyonlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\obj\Debug\net5.0\ref\12.Koleksiyonlar.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\obj\Debug\net5.0\12.Koleksiyonlar.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\12.Koleksiyonlar\obj\Debug\net5.0\12.Koleksiyonlar.genruntimeconfig.cache
