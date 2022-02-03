@@ -1,0 +1,16 @@
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\bin\Debug\net5.0\Koleksiyonlar-Soru-3.exe
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\bin\Debug\net5.0\Koleksiyonlar-Soru-3.deps.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\bin\Debug\net5.0\Koleksiyonlar-Soru-3.runtimeconfig.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\bin\Debug\net5.0\Koleksiyonlar-Soru-3.runtimeconfig.dev.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\bin\Debug\net5.0\Koleksiyonlar-Soru-3.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\bin\Debug\net5.0\ref\Koleksiyonlar-Soru-3.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\bin\Debug\net5.0\Koleksiyonlar-Soru-3.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\obj\Debug\net5.0\Koleksiyonlar-Soru-3.csproj.AssemblyReference.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\obj\Debug\net5.0\Koleksiyonlar-Soru-3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\obj\Debug\net5.0\Koleksiyonlar-Soru-3.AssemblyInfoInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\obj\Debug\net5.0\Koleksiyonlar-Soru-3.AssemblyInfo.cs
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\obj\Debug\net5.0\Koleksiyonlar-Soru-3.csproj.CoreCompileInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\obj\Debug\net5.0\Koleksiyonlar-Soru-3.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\obj\Debug\net5.0\ref\Koleksiyonlar-Soru-3.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\obj\Debug\net5.0\Koleksiyonlar-Soru-3.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\13.Odev2\Koleksiyonlar-Soru-3\obj\Debug\net5.0\Koleksiyonlar-Soru-3.genruntimeconfig.cache
