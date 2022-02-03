@@ -9,50 +9,50 @@ namespace _12.Koleksiyonlar
         static void Main(string[] args)
         {
             // KoleksiyonlarDers2();
+            // KoleksiyonlarDers3();
 
-            // ArrayList
-            // Farklı türde elemanları tutabiliyor.
-            ArrayList lst = new ArrayList();
-            lst.Add("Ahmet");
-            lst.Add(2);
-            lst.Add(true);
-            lst.Add('a');
+            // Dictionary
+            // Keyler unique olmalıdır.
+            Dictionary<int, string> kullanicilar = new Dictionary<int, string>();
+            kullanicilar.Add(10, "Ahmet Sezgin");
+            kullanicilar.Add(20, "Osman Sezgin");
+            kullanicilar.Add(30, "Ali Veli");
 
-            foreach (var item in lst)
+            // Elemanlara Erişim
+            System.Console.WriteLine("----------Elemanlara Erişim------------");
+            foreach (var kullanici in kullanicilar)
             {
-                System.Console.WriteLine(item);
+                System.Console.WriteLine(kullanici); // [10, Ahmet Sezgin], [20, Osman Sezgin], [30, Ali Veli]
+            }
+            System.Console.WriteLine("-------------");
+            // Count
+            System.Console.WriteLine(kullanicilar.Count); // 3
+            System.Console.WriteLine("-------------");
+
+            // Contains
+            System.Console.WriteLine(kullanicilar.ContainsKey(20)); // True
+            System.Console.WriteLine(kullanicilar.ContainsValue("Ali Sezgin")); // False
+            System.Console.WriteLine("-------------");
+
+            // Remove
+            kullanicilar.Remove(10); // Key ile silme
+            foreach (var kullanici in kullanicilar)
+            {
+                System.Console.WriteLine(kullanici); // [20, Osman Sezgin], [30, Ali Veli]
             }
             System.Console.WriteLine("-------------");
 
-            // AddRange - Birden fazla eleman eklemek
-            string[] renkler =  {"Sarı","Kırmızı","Mavi"};
-            List<int> sayilar =  new List<int>(){1,8,3,7,92,5};
-            lst.AddRange(renkler);
-            lst.AddRange(sayilar);
-            foreach (var item in lst)
+            // Keys - Values
+            System.Console.WriteLine("keys");
+            foreach (var kullanici in kullanicilar)
             {
-                System.Console.WriteLine(item);
-            }
-            System.Console.WriteLine("-------------");
-
-            // Sort - Sıralama yaparken farklı türdeki elemanlar olabileceği için sıralama biraz sıkıntılıdır.
-            // lst.Sort();
-
-            // Reverse
-            lst.Reverse();
-            foreach (var item in lst)
-            {
-                System.Console.WriteLine(item);
-            }
-            System.Console.WriteLine("-------------");
-
-            // Clear
-            lst.Clear();
-            foreach (var item in lst)
-            {
-                System.Console.WriteLine(item);
+                System.Console.WriteLine(kullanici.Key); // 
             }
 
+            System.Console.WriteLine("values");
+            foreach (var kullanici in kullanicilar){
+                System.Console.WriteLine(kullanici.Value);
+            }
         }
 
         static void KoleksiyonlarDers2()
@@ -148,6 +148,53 @@ namespace _12.Koleksiyonlar
             foreach (var item in kullaniciListesi)
             {
                 System.Console.WriteLine("Ad: {0}, Soyad: {1}, Yas: {2}", item.Isim, item.Soyisim, item.Yas);
+            }
+        }
+
+        static void KoleksiyonlarDers3()
+        {
+
+            // ArrayList
+            // Farklı türde elemanları tutabiliyor.
+            ArrayList lst = new ArrayList();
+            lst.Add("Ahmet");
+            lst.Add(2);
+            lst.Add(true);
+            lst.Add('a');
+
+            foreach (var item in lst)
+            {
+                System.Console.WriteLine(item);
+            }
+            System.Console.WriteLine("-------------");
+
+            // AddRange - Birden fazla eleman eklemek
+            string[] renkler = { "Sarı", "Kırmızı", "Mavi" };
+            List<int> sayilar = new List<int>() { 1, 8, 3, 7, 92, 5 };
+            lst.AddRange(renkler);
+            lst.AddRange(sayilar);
+            foreach (var item in lst)
+            {
+                System.Console.WriteLine(item);
+            }
+            System.Console.WriteLine("-------------");
+
+            // Sort - Sıralama yaparken farklı türdeki elemanlar olabileceği için sıralama biraz sıkıntılıdır.
+            // lst.Sort();
+
+            // Reverse
+            lst.Reverse();
+            foreach (var item in lst)
+            {
+                System.Console.WriteLine(item);
+            }
+            System.Console.WriteLine("-------------");
+
+            // Clear
+            lst.Clear();
+            foreach (var item in lst)
+            {
+                System.Console.WriteLine(item);
             }
         }
     }
