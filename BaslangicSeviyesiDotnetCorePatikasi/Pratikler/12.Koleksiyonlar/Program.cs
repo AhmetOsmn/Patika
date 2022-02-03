@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace _12.Koleksiyonlar
@@ -6,6 +7,55 @@ namespace _12.Koleksiyonlar
     class Program
     {
         static void Main(string[] args)
+        {
+            // KoleksiyonlarDers2();
+
+            // ArrayList
+            // Farklı türde elemanları tutabiliyor.
+            ArrayList lst = new ArrayList();
+            lst.Add("Ahmet");
+            lst.Add(2);
+            lst.Add(true);
+            lst.Add('a');
+
+            foreach (var item in lst)
+            {
+                System.Console.WriteLine(item);
+            }
+            System.Console.WriteLine("-------------");
+
+            // AddRange - Birden fazla eleman eklemek
+            string[] renkler =  {"Sarı","Kırmızı","Mavi"};
+            List<int> sayilar =  new List<int>(){1,8,3,7,92,5};
+            lst.AddRange(renkler);
+            lst.AddRange(sayilar);
+            foreach (var item in lst)
+            {
+                System.Console.WriteLine(item);
+            }
+            System.Console.WriteLine("-------------");
+
+            // Sort - Sıralama yaparken farklı türdeki elemanlar olabileceği için sıralama biraz sıkıntılıdır.
+            // lst.Sort();
+
+            // Reverse
+            lst.Reverse();
+            foreach (var item in lst)
+            {
+                System.Console.WriteLine(item);
+            }
+            System.Console.WriteLine("-------------");
+
+            // Clear
+            lst.Clear();
+            foreach (var item in lst)
+            {
+                System.Console.WriteLine(item);
+            }
+
+        }
+
+        static void KoleksiyonlarDers2()
         {
             List<int> sayiListesi = new List<int>();
             sayiListesi.Add(23);
@@ -55,12 +105,13 @@ namespace _12.Koleksiyonlar
             System.Console.WriteLine("---------");
 
             // Liste içerisinde arama
-            if(sayiListesi.Contains(20)){
+            if (sayiListesi.Contains(20))
+            {
                 System.Console.WriteLine("Eleman bulundu");
             }
 
             // Diziyi Listeye çevirme
-            string[] hayvanlar =  {"kedi", "köpek","kuş"};
+            string[] hayvanlar = { "kedi", "köpek", "kuş" };
             List<string> hayvanlarListesi = new List<string>(hayvanlar);
 
             // Listeyi temizleme
@@ -87,7 +138,8 @@ namespace _12.Koleksiyonlar
             kullaniciListesi.Add(kullanici2);
             kullaniciListesi.Add(kullanici3);
 
-            kullaniciListesi.Add(new Kullanicilar{
+            kullaniciListesi.Add(new Kullanicilar
+            {
                 Isim = "Emre",
                 Soyisim = "Bulut",
                 Yas = 19
@@ -95,14 +147,13 @@ namespace _12.Koleksiyonlar
 
             foreach (var item in kullaniciListesi)
             {
-                System.Console.WriteLine("Ad: {0}, Soyad: {1}, Yas: {2}",item.Isim,item.Soyisim,item.Yas);
+                System.Console.WriteLine("Ad: {0}, Soyad: {1}, Yas: {2}", item.Isim, item.Soyisim, item.Yas);
             }
-
-
         }
     }
 
-    public class Kullanicilar {
+    public class Kullanicilar
+    {
         string isim;
         string soyisim;
         int yas;
