@@ -48,6 +48,11 @@ namespace Koleksiyonlar_Soru_1
                 }
             }
 
+            asallar.Sort();
+            asallar.Reverse();
+
+            asalOlmayanlar.Sort();
+            asalOlmayanlar.Reverse();
             
             decimal asallarOrtalama = Convert.ToDecimal(asallarToplam)/Convert.ToDecimal(asallar.Count);
             decimal asalOlmayanlarOrtalama = Convert.ToDecimal(asalOlmayanlarToplam)/Convert.ToDecimal(asalOlmayanlar.Count);
@@ -60,7 +65,7 @@ namespace Koleksiyonlar_Soru_1
             }
             System.Console.WriteLine("\n");
 
-            System.Console.WriteLine("Asal sayıların sayısı: {0}, asal sayıların ortalaması: {1}",asallar.Count,asalOlmayanlarOrtalama.ToString("#.##"));
+            System.Console.WriteLine("Asal olmayan sayıların sayısı: {0}, asal olmayan sayıların ortalaması: {1}",asalOlmayanlar.Count,asalOlmayanlarOrtalama.ToString("#.##"));
             System.Console.Write("Asal olmayan sayılar: ");
             foreach (var item in asalOlmayanlar)
             {
