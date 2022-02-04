@@ -6,7 +6,18 @@ namespace _14.SinifKavrami
     {
         static void Main(string[] args)
         {
-            // Class
+            // SiniflarDers1();
+
+            Calisan calisan3 = new Calisan("Ayşe", "Kara",14725836,"İnsan Kaynakları");
+            calisan3.CalisanBilgileri();
+
+            Calisan calisan4 = new Calisan("Veli","Tutuk");
+            calisan4.CalisanBilgileri(); // "Veli" "Tutuk" "0" ""
+
+        }
+
+        static void SiniflarDers1(){
+                        // Class
             // Metotlardan ve prop'lardan oluşur.
 
             // Erişim belirleyiciler
@@ -32,6 +43,27 @@ namespace _14.SinifKavrami
     }
 
     class Calisan {
+
+        public Calisan(string ad, string soyad, int no, string departman){
+
+            this.Ad = ad;
+            this.Soyad = soyad;
+            this.No = no;
+            this.Departman = departman;
+        }
+
+        public Calisan(string ad, string soyad)
+        {
+            this.Ad = ad;
+            this.Soyad = soyad;
+        }
+
+        public Calisan()
+        {
+            
+        }
+
+
         public string Ad;
         public string Soyad;
         public int No;
