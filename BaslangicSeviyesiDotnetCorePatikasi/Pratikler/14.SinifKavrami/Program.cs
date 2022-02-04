@@ -7,17 +7,30 @@ namespace _14.SinifKavrami
         static void Main(string[] args)
         {
             // SiniflarDers1();
+            // SiniflarDers2();
 
-            Calisan calisan3 = new Calisan("Ayşe", "Kara",14725836,"İnsan Kaynakları");
-            calisan3.CalisanBilgileri();
+            // Encapsulation
+            // Ogrenci ogrenci1 = new Ogrenci("Ayşe", "YILMAZ", 001, 3);
+            // ogrenci1.OgrenciBilgileriniGetir();
+            // ogrenci1.SinifArttir();
+            // ogrenci1.OgrenciBilgileriniGetir();
+            // System.Console.WriteLine("------------");
 
-            Calisan calisan4 = new Calisan("Veli","Tutuk");
-            calisan4.CalisanBilgileri(); // "Veli" "Tutuk" "0" ""
+            Ogrenci ogrenci2 = new Ogrenci("Ahmet", "SEZGİN", 002, 2);
+            ogrenci2.OgrenciBilgileriniGetir();
+            ogrenci2.SinifDusur();
+            ogrenci2.OgrenciBilgileriniGetir();
+            ogrenci2.SinifDusur();
+            ogrenci2.OgrenciBilgileriniGetir();
+            ogrenci2.SinifDusur();
+            ogrenci2.OgrenciBilgileriniGetir();
+
 
         }
 
-        static void SiniflarDers1(){
-                        // Class
+        static void SiniflarDers1()
+        {
+            // Class
             // Metotlardan ve prop'lardan oluşur.
 
             // Erişim belirleyiciler
@@ -40,11 +53,25 @@ namespace _14.SinifKavrami
             calisan2.Departman = "Frontend Developer";
             calisan2.CalisanBilgileri();
         }
+
+        static void SiniflarDers2()
+        {
+
+            // Kurucu metotlar 
+
+            Calisan calisan3 = new Calisan("Ayşe", "Kara", 14725836, "İnsan Kaynakları");
+            calisan3.CalisanBilgileri();
+            System.Console.WriteLine("-------");
+            Calisan calisan4 = new Calisan("Veli", "Tutuk");
+            calisan4.CalisanBilgileri(); // "Veli" "Tutuk" "0" ""
+        }
     }
 
-    class Calisan {
+    class Calisan
+    {
 
-        public Calisan(string ad, string soyad, int no, string departman){
+        public Calisan(string ad, string soyad, int no, string departman)
+        {
 
             this.Ad = ad;
             this.Soyad = soyad;
@@ -60,7 +87,7 @@ namespace _14.SinifKavrami
 
         public Calisan()
         {
-            
+
         }
 
 
@@ -69,11 +96,71 @@ namespace _14.SinifKavrami
         public int No;
         public string Departman;
 
-        public void CalisanBilgileri(){
-            System.Console.WriteLine("Çalışanın adı: {0}",Ad);
-            System.Console.WriteLine("Çalışanın soyadı: {0}",Soyad);
-            System.Console.WriteLine("Çalışanın numarası: {0}",No);
-            System.Console.WriteLine("Çalışanın departmanı: {0}",Departman);
+        public void CalisanBilgileri()
+        {
+            System.Console.WriteLine("Çalışanın adı: {0}", Ad);
+            System.Console.WriteLine("Çalışanın soyadı: {0}", Soyad);
+            System.Console.WriteLine("Çalışanın numarası: {0}", No);
+            System.Console.WriteLine("Çalışanın departmanı: {0}", Departman);
+        }
+    }
+
+    class Ogrenci
+    {
+
+        private string isim;
+        private string soyisim;
+        private int ogrenciNo;
+        private int sinif;
+
+        public Ogrenci(string isim, string soyisim, int ogrenciNo, int sinif)
+        {
+            this.isim = isim;
+            this.soyisim = soyisim;
+            this.ogrenciNo = ogrenciNo;
+            this.sinif = sinif;
+        }
+
+        public Ogrenci()
+        {
+
+        }
+
+        public int Sinif
+        {
+            get => sinif;
+            set
+            {
+                if(value < 1){
+                    Console.WriteLine("Sınıf en az 1 olabilir.");
+                    sinif = 1;
+                }
+                else{
+                    sinif = value;
+                }
+            }
+        }
+        public int OgrenciNo { get => ogrenciNo; set => ogrenciNo = value; }
+        public string Soyisim { get => soyisim; set => soyisim = value; }
+        public string Isim { get => isim; set => isim = value; }
+
+        public void OgrenciBilgileriniGetir()
+        {
+            System.Console.WriteLine("----OGRENCİ BİLGİLERİ");
+            System.Console.WriteLine("Öğrencinin adı: " + this.isim);
+            System.Console.WriteLine("Öğrencinin soyisim: " + this.soyisim);
+            System.Console.WriteLine("Öğrencinin sınıfı: " + this.sinif);
+            System.Console.WriteLine("Öğrencinin öğrenci numarası: " + this.ogrenciNo);
+        }
+
+        public void SinifArttir()
+        {
+            this.Sinif = this.Sinif + 1; 
+        }
+
+        public void SinifDusur()
+        {
+            this.Sinif = this.Sinif - 1;
         }
     }
 }
