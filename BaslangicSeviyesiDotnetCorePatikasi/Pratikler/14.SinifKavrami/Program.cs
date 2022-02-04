@@ -15,25 +15,36 @@ namespace _14.SinifKavrami
             // Encapsulation
             // SiniflarDers3();
 
-            // Static sınıf ve üyeler
-            System.Console.WriteLine("Müşteri sayısı: " + Musteri.MusteriSayisi);
+            // Static sınıf ve üyeleri
+            // SiniflarDers4();
 
-            Musteri musteri1 = new Musteri("Ahmet", "SEZGİN", "12345");
-            System.Console.WriteLine("Müşteri sayısı: " + Musteri.MusteriSayisi);
+            // Struct
+            // SiniflarDers5();
 
-            // Statik bir sınıfın içerisinde statik olmayan herhangi bir öğre kullanamayız.
-            // Statik sınıflarda kalıtım kullanılamaz.
-            // Islemler islemler = new Islemler(); // Hata veriyor. Çünkü statik sınıfların öğelerine 'SınıfAdı.' şeklinde ulaşırız.
-            System.Console.WriteLine(Islemler.Topla(100, 500));
-            System.Console.WriteLine(Islemler.Cikar(100, 500));
-        
+            //Enum
+            // Sıralı olan sabit verilerde çokça kullanılır. 
+            // Günler, aylar vb.
+            System.Console.WriteLine(Gunler.Cuma); // Cuma
+            System.Console.WriteLine((int)Gunler.Cuma); // 5
 
+            System.Console.Write("Sıcaklık derecesini girin: ");
+            int sicaklik = int.Parse(Console.ReadLine());
+            if(sicaklik <= (int)HavaDurumuEnum.normal){
+                System.Console.WriteLine("Dışarıya çıkmak için havanın biraz daha ısınmasını bekleyelim");
+            }
+            else if(sicaklik >= (int)HavaDurumuEnum.sicak){
+                System.Console.WriteLine("Dışarıya çıkmak için çok sıcak bir gün");
+            }
+            else if(sicaklik >= (int)HavaDurumuEnum.normal && sicaklik < (int)HavaDurumuEnum.cokSicak){
+                System.Console.WriteLine("Hadi dışarıya çıkalım");
+            }
         }
 
         static void SiniflarDers1()
         {
             // Class
             // Metotlardan ve prop'lardan oluşur.
+            // Sınıflar referans tipindedir.
 
             // Erişim belirleyiciler
             // - Public: Her yerden erişilebilir.
@@ -82,140 +93,40 @@ namespace _14.SinifKavrami
             ogrenci2.SinifDusur();
             ogrenci2.OgrenciBilgileriniGetir();
         }
-    }
 
-    class Calisan
-    {
-
-        public Calisan(string ad, string soyad, int no, string departman)
+        static void SiniflarDers4()
         {
+            System.Console.WriteLine("Müşteri sayısı: " + Musteri.MusteriSayisi);
 
-            this.Ad = ad;
-            this.Soyad = soyad;
-            this.No = no;
-            this.Departman = departman;
+            Musteri musteri1 = new Musteri("Ahmet", "SEZGİN", "12345");
+            System.Console.WriteLine("Müşteri sayısı: " + Musteri.MusteriSayisi);
+
+            // Statik bir sınıfın içerisinde statik olmayan herhangi bir öğre kullanamayız.
+            // Statik sınıflarda kalıtım kullanılamaz.
+            // Islemler islemler = new Islemler(); // Hata veriyor. Çünkü statik sınıfların öğelerine 'SınıfAdı.' şeklinde ulaşırız.
+            System.Console.WriteLine(Islemler.Topla(100, 500));
+            System.Console.WriteLine(Islemler.Cikar(100, 500));
         }
 
-        public Calisan(string ad, string soyad)
+        static void SiniflarDers5()
         {
-            this.Ad = ad;
-            this.Soyad = soyad;
-        }
+            DikdortgenClass dikdortgen1 = new DikdortgenClass();
+            dikdortgen1.KisaKenar = 3;
+            dikdortgen1.UzunKenar = 5;
+            System.Console.WriteLine("Dikdörtgenin alanı: " + dikdortgen1.AlanHesapla());
 
-        public Calisan()
-        {
+            DikdortgenStruct dikdortgen2 = new DikdortgenStruct();
+            dikdortgen2.KisaKenar = 3;
+            dikdortgen2.UzunKenar = 5;
+            System.Console.WriteLine("Dikdörtgenin alanı: " + dikdortgen2.AlanHesapla());
 
-        }
-
-
-        public string Ad;
-        public string Soyad;
-        public int No;
-        public string Departman;
-
-        public void CalisanBilgileri()
-        {
-            System.Console.WriteLine("Çalışanın adı: {0}", Ad);
-            System.Console.WriteLine("Çalışanın soyadı: {0}", Soyad);
-            System.Console.WriteLine("Çalışanın numarası: {0}", No);
-            System.Console.WriteLine("Çalışanın departmanı: {0}", Departman);
+            // Classlar ile farkı olarak new yapmadan da kullanılabilir.
+            // Ayrıca Struct'larda parametresiz yapıcı metot yazmamıza izin verilmez. Parametreli yapıcı metot yazabiliriz.
+            DikdortgenStruct dikdortgen3; // Bu şekilde kullanıldığında ctor'ile atama yapılamadığı için aşağıdaki gibi atamalar yapılmalıdır.
+            dikdortgen3.KisaKenar = 3;
+            dikdortgen3.UzunKenar = 5;
+            System.Console.WriteLine("Dikdörtgenin alanı: " + dikdortgen3.AlanHesapla());
         }
     }
 
-    class Ogrenci
-    {
-
-        private string isim;
-        private string soyisim;
-        private int ogrenciNo;
-        private int sinif;
-
-        public Ogrenci(string isim, string soyisim, int ogrenciNo, int sinif)
-        {
-            this.isim = isim;
-            this.soyisim = soyisim;
-            this.ogrenciNo = ogrenciNo;
-            this.sinif = sinif;
-        }
-
-        public Ogrenci()
-        {
-
-        }
-
-        public int Sinif
-        {
-            get => sinif;
-            set
-            {
-                if (value < 1)
-                {
-                    Console.WriteLine("Sınıf en az 1 olabilir.");
-                    sinif = 1;
-                }
-                else
-                {
-                    sinif = value;
-                }
-            }
-        }
-        public int OgrenciNo { get => ogrenciNo; set => ogrenciNo = value; }
-        public string Soyisim { get => soyisim; set => soyisim = value; }
-        public string Isim { get => isim; set => isim = value; }
-
-        public void OgrenciBilgileriniGetir()
-        {
-            System.Console.WriteLine("----OGRENCİ BİLGİLERİ");
-            System.Console.WriteLine("Öğrencinin adı: " + this.isim);
-            System.Console.WriteLine("Öğrencinin soyisim: " + this.soyisim);
-            System.Console.WriteLine("Öğrencinin sınıfı: " + this.sinif);
-            System.Console.WriteLine("Öğrencinin öğrenci numarası: " + this.ogrenciNo);
-        }
-
-        public void SinifArttir()
-        {
-            this.Sinif = this.Sinif + 1;
-        }
-
-        public void SinifDusur()
-        {
-            this.Sinif = this.Sinif - 1;
-        }
-    }
-
-    class Musteri
-    {
-        private static int musteriSayisi;   // Her zaman değiştirilen son değerini göreceğiz.
-        private string Isim;
-        private string Soyisim;
-        private string TC;
-
-        public Musteri(string isim, string soyisim, string tc)
-        {
-            Isim = isim;
-            Soyisim = soyisim;
-            TC = tc;
-            musteriSayisi++;
-        }
-
-        static Musteri()
-        {
-            musteriSayisi = 0;
-        }
-
-        public static int MusteriSayisi { get => musteriSayisi; set => musteriSayisi = value; }
-    }
-
-    static class Islemler
-    {
-        public static long Topla(int s1, int s2)
-        {
-            return s1 + s2;
-        }
-
-        public static long Cikar(int s1, int s2)
-        {
-            return s1 - s2;
-        }
-    }
 }
