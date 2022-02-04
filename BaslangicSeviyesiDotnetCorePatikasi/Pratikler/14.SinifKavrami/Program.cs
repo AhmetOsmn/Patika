@@ -6,25 +6,27 @@ namespace _14.SinifKavrami
     {
         static void Main(string[] args)
         {
+            // Sınıf kavramı
             // SiniflarDers1();
+
+            // Kurucu metotlar 
             // SiniflarDers2();
 
             // Encapsulation
-            // Ogrenci ogrenci1 = new Ogrenci("Ayşe", "YILMAZ", 001, 3);
-            // ogrenci1.OgrenciBilgileriniGetir();
-            // ogrenci1.SinifArttir();
-            // ogrenci1.OgrenciBilgileriniGetir();
-            // System.Console.WriteLine("------------");
+            // SiniflarDers3();
 
-            Ogrenci ogrenci2 = new Ogrenci("Ahmet", "SEZGİN", 002, 2);
-            ogrenci2.OgrenciBilgileriniGetir();
-            ogrenci2.SinifDusur();
-            ogrenci2.OgrenciBilgileriniGetir();
-            ogrenci2.SinifDusur();
-            ogrenci2.OgrenciBilgileriniGetir();
-            ogrenci2.SinifDusur();
-            ogrenci2.OgrenciBilgileriniGetir();
+            // Static sınıf ve üyeler
+            System.Console.WriteLine("Müşteri sayısı: " + Musteri.MusteriSayisi);
 
+            Musteri musteri1 = new Musteri("Ahmet", "SEZGİN", "12345");
+            System.Console.WriteLine("Müşteri sayısı: " + Musteri.MusteriSayisi);
+
+            // Statik bir sınıfın içerisinde statik olmayan herhangi bir öğre kullanamayız.
+            // Statik sınıflarda kalıtım kullanılamaz.
+            // Islemler islemler = new Islemler(); // Hata veriyor. Çünkü statik sınıfların öğelerine 'SınıfAdı.' şeklinde ulaşırız.
+            System.Console.WriteLine(Islemler.Topla(100, 500));
+            System.Console.WriteLine(Islemler.Cikar(100, 500));
+        
 
         }
 
@@ -56,14 +58,29 @@ namespace _14.SinifKavrami
 
         static void SiniflarDers2()
         {
-
-            // Kurucu metotlar 
-
             Calisan calisan3 = new Calisan("Ayşe", "Kara", 14725836, "İnsan Kaynakları");
             calisan3.CalisanBilgileri();
             System.Console.WriteLine("-------");
             Calisan calisan4 = new Calisan("Veli", "Tutuk");
             calisan4.CalisanBilgileri(); // "Veli" "Tutuk" "0" ""
+        }
+
+        static void SiniflarDers3()
+        {
+            Ogrenci ogrenci1 = new Ogrenci("Ayşe", "YILMAZ", 001, 3);
+            ogrenci1.OgrenciBilgileriniGetir();
+            ogrenci1.SinifArttir();
+            ogrenci1.OgrenciBilgileriniGetir();
+            System.Console.WriteLine("------------");
+
+            Ogrenci ogrenci2 = new Ogrenci("Ahmet", "SEZGİN", 002, 2);
+            ogrenci2.OgrenciBilgileriniGetir();
+            ogrenci2.SinifDusur();
+            ogrenci2.OgrenciBilgileriniGetir();
+            ogrenci2.SinifDusur();
+            ogrenci2.OgrenciBilgileriniGetir();
+            ogrenci2.SinifDusur();
+            ogrenci2.OgrenciBilgileriniGetir();
         }
     }
 
@@ -131,11 +148,13 @@ namespace _14.SinifKavrami
             get => sinif;
             set
             {
-                if(value < 1){
+                if (value < 1)
+                {
                     Console.WriteLine("Sınıf en az 1 olabilir.");
                     sinif = 1;
                 }
-                else{
+                else
+                {
                     sinif = value;
                 }
             }
@@ -155,12 +174,48 @@ namespace _14.SinifKavrami
 
         public void SinifArttir()
         {
-            this.Sinif = this.Sinif + 1; 
+            this.Sinif = this.Sinif + 1;
         }
 
         public void SinifDusur()
         {
             this.Sinif = this.Sinif - 1;
+        }
+    }
+
+    class Musteri
+    {
+        private static int musteriSayisi;   // Her zaman değiştirilen son değerini göreceğiz.
+        private string Isim;
+        private string Soyisim;
+        private string TC;
+
+        public Musteri(string isim, string soyisim, string tc)
+        {
+            Isim = isim;
+            Soyisim = soyisim;
+            TC = tc;
+            musteriSayisi++;
+        }
+
+        static Musteri()
+        {
+            musteriSayisi = 0;
+        }
+
+        public static int MusteriSayisi { get => musteriSayisi; set => musteriSayisi = value; }
+    }
+
+    static class Islemler
+    {
+        public static long Topla(int s1, int s2)
+        {
+            return s1 + s2;
+        }
+
+        public static long Cikar(int s1, int s2)
+        {
+            return s1 - s2;
         }
     }
 }
