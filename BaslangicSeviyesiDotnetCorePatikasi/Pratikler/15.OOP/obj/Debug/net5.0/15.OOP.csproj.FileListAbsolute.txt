@@ -1,0 +1,16 @@
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\bin\Debug\net5.0\15.OOP.exe
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\bin\Debug\net5.0\15.OOP.deps.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\bin\Debug\net5.0\15.OOP.runtimeconfig.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\bin\Debug\net5.0\15.OOP.runtimeconfig.dev.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\bin\Debug\net5.0\15.OOP.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\bin\Debug\net5.0\ref\15.OOP.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\bin\Debug\net5.0\15.OOP.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\obj\Debug\net5.0\15.OOP.csproj.AssemblyReference.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\obj\Debug\net5.0\15.OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\obj\Debug\net5.0\15.OOP.AssemblyInfoInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\obj\Debug\net5.0\15.OOP.AssemblyInfo.cs
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\obj\Debug\net5.0\15.OOP.csproj.CoreCompileInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\obj\Debug\net5.0\15.OOP.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\obj\Debug\net5.0\ref\15.OOP.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\obj\Debug\net5.0\15.OOP.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\15.OOP\obj\Debug\net5.0\15.OOP.genruntimeconfig.cache

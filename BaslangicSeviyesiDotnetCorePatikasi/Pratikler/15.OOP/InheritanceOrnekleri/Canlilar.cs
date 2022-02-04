@@ -1,0 +1,26 @@
+using System;
+
+namespace _15.OOP
+{
+    public class Canlilar
+    {
+        protected void Beslenme()
+        {
+            System.Console.WriteLine("Canlılar beslenir.");
+        }
+
+        protected void Solunum()
+        {
+            System.Console.WriteLine("Canlılar solunum yapar.");
+        }
+
+        protected void Bosaltim()
+        {
+            System.Console.WriteLine("Canlılar boşaltım yapar.");
+        }
+
+        public virtual void UyaranlaraTepki(){
+            System.Console.WriteLine("Canlılar uyaranlara tepki verir.");
+        }
+    }
+}
