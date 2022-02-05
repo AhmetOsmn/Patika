@@ -1,0 +1,16 @@
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\bin\Debug\net5.0\16.TelefonRehberiUygulamasi.exe
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\bin\Debug\net5.0\16.TelefonRehberiUygulamasi.deps.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\bin\Debug\net5.0\16.TelefonRehberiUygulamasi.runtimeconfig.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\bin\Debug\net5.0\16.TelefonRehberiUygulamasi.runtimeconfig.dev.json
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\bin\Debug\net5.0\16.TelefonRehberiUygulamasi.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\bin\Debug\net5.0\ref\16.TelefonRehberiUygulamasi.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\bin\Debug\net5.0\16.TelefonRehberiUygulamasi.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\obj\Debug\net5.0\16.TelefonRehberiUygulamasi.csproj.AssemblyReference.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\obj\Debug\net5.0\16.TelefonRehberiUygulamasi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\obj\Debug\net5.0\16.TelefonRehberiUygulamasi.AssemblyInfoInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\obj\Debug\net5.0\16.TelefonRehberiUygulamasi.AssemblyInfo.cs
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\obj\Debug\net5.0\16.TelefonRehberiUygulamasi.csproj.CoreCompileInputs.cache
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\obj\Debug\net5.0\16.TelefonRehberiUygulamasi.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\obj\Debug\net5.0\ref\16.TelefonRehberiUygulamasi.dll
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\obj\Debug\net5.0\16.TelefonRehberiUygulamasi.pdb
+C:\Projects\Patika\BaslangicSeviyesiDotnetCorePatikasi\Pratikler\16.TelefonRehberiUygulamasi\obj\Debug\net5.0\16.TelefonRehberiUygulamasi.genruntimeconfig.cache

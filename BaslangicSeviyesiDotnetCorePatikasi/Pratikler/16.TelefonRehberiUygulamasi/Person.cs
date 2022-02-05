@@ -16,6 +16,11 @@ namespace _16.TelefonRehberiUygulamasi
             this.Number = number;
         }
 
+        public Person()
+        {
+            
+        }
+
         public string Name { get => name; set => name = value; }
         public string Surname { get => surname; set => surname = value; }
         public string Number { get => number; set => number = value; }
