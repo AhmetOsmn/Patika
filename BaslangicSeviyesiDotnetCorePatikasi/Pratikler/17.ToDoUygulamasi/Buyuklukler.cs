@@ -2,7 +2,8 @@ using System;
 
 namespace _17.ToDoUygulamasi
 {
-    public enum Buyuklukler{
+    public enum Buyuklukler
+    {
         XS = 1,
         S,
         M,

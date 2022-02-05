@@ -7,13 +7,14 @@ namespace _17.ToDoUygulamasi
         public static int TempID { get; set; }
         public int ID { get; set; }
         public string Baslik { get; set; }
-        public string Icerik { get; set; }      
+        public string Icerik { get; set; }
         public string AtananKisi { get; set; }
         public Buyuklukler Buyukluk { get; set; }
         public Lines Line { get; set; }
 
-        
-        static Kart(){
+
+        static Kart()
+        {
             TempID++;
         }
 
@@ -29,7 +30,7 @@ namespace _17.ToDoUygulamasi
 
         public Kart()
         {
-            
+
         }
     }
 }

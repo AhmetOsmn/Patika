@@ -4,7 +4,7 @@ namespace _17.ToDoUygulamasi
 {
     public enum Lines
     {
-        todo,
+        todo = 1,
         inProgress,
         done
     }
