@@ -1,4 +1,4 @@
-# Ders 1
+# Ders 1 - OOP Nedir ?
 
 - Nesneye yönelimli programlamanın temel amacı, ihtiyaç duyulan programı daha küçük parçalara bölüp, yönetilebilir ve değiştirilebilir hale getirmektir.
 
@@ -16,7 +16,7 @@
 
 <br>
 
-# Ders 2
+# Ders 2 - Sınıf ve Nesne Kavramları
 
 ### Nesne (Object) nedir ?
 
@@ -41,7 +41,7 @@ Mesela bir kedinin ihtiyaç duyduğu otu koklayarak bulabilmesi gibi.
 
 <br>
 
-# Ders 3
+# Ders 3 - UML Diyagramları
 
 - Bilgisayar ortamında projeleri modellemek için yazılımcılar arasında standart bir modelleme dili olan **UML**'i (Unified Modeling Language) kullanır. 
 
@@ -61,4 +61,53 @@ Mesela bir kedinin ihtiyaç duyduğu otu koklayarak bulabilmesi gibi.
 
     - Proje içerisinde farklı diller kullanıldığında farklı geliştiricilerin aynı yerden faydalanabilmesini sağlar.
 
-    
+<br>
+
+# Ders 5 - Encapsulation (Kapsülleme)
+
+OOP 4 temel ilke üzerine kuruludur.
+
+- Encapsulation (Kapsülleme)
+
+- Inheritance (Kalıtım)
+
+- Polymorphism (Çok biçimlilik)
+
+- Abstraction (Soyutlama)
+
+## Encapsulation (Kapsülleme)
+
+- Bir sınıf içerisindeki nitelikleri ancak o sınıfa ait olan metotların değiştirebilmesini ve okunabilmesini savunur. Bu sayede nesnelerde anlamsızlıkların oluşması önlenir. Anlamsızlıktan kasıt örnek olarak kitap nesnesinde sayfa sayısı -10 olarak girildiinde bir anlamsızlık oluşur. Bunun önüne geçmek için `Setter` metotları kullanılabilir. Bu metotlar içerisinde anlamsızlık oluşabilecek durumları yöneterek nesnede anlamsızlıkların önüne geçeriz.
+
+- Bunu sağlaman için erişim belirleyicilerin kullanımı önemlidir. 
+
+    - Private 
+
+    - Public 
+
+    - Protected
+
+    Burada kapsülleme yapılacaksa nitelikler private olarak tanımlanmalıdır. Private tanımlanan niteliklere ulabilmemiz için devreye `Getter` ve `Setter` metotlar devreye girer. Bu metotlar sayesinde kapsülleme işlemini gerçek anlamda gerçekleştirmiş oluruz.
+
+<br>
+
+# Ders 6 - Inheritance (Kalıtım)
+
+Bir sınıfın bütün özelliklerinin (nitelik + davranış) kendisinden oluşturulan diğer sınıflara aktarılmasına denir. Aktarılan özellikler alt sınıflarda tekrar oluşturulmazlar.
+
+ Kalıtımın önemli özelliği kendimizi tekrar etmemizi engellemesidir. Ortak özellikleri ata sınıfta toplayarak kod tekrarlarını azaltırız. Ayrıca bir değişiklik yapılacağı zaman da her yerde değişim yapmak yerine tek bir yerde yaparak verimli çalışma yapmış oluyoruz.
+
+ <br>
+
+ # Ders 7 - Polymorphism (Çokbiçimlilik)
+
+ Kalıtmın olduğu yerde olur.
+ Alt sınıfların, ata sınıfındaki metotlarını değiştirerek kullanılabilmesi diyebiliriz. Buna `Overriding` diyoruz. Atadan alınan metodu özelleştirerek yeni şekli ile kullanıp çeşitlilik sağlarız.
+
+ Örnek olarak hayvan sınıfında "hayvanlar ses çıkarır" şekline bir motot olsun. Aynı zamanda hayvanlar sınıfından türetilen kuş ve kedi sınıfı olsun. Türetilen sınıflarda da "hayvanlar ses çıkarır" metodu erişilebiliyor olacak ama bu metodu override ederek özelleştirebiliriz. Yani kedi sınıfında "hayvanlar ses çıkarır" metodunu "kediler miyavlar" olarak kullanabiliriz. İstersek kuş sınıfında da değiştirip "kuşlar öter" şeklinde kullanabiliriz. Yukarıdaki durumda istersek türetilen sınıflarda polymorphism kullanmaya da biliriz.
+
+<br>
+
+ # Ders 8 - Abstraction (Soyutlama)
+
+ Bir sınıftan nesne üretilmesini engellememizi sağlar. Üst sınıfta, alt sınıfta bulunmasını istediğimiz özellikleri tanımlarız ama detaylarını belirtmeyiz. Detayların türetilen sınıflarda uygulanmasını istediğimiz zaman soyutlama kullanırız.
