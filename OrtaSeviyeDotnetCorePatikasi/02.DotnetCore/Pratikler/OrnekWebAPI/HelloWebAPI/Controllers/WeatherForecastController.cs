@@ -13,10 +13,10 @@ namespace HelloWebAPI.Controllers
     // Geriye HTTP Response dönen yapılardır.
 
     [ApiController] // Bu controller'ın bir HTTP Response döneceğini taahüt eder.
-    [Route("[api/controller]s")] 
+    [Route("[controller]s")]
     // Route ile, HTTP Requestinin controller içerisindeki bileşenlere nasıl erişebileceklerini söyleriz.
     // WebAPI'ye gelen istekleri Route niteliği ile yönlendiriyoruz diyebiliriz.
-    public class WeatherForecastController : ControllerBase 
+    public class WeatherForecastController : ControllerBase
     {
 
         // Bu controller için resource: WeatherForecast'tir.
@@ -54,34 +54,47 @@ namespace HelloWebAPI.Controllers
             .ToArray();
         }
 
-        [HttpGet]
-        // From Query
-        // api/WeatherForecasts?id=3
-        public IEnumerable<WeatherForecast> GetByID([FromQuery] string id)  
+        [HttpGet("{id}")]
+        public ActionResult<WeatherForecast> GetByID(string id) // IEnumerable<x> demek, x tipinte bir listeyi ifade ediyor.
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55), 
+                TemperatureC = rng.Next(-20, 55), // Next: Random sınıfından rastgele bir sayı üretmemizi sağlayan metot.
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
-            .ToArray();
+            .ToArray()[0];
         }
 
-        [HttpGet("{id}")]
-        // From Route 
-        // api/WeatherForecasts/3
-        public IEnumerable<WeatherForecast> GetWeatherCast(string id) 
-        {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55), 
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
-        }
+        // [HttpGet]
+        // // From Query
+        // // api/WeatherForecasts?id=3
+        // public IEnumerable<WeatherForecast> GetByID([FromQuery] string id)  
+        // {
+        //     var rng = new Random();
+        //     return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        //     {
+        //         Date = DateTime.Now.AddDays(index),
+        //         TemperatureC = rng.Next(-20, 55), 
+        //         Summary = Summaries[rng.Next(Summaries.Length)]
+        //     })
+        //     .ToArray();
+        // }
+
+        // [HttpGet("{id}")]
+        // // From Route 
+        // // api/WeatherForecasts/3
+        // public IEnumerable<WeatherForecast> GetWeatherCast(string id) 
+        // {
+        //     var rng = new Random();
+        //     return Enumerable.Range(1, 5).Select(index => new WeatherForecast
+        //     {
+        //         Date = DateTime.Now.AddDays(index),
+        //         TemperatureC = rng.Next(-20, 55), 
+        //         Summary = Summaries[rng.Next(Summaries.Length)]
+        //     })
+        //     .ToArray();
+        // }
     }
 }
