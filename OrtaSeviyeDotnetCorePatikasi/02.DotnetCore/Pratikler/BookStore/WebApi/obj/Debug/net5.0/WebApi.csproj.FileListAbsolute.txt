@@ -27,3 +27,8 @@ C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStor
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\obj\Debug\net5.0\ref\WebApi.dll
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\obj\Debug\net5.0\WebApi.pdb
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
+C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
