@@ -4,26 +4,26 @@ using WebApi.Common;
 using WebApi.DBOperations;
 using static WebApi.BookOperations.GetBooks.GetBooksQuery;
 
-namespace WebApi.BookOperations.GetBooks
+namespace WebApi.BookOperations.GetBookDetail
 {
-    public class GetBookById
+    public class GetBookDetailQuery
     {
         private readonly BookStoreDbContext _context;
-
-        public GetBookById(BookStoreDbContext context)
+        public int BookId { get; set; }
+        public GetBookDetailQuery(BookStoreDbContext context)
         {
             _context = context;
         }
 
-        public BooksViewModel Handle(int id)
+        public BookDetailViewModel Handle()
         {
-            var book = _context.Books.Where(book => book.Id == id).SingleOrDefault();
-            if(book is null)
+            var book = _context.Books.Where(book => book.Id == BookId).SingleOrDefault();
+            if (book is null)
             {
                 throw new InvalidOperationException("Aranan kitap bulunamadı.");
             }
-            
-            BooksViewModel requestedBook = new BooksViewModel();
+
+            BookDetailViewModel requestedBook = new BookDetailViewModel();
             requestedBook.Title = book.Title;
             requestedBook.Genre = ((GenreEnum)book.GenreId).ToString();
             requestedBook.PageCount = book.PageCount;
@@ -31,5 +31,13 @@ namespace WebApi.BookOperations.GetBooks
             return requestedBook;
         }
 
+    }
+
+    public class BookDetailViewModel
+    {
+        public string Title { get; set; }
+        public int PageCount { get; set; }
+        public string PublishDate { get; set; }
+        public string Genre { get; set; }
     }
 }

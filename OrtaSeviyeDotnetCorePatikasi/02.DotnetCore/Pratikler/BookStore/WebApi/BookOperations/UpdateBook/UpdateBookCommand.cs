@@ -7,7 +7,9 @@ namespace WebApi.BookOperations.UdpateBook
 {
     public class UpdateBookCommand
     {
-        public CreateBookModel Model { get; set; }
+        public int BookId { get; set; }
+        public UpdateBookModel Model { get; set; }
+
 
         private readonly BookStoreDbContext _context;
 
@@ -16,19 +18,23 @@ namespace WebApi.BookOperations.UdpateBook
             _context = context;
         }
 
-        public void Handle(int id)
+        public void Handle()
         {
-            var book = _context.Books.SingleOrDefault(x => x.Id == id);
+            var book = _context.Books.SingleOrDefault(x => x.Id == BookId);
             if (book is null)
             {
                 throw new InvalidOperationException("Aranan kitap bulunamadı.");
             }
 
             book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
-            book.PageCount = Model.PageCount != default ? Model.PageCount : book.PageCount;
-            book.PublishDate = Model.PublishDate != default ? Model.PublishDate : book.PublishDate;
             book.Title = Model.Title != default ? Model.Title : book.Title;
             _context.SaveChanges();
         }
+    }
+
+    public class UpdateBookModel
+    {
+        public string Title { get; set; }
+        public int GenreId { get; set; }
     }
 }
