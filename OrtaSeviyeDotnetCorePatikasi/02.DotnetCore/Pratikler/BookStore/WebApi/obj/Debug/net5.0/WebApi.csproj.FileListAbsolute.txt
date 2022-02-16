@@ -35,3 +35,4 @@ C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStor
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\bin\Debug\net5.0\AutoMapper.dll
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\bin\Debug\net5.0\FluentValidation.dll
+C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\WebApi\bin\Debug\net5.0\Newtonsoft.Json.dll

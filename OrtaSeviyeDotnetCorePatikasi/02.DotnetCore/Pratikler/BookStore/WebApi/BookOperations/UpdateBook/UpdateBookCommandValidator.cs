@@ -9,7 +9,6 @@ namespace WebApi.BookOperations.UdpateBook
         {
             RuleFor(command => command.BookId).GreaterThan(0);
             RuleFor(command => command.Model.GenreId).NotEmpty().GreaterThan(0);
-            RuleFor(command => command.Model.GenreId).IsInEnum();
             RuleFor(command => command.Model.Title).NotEmpty().MinimumLength(4);
         }
     }
