@@ -1,4 +1,5 @@
 using FluentValidation;
+using WebApi.Common;
 
 namespace WebApi.BookOperations.UdpateBook
 {
@@ -6,8 +7,10 @@ namespace WebApi.BookOperations.UdpateBook
     {
         public UpdateBookCommandValidator()
         {
-            RuleFor(command => command.Model.GenreId).GreaterThan(0);
-            RuleFor(command => command.Model.Title).MinimumLength(3);
+            RuleFor(command => command.BookId).GreaterThan(0);
+            RuleFor(command => command.Model.GenreId).NotEmpty().GreaterThan(0);
+            RuleFor(command => command.Model.GenreId).IsInEnum();
+            RuleFor(command => command.Model.Title).NotEmpty().MinimumLength(4);
         }
     }
 }
