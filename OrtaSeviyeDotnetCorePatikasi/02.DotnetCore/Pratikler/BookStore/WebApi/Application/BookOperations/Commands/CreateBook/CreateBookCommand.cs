@@ -2,8 +2,9 @@ using System;
 using System.Linq;
 using AutoMapper;
 using WebApi.DBOperations;
+using WebApi.Entities;
 
-namespace WebApi.BookOperations.CreateBook
+namespace WebApi.Application.BookOperations.Commands.CreateBook
 {
 
     public class CreateBookCommand
@@ -23,7 +24,7 @@ namespace WebApi.BookOperations.CreateBook
 
             if (book is not null)
             {
-                throw new InvalidOperationException("Kitap zaten mevcut");
+                throw new InvalidOperationException("Eklenecek kitap zaten mevcut");
             }
             book = _mapper.Map<Book>(Model); // Model ile verilen veriyi book objesine map et.
 

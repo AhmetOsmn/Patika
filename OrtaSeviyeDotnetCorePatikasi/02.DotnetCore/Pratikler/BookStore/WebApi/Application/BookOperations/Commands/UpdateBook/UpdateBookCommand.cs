@@ -1,9 +1,8 @@
 using System;
 using System.Linq;
 using WebApi.DBOperations;
-using static WebApi.BookOperations.CreateBook.CreateBookCommand;
 
-namespace WebApi.BookOperations.UdpateBook
+namespace WebApi.Application.BookOperations.Commands.UdpateBook
 {
     public class UpdateBookCommand
     {
@@ -23,7 +22,7 @@ namespace WebApi.BookOperations.UdpateBook
             var book = _context.Books.SingleOrDefault(x => x.Id == BookId);
             if (book is null)
             {
-                throw new InvalidOperationException("Aranan kitap bulunamadı.");
+                throw new InvalidOperationException("Güncellenecek kitap bulunamadı.");
             }
 
             book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
