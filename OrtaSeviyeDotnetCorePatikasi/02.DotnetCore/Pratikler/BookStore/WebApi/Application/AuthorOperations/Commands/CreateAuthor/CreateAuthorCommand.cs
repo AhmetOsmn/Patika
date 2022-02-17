@@ -12,9 +12,10 @@ namespace WebApi.Application.AuthorOperations.CreateAuthor
         private readonly BookStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public CreateAuthorCommand(BookStoreDbContext context)
+        public CreateAuthorCommand(BookStoreDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public void Handle()
@@ -24,7 +25,7 @@ namespace WebApi.Application.AuthorOperations.CreateAuthor
             {
                 throw new InvalidOperationException("Eklenecek yazar zaten mevcut.");
             }
-            author = _mapper.Map<Author>(author);
+            author = _mapper.Map<Author>(Model);
             
             _context.Authors.Add(author);
             _context.SaveChanges();

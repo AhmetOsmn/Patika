@@ -7,11 +7,11 @@ using WebApi.Entities;
 
 namespace WebApi.Application.AuthorOperations.Queries.GetBooks
 {
-    public class GetAuthorQuery
+    public class GetAuthorsQuery
     {
         private readonly BookStoreDbContext _context;
         private readonly IMapper _mapper;
-        public GetAuthorQuery(IMapper mapper, BookStoreDbContext context = null)
+        public GetAuthorsQuery(IMapper mapper, BookStoreDbContext context = null)
         {
             _mapper = mapper;
             _context = context;
@@ -29,6 +29,6 @@ namespace WebApi.Application.AuthorOperations.Queries.GetBooks
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public DateTime BirthDay { get; set; }
+        public string BirthDay { get; set; }
     }
 }

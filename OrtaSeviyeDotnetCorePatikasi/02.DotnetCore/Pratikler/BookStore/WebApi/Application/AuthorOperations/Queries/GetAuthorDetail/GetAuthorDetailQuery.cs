@@ -6,30 +6,30 @@ using WebApi.DBOperations;
 
 namespace WebApi.Application.AuthorOperations.Queries.GetAuthorDetail
 {
-    public class GetAuthorDetail
+    public class GetAuthorDetailQuery
     {
         private readonly BookStoreDbContext _context;
         private IMapper _mapper;
         public int AuthorId { get; set; }
 
-        public GetAuthorDetail(IMapper mapper, BookStoreDbContext context)
+        public GetAuthorDetailQuery(IMapper mapper, BookStoreDbContext context)
         {
             _mapper = mapper;
             _context = context;
         }
 
-        public AuthorDetailModel Handle()
+        public AuthorDetailViewModel Handle()
         {
             var author = _context.Authors.SingleOrDefault(x => x.Id == AuthorId);
             if(author is null)
             {
-                throw new InvalidOperationException("Yazar bulunamadı.");
+                throw new InvalidOperationException("Aranan yazar bulunamadı.");
             }
-            return _mapper.Map<AuthorDetailModel>(author);
+            return _mapper.Map<AuthorDetailViewModel>(author);
         }
     }
 
-    public class AuthorDetailModel
+    public class AuthorDetailViewModel
     {
         public string Name { get; set; }
         public string Surname { get; set; }
