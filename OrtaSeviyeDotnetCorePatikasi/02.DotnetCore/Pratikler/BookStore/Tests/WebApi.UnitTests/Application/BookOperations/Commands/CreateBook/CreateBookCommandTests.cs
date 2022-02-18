@@ -55,7 +55,7 @@ namespace Application.BookOperations.Commands.CreateBook
             CreateBookModel model = new CreateBookModel()
             {
                 Title = "Hobbit",
-                AuthorId = 0,
+                AuthorId = 1,
                 GenreId = 2,
                 PageCount = 800,
                 PublishDate = DateTime.Now.Date.AddYears(-20)
@@ -66,7 +66,7 @@ namespace Application.BookOperations.Commands.CreateBook
             FluentActions.Invoking(() => command.Handle()).Invoke();
 
             //assert
-            var book =  _context.Books.SingleOrDefault(book => book.Title == model.Title);
+            var book =  _context.Books.SingleOrDefault(book => book.Title == model.Title && book.GenreId == model.GenreId);
             
             book.Should().NotBeNull();
             book.PageCount.Should().Be(model.PageCount);
