@@ -9,10 +9,10 @@ namespace WebApi.Application.BookOperations.Commands.CreateBook
 
     public class CreateBookCommand
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
         public CreateBookModel Model { get; set; }
-        public CreateBookCommand(BookStoreDbContext context, IMapper mapper)
+        public CreateBookCommand(IBookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -36,6 +36,7 @@ namespace WebApi.Application.BookOperations.Commands.CreateBook
         {
             public string Title { get; set; }
             public int GenreId { get; set; }
+            public int AuthorId { get; set; }
             public int PageCount { get; set; }
             public DateTime PublishDate { get; set; }
         }
