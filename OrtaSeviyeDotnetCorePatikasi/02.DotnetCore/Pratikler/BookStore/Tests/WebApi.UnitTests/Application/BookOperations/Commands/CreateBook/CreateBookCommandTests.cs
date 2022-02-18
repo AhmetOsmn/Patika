@@ -23,7 +23,7 @@ namespace Application.BookOperations.Commands.CreateBook
         }
 
         [Fact]
-        public void WhenAlreadyExistBookTitleGiven_InvalidOperationException_ShouldBeReturn()
+        public void WhenAlreadyExistBookTitleGiven_InvalidOperationException_ShouldBeReturnErrors()
         {
             //arrange - Hazırlık
             var book = new Book()

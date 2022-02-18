@@ -16,12 +16,12 @@ namespace WebApi.Application.AuthorOperations.DeleteAuthor
 
         public void Handle()
         {
-            var author = _context.Authors.SingleOrDefault(x => x.Id == AuthorId);
+            var author = _context.Authors.FirstOrDefault(x => x.Id == AuthorId);
             if (author is null)
             {
                 throw new InvalidOperationException("Silinecek yazar bulunamadı.");
             }
-            if ((_context.Books.SingleOrDefault(book => book.AuthorId == author.Id)) is not null)
+            if ((_context.Books.FirstOrDefault(book => book.AuthorId == author.Id)) is not null)
             {
                 throw new InvalidOperationException("Kitabı yayında olan yazar silinemez.");
             }
