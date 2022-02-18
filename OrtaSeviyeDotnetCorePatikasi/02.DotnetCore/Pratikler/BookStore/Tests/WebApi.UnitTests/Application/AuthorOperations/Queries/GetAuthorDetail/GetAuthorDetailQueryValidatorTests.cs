@@ -1,7 +1,6 @@
 using FluentAssertions;
 using TestSetup;
 using WebApi.Application.AuthorOperations.Queries.GetAuthorDetail;
-using WebApi.Application.BookOperations.Queries.GetBookDetail;
 using Xunit;
 
 namespace Application.AuthorOptions.Queries.GetAuthorDetail

@@ -1,7 +1,5 @@
-using System;
 using FluentAssertions;
 using TestSetup;
-using WebApi.Application.BookOperations.Commands.DeleteBook;
 using WebApi.Application.BookOperations.Commands.UdpateBook;
 using Xunit;
 
@@ -35,8 +33,8 @@ namespace Application.BookOperations.Commands.UpdateBook
         }
 
         [Theory]
-        [InlineData(1,"lord of the rings", 1)]
-        [InlineData(1,"DENEME", 2)]
+        [InlineData(1, "lord of the rings", 1)]
+        [InlineData(1, "DENEME", 2)]
 
         public void WhenValidInputsAreGiven_Validator_ShouldNotBeReturnErrors(int bookId, string title, int genreId)
         {
@@ -52,7 +50,7 @@ namespace Application.BookOperations.Commands.UpdateBook
             //act
             UpdateBookCommandValidator validator = new UpdateBookCommandValidator();
             var result = validator.Validate(command);
-            
+
             //assert
             result.Errors.Count.Should().Be(0);
         }

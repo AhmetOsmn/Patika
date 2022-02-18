@@ -38,7 +38,7 @@ namespace Application.BookOperations.Commands.CreateBook
             _context.SaveChanges();
 
             CreateBookCommand command = new CreateBookCommand(_context, _mapper);
-            command.Model = new CreateBookModel(){Title = book.Title};
+            command.Model = new CreateBookModel() { Title = book.Title };
 
             //act - Çalıştırma & assert - Doğrulama
             FluentActions
@@ -66,8 +66,8 @@ namespace Application.BookOperations.Commands.CreateBook
             FluentActions.Invoking(() => command.Handle()).Invoke();
 
             //assert
-            var book =  _context.Books.SingleOrDefault(book => book.Title == model.Title);
-            
+            var book = _context.Books.SingleOrDefault(book => book.Title == model.Title);
+
             book.Should().NotBeNull();
             book.PageCount.Should().Be(model.PageCount);
             book.PublishDate.Should().Be(model.PublishDate);

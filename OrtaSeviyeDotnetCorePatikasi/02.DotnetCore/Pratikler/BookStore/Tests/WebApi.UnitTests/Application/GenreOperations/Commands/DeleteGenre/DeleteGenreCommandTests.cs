@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using FluentAssertions;
 using TestSetup;
-using WebApi.Application.BookOperations.Commands.DeleteBook;
 using WebApi.Application.GenreOperations.DeleteGenre;
 using WebApi.DBOperations;
 using Xunit;

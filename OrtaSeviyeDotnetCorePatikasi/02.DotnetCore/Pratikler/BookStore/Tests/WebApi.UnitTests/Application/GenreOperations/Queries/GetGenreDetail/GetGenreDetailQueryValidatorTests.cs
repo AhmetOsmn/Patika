@@ -1,6 +1,5 @@
 using FluentAssertions;
 using TestSetup;
-using WebApi.Application.BookOperations.Queries.GetBookDetail;
 using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
 using Xunit;
 

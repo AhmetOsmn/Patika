@@ -29,7 +29,7 @@ namespace Application.AuthorOptions.Commands.CreateAuthor
             {
                 Name = "Deneme 2",
                 Surname = "Deneme 2",
-                BirthDay = new DateTime(2000,3,21)
+                BirthDay = new DateTime(2000, 3, 21)
             };
             _context.Authors.Add(author);
             _context.SaveChanges();
@@ -53,7 +53,7 @@ namespace Application.AuthorOptions.Commands.CreateAuthor
             {
                 Name = "WhenAlreadyExistAuthorGiven_InvalidOperationException_ShouldBeReturnErrors",
                 Surname = "Deneme 2",
-                BirthDay = new DateTime(2000,3,21)
+                BirthDay = new DateTime(2000, 3, 21)
             };
             command.Model = model;
 

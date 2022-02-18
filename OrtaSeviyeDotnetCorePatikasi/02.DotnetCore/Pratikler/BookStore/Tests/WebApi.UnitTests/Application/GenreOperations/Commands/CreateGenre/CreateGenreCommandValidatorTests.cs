@@ -1,10 +1,7 @@
-using System;
 using FluentAssertions;
 using TestSetup;
-using WebApi.Application.BookOperations.Commands.CreateBook;
 using WebApi.Application.GenreOperations.CreateGenre;
 using Xunit;
-using static WebApi.Application.BookOperations.Commands.CreateBook.CreateBookCommand;
 
 namespace Application.GenreOperations.Commands.CreateGenre
 {

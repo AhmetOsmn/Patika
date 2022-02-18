@@ -4,7 +4,6 @@ using FluentAssertions;
 using TestSetup;
 using WebApi.Application.BookOperations.Commands.UdpateBook;
 using WebApi.DBOperations;
-using WebApi.Entities;
 using Xunit;
 
 namespace Application.BookOperations.Commands.UpdateBook
@@ -55,7 +54,7 @@ namespace Application.BookOperations.Commands.UpdateBook
 
             book.Title.Should().Be(model.Title);
             book.GenreId.Should().Be(model.GenreId);
-                   
+
         }
     }
 }

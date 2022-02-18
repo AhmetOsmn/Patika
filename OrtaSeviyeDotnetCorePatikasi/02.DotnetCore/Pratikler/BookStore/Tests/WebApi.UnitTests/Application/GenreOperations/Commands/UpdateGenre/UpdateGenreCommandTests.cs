@@ -32,8 +32,8 @@ namespace Application.GenreOperations.Commands.UpdateGenre
         }
 
         [Theory]
-        [InlineData(1,"Romance")]
-        [InlineData(2,"Romance")]
+        [InlineData(1, "Romance")]
+        [InlineData(2, "Romance")]
         public void WhenAlreadyExistGenreNameIsGiven_InvalidOperationException_ShouldBeReturn(int genreId, string genreName)
         {
             //arrange

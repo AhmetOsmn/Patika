@@ -12,7 +12,7 @@ namespace TestSetup
 
         public CommonTestFixture()
         {
-            var options = new DbContextOptionsBuilder<BookStoreDbContext>().UseInMemoryDatabase(databaseName:"BookStoreTestDb").Options;
+            var options = new DbContextOptionsBuilder<BookStoreDbContext>().UseInMemoryDatabase(databaseName: "BookStoreTestDb").Options;
             Context = new BookStoreDbContext(options);
 
             Context.Database.EnsureCreated();
@@ -21,7 +21,7 @@ namespace TestSetup
             Context.AddAuthors();
             Context.SaveChanges();
 
-            Mapper = new MapperConfiguration(cfg => {cfg.AddProfile<MappingProfile>();}).CreateMapper();
+            Mapper = new MapperConfiguration(cfg => { cfg.AddProfile<MappingProfile>(); }).CreateMapper();
         }
     }
 }

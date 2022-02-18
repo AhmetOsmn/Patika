@@ -1,4 +1,3 @@
-using System;
 using WebApi.DBOperations;
 using WebApi.Entities;
 

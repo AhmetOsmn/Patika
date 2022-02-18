@@ -1,6 +1,5 @@
 using FluentAssertions;
 using TestSetup;
-using WebApi.Application.BookOperations.Commands.DeleteBook;
 using WebApi.Application.GenreOperations.DeleteGenre;
 using Xunit;
 

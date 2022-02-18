@@ -11,10 +11,10 @@ namespace Application.AuthorOptions.Commands.CreateAuthor
     {
 
         [Theory]
-        [InlineData("na","aasg")]    
-        [InlineData("asgdf","dg")]    
-        [InlineData("asgdf","")]    
-        [InlineData("","asfsdg")]    
+        [InlineData("na", "aasg")]
+        [InlineData("asgdf", "dg")]
+        [InlineData("asgdf", "")]
+        [InlineData("", "asfsdg")]
 
         public void WhenInvalidInputsAreGiven_Validator_ShouldBeReturnErrors(string name, string surname)
         {

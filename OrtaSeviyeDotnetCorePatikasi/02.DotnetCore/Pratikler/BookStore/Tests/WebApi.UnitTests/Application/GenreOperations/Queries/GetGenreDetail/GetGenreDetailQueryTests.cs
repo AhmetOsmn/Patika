@@ -3,7 +3,6 @@ using System.Linq;
 using AutoMapper;
 using FluentAssertions;
 using TestSetup;
-using WebApi.Application.BookOperations.Queries.GetBookDetail;
 using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
 using WebApi.DBOperations;
 using Xunit;
@@ -52,7 +51,7 @@ namespace Application.GenreOperations.Queries.GetGenreDetail
             var genre = _context.Genres.SingleOrDefault(x => x.Id == genreId);
 
             vm.Name.Should().Be(genre.Name);
-   
+
         }
     }
 }

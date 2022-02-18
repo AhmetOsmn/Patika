@@ -1,8 +1,5 @@
-using System;
 using FluentAssertions;
 using TestSetup;
-using WebApi.Application.BookOperations.Commands.DeleteBook;
-using WebApi.Application.BookOperations.Commands.UdpateBook;
 using WebApi.Application.GenreOperations.UpdateGenre;
 using Xunit;
 
@@ -42,7 +39,7 @@ namespace Application.GenreOperations.Commands.UpdateGenre
         {
             //arrange
             UpdateGenreCommand command = new UpdateGenreCommand(null);
-            
+
             command.Model = new UpdateGenreModel()
             {
                 Name = name,
@@ -52,7 +49,7 @@ namespace Application.GenreOperations.Commands.UpdateGenre
             //act
             UpdateGenreCommandValidator validator = new UpdateGenreCommandValidator();
             var result = validator.Validate(command);
-            
+
             //assert
             result.Errors.Count.Should().Be(0);
         }
