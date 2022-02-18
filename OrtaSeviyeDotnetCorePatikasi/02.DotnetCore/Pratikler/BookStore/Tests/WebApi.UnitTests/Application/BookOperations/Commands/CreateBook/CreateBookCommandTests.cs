@@ -66,7 +66,7 @@ namespace Application.BookOperations.Commands.CreateBook
             FluentActions.Invoking(() => command.Handle()).Invoke();
 
             //assert
-            var book =  _context.Books.SingleOrDefault(book => book.Title == model.Title && book.GenreId == model.GenreId);
+            var book =  _context.Books.SingleOrDefault(book => book.Title == model.Title);
             
             book.Should().NotBeNull();
             book.PageCount.Should().Be(model.PageCount);
