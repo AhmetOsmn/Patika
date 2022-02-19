@@ -125,3 +125,10 @@ C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStor
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\Tests\WebApi.UnitTests\obj\Debug\net5.0\ref\WebApi.UnitTests.dll
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\Tests\WebApi.UnitTests\obj\Debug\net5.0\WebApi.UnitTests.pdb
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\Tests\WebApi.UnitTests\obj\Debug\net5.0\WebApi.UnitTests.genruntimeconfig.cache
+c:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+c:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+c:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+c:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+c:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+c:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+c:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\BookStore\Tests\WebApi.UnitTests\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
