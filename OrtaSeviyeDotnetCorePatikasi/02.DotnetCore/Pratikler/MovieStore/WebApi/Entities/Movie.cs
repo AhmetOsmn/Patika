@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
+using WebApi.Entities.Route;
 
 namespace WebApi.Entities
 {
@@ -14,8 +15,9 @@ namespace WebApi.Entities
         public Genre Genre { get; set; }
         public int DirectorId { get; set; }
         public Director Director { get; set; }
-        // public List<int> ActorsIds { get; set; }
+        public List<Cast> ActorsIds { get; set; }
         public Actor Actor { get; set; }
         public string Price { get; set; }
+        public bool IsActive { get; set; } = true;
     }
 }
