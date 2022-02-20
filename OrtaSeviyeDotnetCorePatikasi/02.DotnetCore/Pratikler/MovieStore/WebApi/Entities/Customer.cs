@@ -5,8 +5,7 @@ namespace WebApi.Entities
 {
     public class Customer : Person
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public List<int> PurchasedMoviesIds { get; set; }
-        public List<int> FavoriteGenresIds { get; set; }
+        // public List<int> PurchasedMoviesIds { get; set; }
+        // public List<int> FavoriteGenresIds { get; set; }
     }
 }

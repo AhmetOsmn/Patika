@@ -5,8 +5,6 @@ namespace WebApi.Entities
 {
     public class Director : Actor
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public List<int> DirectedMoviesIds { get; set; }
-
+        // public List<int> DirectedMoviesIds { get; set; }
     }
 }

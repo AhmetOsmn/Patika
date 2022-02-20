@@ -14,7 +14,7 @@ namespace WebApi.Middlewares
         private readonly RequestDelegate _next;
         private readonly ILoggerService _loggerService;
 
-        public CustomExceptionMiddleware(RequestDelegate next, ILoggerService loggerService)
+        public CustomExceptionMiddleware(RequestDelegate next, ILoggerService loggerService = null)
         {
             _next = next;
             _loggerService = loggerService;
@@ -30,8 +30,7 @@ namespace WebApi.Middlewares
                 _loggerService.Write(message);
                 await _next(context);
                 watch.Stop();
-                message = "[Response] HTTP " + context.Request.Method + " - " + context.Request.Path +
-                          " responded " + context.Response.StatusCode + " in " + watch.Elapsed.TotalMilliseconds + "ms";
+                message = "[Response] HTTP " + context.Request.Method + " - " + context.Request.Path + " responded " + context.Response.StatusCode + " in " + watch.Elapsed.TotalMilliseconds + "ms";
                 _loggerService.Write(message);
             }
             catch (Exception ex)
@@ -46,13 +45,13 @@ namespace WebApi.Middlewares
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-            string message = "[Error]    HTTP " + context.Request.Method + " - " + context.Response.StatusCode + " - " +
-                             "Error Message: " + ex.Message + " in " + watch.Elapsed.TotalMilliseconds + " ms";
-            
+            string message = "[Error]    HTTP " + context.Request.Method + " - " + context.Response.StatusCode + " - " + "Error Message: " + ex.Message + " in " + watch.Elapsed.TotalMilliseconds + " ms";
+
             _loggerService.Write(message);
-             
-             var result = JsonConvert.SerializeObject(new { error = ex.Message}, Formatting.None);
-             return context.Response.WriteAsync(result);
+
+            var result = JsonConvert.SerializeObject(new { error = ex.Message }, Formatting.None);
+
+            return context.Response.WriteAsync(result);
         }
     }
 
