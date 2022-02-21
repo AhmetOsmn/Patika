@@ -32,7 +32,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("id")]
-        public IActionResult GetGenres(int id)
+        public IActionResult GetGenre(int id)
         {
             GetGenreDetailQuery query = new GetGenreDetailQuery(_context, _mapper);
             GetGenreDetailQueryValidator validator = new GetGenreDetailQueryValidator();

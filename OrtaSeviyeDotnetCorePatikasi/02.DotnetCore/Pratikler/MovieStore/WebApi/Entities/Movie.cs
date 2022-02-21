@@ -8,15 +8,14 @@ namespace WebApi.Entities
     public class Movie
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int MovieId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public DateTime Year { get; set; }
         public int GenreId { get; set; }
         public Genre Genre { get; set; }
         public int DirectorId { get; set; }
         public Director Director { get; set; }
-        public List<Cast> ActorsIds { get; set; }
-        public Actor Actor { get; set; }
+        public virtual ICollection<ActorAndMovie> ActorsAndMovies { get; set; } = new List<ActorAndMovie>();
         public string Price { get; set; }
         public bool IsActive { get; set; } = true;
     }
