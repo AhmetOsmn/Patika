@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebApi.Entities;
+using WebApi.Entities.Route;
 
 namespace WebApi.DbOperations
 {
@@ -15,6 +16,7 @@ namespace WebApi.DbOperations
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Director> Directors { get; set; }
+        // public DbSet<ActorAndMovie> ActorAndMovies { get; set; }
 
         public override int SaveChanges()
         {

@@ -27,10 +27,10 @@ namespace WebApi.DbOperations
                         GenreId = 1, //Drama
                         DirectorId = 1, // Frank Darabont
                         ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                ActorId = 1
-                            },
+                            // new ActorAndMovie
+                            // {
+                            //     ActorId = 1
+                            // },
                             new ActorAndMovie
                             {
                                 ActorId = 2
@@ -48,7 +48,7 @@ namespace WebApi.DbOperations
                         Year = new DateTime(1999, 2, 11),
                         GenreId = 1, //drama
                         DirectorId = 2, // David Fincher
-                         ActorsAndMovies = {
+                        ActorsAndMovies = {
                             new ActorAndMovie
                             {
                                 ActorId = 4
@@ -70,7 +70,7 @@ namespace WebApi.DbOperations
                         Year = new DateTime(1999, 3, 11),
                         GenreId = 1, //drama
                         DirectorId = 1, // Frank Darabont
-                         ActorsAndMovies = {
+                        ActorsAndMovies = {
                             new ActorAndMovie
                             {
                                 ActorId = 7
@@ -92,7 +92,7 @@ namespace WebApi.DbOperations
                         Year = new DateTime(2014, 4, 11),
                         GenreId = 2, //science fiction
                         DirectorId = 3, // Christopher Nolan
-                         ActorsAndMovies = {
+                        ActorsAndMovies = {
                             new ActorAndMovie
                             {
                                 ActorId = 10
@@ -114,7 +114,7 @@ namespace WebApi.DbOperations
                         Year = new DateTime(1994, 5, 11),
                         GenreId = 3, //mystery
                         DirectorId = 3, // Christopher Nolan
-                         ActorsAndMovies = {
+                        ActorsAndMovies = {
                             new ActorAndMovie
                             {
                                 ActorId = 13
@@ -143,161 +143,161 @@ namespace WebApi.DbOperations
                                 MovieId = 1
                             },
                         }
-                    },
-                    new Actor
-                    {
-                        Name = "Tim", // esaretin bedeli
-                        Surname = "Robbins",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 1
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Bob", // esaretin bedeli
-                        Surname = "Gunton",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 1
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Brad", // fight club
-                        Surname = "Pitt",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 2
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Edward", // fight club
-                        Surname = "Norton",
-                       ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 2
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Helena Bonham", // fight club
-                        Surname = "Carter",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 2
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Tom", // yesil yol
-                        Surname = "Hanks",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 3
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Michael Clarke", // yesil yol
-                        Surname = "Duncan",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 3
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "David", // yesil yol
-                        Surname = "Morse",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 3
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Matthew", // yıldızlar arası
-                        Surname = "McConaughey",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 4
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Anne", // yıldızlar arası
-                        Surname = "Hathaway",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 4
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Jessica", // yıldızlar arası
-                        Surname = "Chastain",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 4
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Christian", // prestij
-                        Surname = "Bale",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 5
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Hugh", // prestij
-                        Surname = "Jackman",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 5
-                            },
-                        }
-                    },
-                    new Actor
-                    {
-                        Name = "Michael", // prestij
-                        Surname = "Caine",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 5
-                            },
-                        }
                     }
+                //     new Actor
+                //     {
+                //         Name = "Tim", // esaretin bedeli
+                //         Surname = "Robbins",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 1
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Bob", // esaretin bedeli
+                //         Surname = "Gunton",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 1
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Brad", // fight club
+                //         Surname = "Pitt",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 2
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Edward", // fight club
+                //         Surname = "Norton",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 2
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Helena Bonham", // fight club
+                //         Surname = "Carter",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 2
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Tom", // yesil yol
+                //         Surname = "Hanks",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 3
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Michael Clarke", // yesil yol
+                //         Surname = "Duncan",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 3
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "David", // yesil yol
+                //         Surname = "Morse",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 3
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Matthew", // yıldızlar arası
+                //         Surname = "McConaughey",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 4
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Anne", // yıldızlar arası
+                //         Surname = "Hathaway",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 4
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Jessica", // yıldızlar arası
+                //         Surname = "Chastain",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 4
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Christian", // prestij
+                //         Surname = "Bale",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 5
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Hugh", // prestij
+                //         Surname = "Jackman",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 5
+                //             },
+                //         }
+                //     },
+                //     new Actor
+                //     {
+                //         Name = "Michael", // prestij
+                //         Surname = "Caine",
+                //         ActorsAndMovies = {
+                //             new ActorAndMovie
+                //             {
+                //                 MovieId = 5
+                //             },
+                //         }
+                //     }
                 );
 
                 context.Directors.AddRange(

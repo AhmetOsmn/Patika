@@ -29,6 +29,7 @@ namespace WebApi.Common
 
             CreateMap<Movie, MovieViewModel>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
+                
         }
     }
 }
