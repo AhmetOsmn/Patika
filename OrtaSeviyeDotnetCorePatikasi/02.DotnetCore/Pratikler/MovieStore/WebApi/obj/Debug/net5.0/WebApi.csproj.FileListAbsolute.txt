@@ -5,7 +5,6 @@ C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieSto
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\bin\Debug\net5.0\WebApi.runtimeconfig.json
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\bin\Debug\net5.0\WebApi.runtimeconfig.dev.json
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\bin\Debug\net5.0\WebApi.dll
-C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\bin\Debug\net5.0\ref\WebApi.dll
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\bin\Debug\net5.0\WebApi.pdb
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\bin\Debug\net5.0\AutoMapper.dll
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
@@ -27,7 +26,6 @@ C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieSto
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\obj\Debug\net5.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\obj\Debug\net5.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\obj\Debug\net5.0\staticwebassets\WebApi.StaticWebAssets.Manifest.cache
-C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\obj\Debug\net5.0\staticwebassets\WebApi.StaticWebAssets.xml
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\obj\Debug\net5.0\scopedcss\bundle\WebApi.styles.css
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\obj\Debug\net5.0\WebApi.RazorTargetAssemblyInfo.cache
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\obj\Debug\net5.0\WebApi.csproj.CopyComplete
@@ -36,3 +34,4 @@ C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieSto
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\obj\Debug\net5.0\WebApi.pdb
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\obj\Debug\net5.0\WebApi.genruntimeconfig.cache
 C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\bin\Debug\net5.0\FluentValidation.dll
+C:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\obj\Debug\net5.0\refint\WebApi.dll

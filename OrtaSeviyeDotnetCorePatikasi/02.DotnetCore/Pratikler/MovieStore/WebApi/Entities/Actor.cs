@@ -12,6 +12,7 @@ namespace WebApi.Entities
         public string Surname { get; set; }
         public bool IsActive { get; set; } = true;
         public virtual ICollection<ActorAndMovie> ActorsAndMovies { get; set; } = new List<ActorAndMovie>();
+        public int MovieId { get; set; }
 
     }
 }

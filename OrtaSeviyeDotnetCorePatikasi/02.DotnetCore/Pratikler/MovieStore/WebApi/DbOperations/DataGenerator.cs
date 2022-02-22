@@ -26,20 +26,6 @@ namespace WebApi.DbOperations
                         Year = new DateTime(1994, 1, 11),
                         GenreId = 1, //Drama
                         DirectorId = 1, // Frank Darabont
-                        ActorsAndMovies = {
-                            // new ActorAndMovie
-                            // {
-                            //     ActorId = 1
-                            // },
-                            new ActorAndMovie
-                            {
-                                ActorId = 2
-                            },
-                            new ActorAndMovie
-                            {
-                                ActorId = 3
-                            },
-                        },
                         Price = "$58 Million"
                     },
                     new Movie
@@ -48,20 +34,6 @@ namespace WebApi.DbOperations
                         Year = new DateTime(1999, 2, 11),
                         GenreId = 1, //drama
                         DirectorId = 2, // David Fincher
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                ActorId = 4
-                            },
-                            new ActorAndMovie
-                            {
-                                ActorId = 5
-                            },
-                            new ActorAndMovie
-                            {
-                                ActorId = 6
-                            },
-                        },
                         Price = "$100 Million"
                     },
                     new Movie
@@ -70,20 +42,6 @@ namespace WebApi.DbOperations
                         Year = new DateTime(1999, 3, 11),
                         GenreId = 1, //drama
                         DirectorId = 1, // Frank Darabont
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                ActorId = 7
-                            },
-                            new ActorAndMovie
-                            {
-                                ActorId = 8
-                            },
-                            new ActorAndMovie
-                            {
-                                ActorId = 9
-                            },
-                        },
                         Price = "$80 Million"
                     },
                     new Movie
@@ -92,20 +50,6 @@ namespace WebApi.DbOperations
                         Year = new DateTime(2014, 4, 11),
                         GenreId = 2, //science fiction
                         DirectorId = 3, // Christopher Nolan
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                ActorId = 10
-                            },
-                            new ActorAndMovie
-                            {
-                                ActorId = 11
-                            },
-                            new ActorAndMovie
-                            {
-                                ActorId = 12
-                            },
-                        },
                         Price = "$165 Million"
                     },
                     new Movie
@@ -114,20 +58,6 @@ namespace WebApi.DbOperations
                         Year = new DateTime(1994, 5, 11),
                         GenreId = 3, //mystery
                         DirectorId = 3, // Christopher Nolan
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                ActorId = 13
-                            },
-                            new ActorAndMovie
-                            {
-                                ActorId = 14
-                            },
-                            new ActorAndMovie
-                            {
-                                ActorId = 15
-                            },
-                        },
                         Price = "$109 Million"
                     }
                 );
@@ -137,167 +67,171 @@ namespace WebApi.DbOperations
                     {
                         Name = "Morgan", // esaretin bedeli
                         Surname = "Freeman",
-                        ActorsAndMovies = {
-                            new ActorAndMovie
-                            {
-                                MovieId = 1
-                            },
-                        }
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Tim", // esaretin bedeli
+                        Surname = "Robbins",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Bob", // esaretin bedeli
+                        Surname = "Gunton",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Brad", // fight club
+                        Surname = "Pitt",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Edward", // fight club
+                        Surname = "Norton",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Helena Bonham", // fight club
+                        Surname = "Carter",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Tom", // yesil yol
+                        Surname = "Hanks",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Michael Clarke", // yesil yol
+                        Surname = "Duncan",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "David", // yesil yol
+                        Surname = "Morse",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Matthew", // yıldızlar arası
+                        Surname = "McConaughey",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Anne", // yıldızlar arası
+                        Surname = "Hathaway",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Jessica", // yıldızlar arası
+                        Surname = "Chastain",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Christian", // prestij
+                        Surname = "Bale",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Hugh", // prestij
+                        Surname = "Jackman",
+                        
+                    },
+                    new Actor
+                    {
+                        Name = "Michael", // prestij
+                        Surname = "Caine",
+                        
                     }
-                //     new Actor
-                //     {
-                //         Name = "Tim", // esaretin bedeli
-                //         Surname = "Robbins",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 1
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Bob", // esaretin bedeli
-                //         Surname = "Gunton",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 1
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Brad", // fight club
-                //         Surname = "Pitt",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 2
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Edward", // fight club
-                //         Surname = "Norton",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 2
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Helena Bonham", // fight club
-                //         Surname = "Carter",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 2
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Tom", // yesil yol
-                //         Surname = "Hanks",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 3
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Michael Clarke", // yesil yol
-                //         Surname = "Duncan",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 3
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "David", // yesil yol
-                //         Surname = "Morse",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 3
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Matthew", // yıldızlar arası
-                //         Surname = "McConaughey",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 4
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Anne", // yıldızlar arası
-                //         Surname = "Hathaway",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 4
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Jessica", // yıldızlar arası
-                //         Surname = "Chastain",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 4
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Christian", // prestij
-                //         Surname = "Bale",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 5
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Hugh", // prestij
-                //         Surname = "Jackman",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 5
-                //             },
-                //         }
-                //     },
-                //     new Actor
-                //     {
-                //         Name = "Michael", // prestij
-                //         Surname = "Caine",
-                //         ActorsAndMovies = {
-                //             new ActorAndMovie
-                //             {
-                //                 MovieId = 5
-                //             },
-                //         }
-                //     }
+                );
+
+                context.ActorAndMovies.AddRange(
+                    new ActorAndMovie
+                    {
+                        MovieId = 1,
+                        ActorId = 1
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 1,
+                        ActorId = 2
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 1,
+                        ActorId = 3
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 2,
+                        ActorId = 4
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 2,
+                        ActorId = 5
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 3,
+                        ActorId = 6
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 3,
+                        ActorId = 7
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 3,
+                        ActorId = 8
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 3,
+                        ActorId = 9
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 4,
+                        ActorId = 10
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 4,
+                        ActorId = 11
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 4,
+                        ActorId = 12
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 5,
+                        ActorId = 13
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 5,
+                        ActorId = 14
+                    },
+                    new ActorAndMovie
+                    {
+                        MovieId = 5,
+                        ActorId = 15
+                    }
+                   
                 );
 
                 context.Directors.AddRange(

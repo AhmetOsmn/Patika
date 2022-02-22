@@ -11,6 +11,7 @@ namespace WebApi.Entities
         public string Name { get; set; }
         public string Surname { get; set; }
         public bool IsActive { get; set; } = true;
-        public List<DirectorAndMovie> DirectorAndMovies { get; set; }
+        public List<DirectorAndMovie> DirectedMovies { get; set; }
+        public List<ActorAndMovie> ActedMovies { get; set; }
     }
 }

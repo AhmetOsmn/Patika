@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using WebApi.DbOperations;
+using WebApi.Entities.ViewModels;
 
 namespace WebApi.Application.GenreOperations.Queries.GetGenres
 {
@@ -16,17 +17,12 @@ namespace WebApi.Application.GenreOperations.Queries.GetGenres
             _mapper = mapper;
         }
 
-        public List<GenresViewModel> Handle()
+        public List<GenreViewModel> Handle()
         {
             var genres = _context.Genres.Where(x => x.IsActive).OrderBy(x => x.Id);
-            List<GenresViewModel> listGVM = _mapper.Map<List<GenresViewModel>>(genres);
+            List<GenreViewModel> listGVM = _mapper.Map<List<GenreViewModel>>(genres);
             return listGVM;
         }
     }
 
-    public class GenresViewModel
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-    }
 }

@@ -4,7 +4,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DbOperations;
 using WebApi.Entities;
-using WebApi.Entities.Route;
+using WebApi.Entities.ViewModels;
 
 namespace WebApi.Application.ActorOperations.Queries.GetActors
 {
@@ -21,21 +21,18 @@ namespace WebApi.Application.ActorOperations.Queries.GetActors
 
         public ICollection<ActorViewModel> Handle()
         {
-            var actors = _context.Actors.Where(x => x.IsActive).Include(x => x.ActorsAndMovies).OrderBy(x => x.Id).ToList<Actor>();
+            var actors = _context.Actors.Where(x => x.IsActive)
+                                        .Include(x => x.ActorsAndMovies)
+                                        .ThenInclude(y => y.Movie)
+                                        .OrderBy(x => x.Id).ToList<Actor>();
+
             ICollection<ActorViewModel> actorsVM = _mapper.Map<ICollection<ActorViewModel>>(actors);
+
             return actorsVM;
         }
     }
 
-    public class ActorViewModel
-    {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public ICollection<MovieViewModel> Movies { get; set; }
-    }
+   
 
-    public class MovieViewModel
-    {
-        public string Name { get; set; }
-    }
+    
 }
