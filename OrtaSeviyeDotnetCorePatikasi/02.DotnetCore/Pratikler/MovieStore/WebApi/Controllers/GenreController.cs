@@ -7,6 +7,8 @@ using WebApi.Application.GenreOperations.Commands.UpdateGenre;
 using WebApi.Application.GenreOperations.Queries.GetGenreDetail;
 using WebApi.Application.GenreOperations.Queries.GetGenres;
 using WebApi.DbOperations;
+using WebApi.Models.ViewModels.Create;
+using WebApi.Models.ViewModels.Update;
 
 namespace WebApi.Controllers
 {

@@ -5,10 +5,8 @@ namespace WebApi.Models.Entities.ViewModels.Detail
 {
     public class ActorDetailViewModel
     {
-        public string Fullname { get; set; }
-        public ICollection<MovieViewModelForActor> DirectedMovies { get; set; }
-        public ICollection<MovieViewModelForActor> ActedMovies { get; set; }
-
-        
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public ICollection<MovieViewModelForActor> Movies { get; set; }        
     }
 }

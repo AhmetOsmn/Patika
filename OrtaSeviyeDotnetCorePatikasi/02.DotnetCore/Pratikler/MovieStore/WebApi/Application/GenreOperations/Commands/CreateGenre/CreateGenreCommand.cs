@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc;
 using WebApi.DbOperations;
 using WebApi.Models.Entities;
+using WebApi.Models.ViewModels.Create;
 
 namespace WebApi.Application.GenreOperations.Commands.CreateGenre
 {
@@ -40,10 +40,5 @@ namespace WebApi.Application.GenreOperations.Commands.CreateGenre
                 _context.SaveChanges();
             }
         }
-    }
-
-    public class CreateGenreModel
-    {
-        public string Name { get; set; }
     }
 }

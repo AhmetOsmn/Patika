@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using WebApi.DbOperations;
+using WebApi.Models.ViewModels.Update;
 
 namespace WebApi.Application.GenreOperations.Commands.UpdateGenre
 {
@@ -29,15 +30,8 @@ namespace WebApi.Application.GenreOperations.Commands.UpdateGenre
             else
             {
                 genre.Name = string.IsNullOrEmpty(Model.Name.Trim()) ? genre.Name : Model.Name;
-                genre.IsActive = Model.IsActive;
                 _context.SaveChanges();
             }
         }
-    }
-
-    public class UpdateGenreModel
-    {
-        public string Name { get; set; }
-        public bool IsActive { get; set; } = true;
     }
 }
