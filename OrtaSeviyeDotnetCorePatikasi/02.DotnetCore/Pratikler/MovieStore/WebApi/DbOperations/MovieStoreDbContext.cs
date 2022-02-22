@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using WebApi.Entities;
-using WebApi.Entities.Route;
+using WebApi.Models.Entities;
+using WebApi.Models.Entities.Route;
 
 namespace WebApi.DbOperations
 {

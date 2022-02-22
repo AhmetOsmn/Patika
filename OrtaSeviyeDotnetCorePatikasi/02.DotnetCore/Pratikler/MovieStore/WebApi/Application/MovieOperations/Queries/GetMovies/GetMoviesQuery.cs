@@ -3,9 +3,8 @@ using System.Linq;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DbOperations;
-using WebApi.Entities;
-using WebApi.Entities.Route;
-using WebApi.Entities.ViewModels;
+using WebApi.Models.Entities;
+using WebApi.Models.Entities.ViewModels;
 
 namespace WebApi.Application.MovieOperations.Queries.GetMovies
 {

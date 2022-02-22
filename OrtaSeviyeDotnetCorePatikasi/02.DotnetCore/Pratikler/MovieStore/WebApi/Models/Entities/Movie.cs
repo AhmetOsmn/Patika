@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using WebApi.Entities.Route;
+using WebApi.Models.Entities.Route;
 
-namespace WebApi.Entities
+namespace WebApi.Models.Entities
 {
     public class Movie
     {

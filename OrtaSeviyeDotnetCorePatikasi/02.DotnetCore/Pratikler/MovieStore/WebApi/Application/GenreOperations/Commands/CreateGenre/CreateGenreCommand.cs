@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.DbOperations;
-using WebApi.Entities;
+using WebApi.Models.Entities;
 
 namespace WebApi.Application.GenreOperations.Commands.CreateGenre
 {

@@ -1,4 +1,4 @@
-namespace WebApi.Entities.ViewModels
+namespace WebApi.Models.Entities.ViewModels.For
 {
     public class ActorViewModelForMovie
     {

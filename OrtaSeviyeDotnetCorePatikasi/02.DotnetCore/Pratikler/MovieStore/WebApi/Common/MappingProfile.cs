@@ -1,7 +1,9 @@
 using AutoMapper;
-using WebApi.Entities;
-using WebApi.Entities.Route;
-using WebApi.Entities.ViewModels;
+using WebApi.Models.Entities;
+using WebApi.Models.Entities.Route;
+using WebApi.Models.Entities.ViewModels;
+using WebApi.Models.Entities.ViewModels.Detail;
+using WebApi.Models.Entities.ViewModels.For;
 
 namespace WebApi.Common
 {
@@ -26,7 +28,6 @@ namespace WebApi.Common
 
             CreateMap<Movie, MovieViewModel>()
                 .ForMember(dest => dest.Actors, opt => opt.MapFrom(src => src.ActorsAndMovies));
-                // .AfterMap((model))
 
 
             CreateMap<Movie, MovieViewModelForActor>()
@@ -60,7 +61,7 @@ namespace WebApi.Common
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Movie.Name));
 
             CreateMap<ActorAndMovie, ActorViewModelForMovie>()
-                .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Actor.Name + " " + src.Actor.Name)));
+                .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Actor.Name + " " + src.Actor.Surname)));
         }
     }
 }

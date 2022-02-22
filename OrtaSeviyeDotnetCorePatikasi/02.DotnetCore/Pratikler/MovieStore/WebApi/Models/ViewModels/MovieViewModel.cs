@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using WebApi.Models.Entities.ViewModels.For;
 
-namespace WebApi.Entities.ViewModels
+namespace WebApi.Models.Entities.ViewModels
 {
     public class MovieViewModel
     {

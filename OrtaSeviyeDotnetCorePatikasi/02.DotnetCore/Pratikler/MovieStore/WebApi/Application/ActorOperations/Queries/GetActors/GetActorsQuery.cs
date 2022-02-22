@@ -3,8 +3,8 @@ using System.Linq;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DbOperations;
-using WebApi.Entities;
-using WebApi.Entities.ViewModels;
+using WebApi.Models.Entities;
+using WebApi.Models.Entities.ViewModels;
 
 namespace WebApi.Application.ActorOperations.Queries.GetActors
 {
