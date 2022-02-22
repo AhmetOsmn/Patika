@@ -25,7 +25,9 @@ namespace WebApi.Common
                 });
 
             CreateMap<Movie, MovieViewModel>()
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
+                .ForMember(dest => dest.Actors, opt => opt.MapFrom(src => src.ActorsAndMovies));
+                // .AfterMap((model))
+
 
             CreateMap<Movie, MovieViewModelForActor>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
@@ -34,25 +36,13 @@ namespace WebApi.Common
             CreateMap<Actor, ActorViewModel>()
                 .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => (src.Name + " " + src.Surname)))
                 .ForMember(dest => dest.Movies, opt => opt.MapFrom(src => src.ActorsAndMovies))
-                    .AfterMap((model, entity) =>
-                    {
-                        foreach (var entityActorAndMovie in model.ActorsAndMovies)
-                        {
-                            entityActorAndMovie.Actor = model;
-                        }
-                    });
-
-            CreateMap<ActorViewModel, ActorViewModelForMovie>()
-                // .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Name + " " + src.Surname)));
-                .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => src.FullName))
                 .AfterMap((model, entity) =>
                 {
-                    // foreach (var item in model.)
-                    // {
-                    //     item.Name = model.FullName;
-                    // }
+                    foreach (var entityActorAndMovie in model.ActorsAndMovies)
+                    {
+                        entityActorAndMovie.Actor = model;
+                    }
                 });
-
 
             //DIRECTOR    
             CreateMap<Director, DirectorViewModelForMovie>()
