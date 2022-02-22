@@ -24,18 +24,15 @@ namespace WebApi.Common
                     }
                 });
 
-            CreateMap<ActorAndMovie, MovieViewModel>()
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Movie.Name));
-
             CreateMap<Movie, MovieViewModel>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
 
+            CreateMap<Movie, MovieViewModelForActor>()
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
 
             //ACTOR
-            CreateMap<Actor, ActorViewModelForMovie>()
-                .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Name + " " + src.Surname)));
-
-            CreateMap<Actor, ActorViewModel >()
+            CreateMap<Actor, ActorViewModel>()
+                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => (src.Name + " " + src.Surname)))
                 .ForMember(dest => dest.Movies, opt => opt.MapFrom(src => src.ActorsAndMovies))
                     .AfterMap((model, entity) =>
                     {
@@ -44,18 +41,36 @@ namespace WebApi.Common
                             entityActorAndMovie.Actor = model;
                         }
                     });
-                
 
-            CreateMap<ActorAndMovie, MovieViewModelForActor>()
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Movie.Name));
+            CreateMap<ActorViewModel, ActorViewModelForMovie>()
+                // .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Name + " " + src.Surname)));
+                .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => src.FullName))
+                .AfterMap((model, entity) =>
+                {
+                    // foreach (var item in model.)
+                    // {
+                    //     item.Name = model.FullName;
+                    // }
+                });
 
-            CreateMap<Movie, MovieViewModelForActor>()
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Name));
 
             //DIRECTOR    
             CreateMap<Director, DirectorViewModelForMovie>()
                 .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Name + " " + src.Surname)));
 
+
+            //ACTORANDMOVIE
+            CreateMap<ActorAndMovie, MovieViewModel>()
+               .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Movie.Name));
+
+            CreateMap<ActorAndMovie, ActorViewModel>()
+               .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => src.Actor.Name));
+
+            CreateMap<ActorAndMovie, MovieViewModelForActor>()
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Movie.Name));
+
+            CreateMap<ActorAndMovie, ActorViewModelForMovie>()
+                .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Actor.Name + " " + src.Actor.Name)));
         }
     }
 }

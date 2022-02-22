@@ -31,8 +31,4 @@ namespace WebApi.Application.ActorOperations.Queries.GetActors
             return actorsVM;
         }
     }
-
-   
-
-    
 }
