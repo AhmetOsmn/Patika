@@ -1,9 +1,11 @@
 using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
+using WebApi.Application.MovieOperations.Commands.CreateMovie;
 using WebApi.Application.MovieOperations.Queries.GetMovieDetail;
 using WebApi.Application.MovieOperations.Queries.GetMovies;
 using WebApi.DbOperations;
+using WebApi.Models.ViewModels.Create;
 
 namespace WebApi.Controllers
 {
@@ -40,6 +42,21 @@ namespace WebApi.Controllers
 
             var movies = query.Handle();
             return Ok(movies);
+        }
+
+        [HttpPost]
+        public IActionResult AddMovie([FromBody] CreateMovieModel newMovie)
+        {
+            CreateMovieCommand command = new CreateMovieCommand(_context, _mapper);
+            CreateMovieCommandValidator validator = new CreateMovieCommandValidator();
+
+            command.Model = newMovie;
+
+            validator.ValidateAndThrow(command);
+
+            command.Handle();
+            
+            return Ok();
         }
     }
 }

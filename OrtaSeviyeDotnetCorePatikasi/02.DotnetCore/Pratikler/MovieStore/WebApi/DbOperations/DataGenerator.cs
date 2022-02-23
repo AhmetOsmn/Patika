@@ -22,7 +22,7 @@ namespace WebApi.DbOperations
                     new Movie
                     {
                         Name = "The Shawshank Redemption",
-                        Year = new DateTime(1994, 1, 11),
+                        Year = 1994,
                         GenreId = 1, //Drama
                         DirectorId = 1, // Frank Darabont
                         Price = "$58 Million"
@@ -30,7 +30,7 @@ namespace WebApi.DbOperations
                     new Movie
                     {
                         Name = "Fight Club",
-                        Year = new DateTime(1999, 2, 11),
+                        Year = 1999,
                         GenreId = 1, //drama
                         DirectorId = 2, // David Fincher
                         Price = "$100 Million"
@@ -38,7 +38,7 @@ namespace WebApi.DbOperations
                     new Movie
                     {
                         Name = "The Green Mile",
-                        Year = new DateTime(1999, 3, 11),
+                        Year = 1999,
                         GenreId = 1, //drama
                         DirectorId = 1, // Frank Darabont
                         Price = "$80 Million"
@@ -46,7 +46,7 @@ namespace WebApi.DbOperations
                     new Movie
                     {
                         Name = "Interstellar",
-                        Year = new DateTime(2014, 4, 11),
+                        Year = 2014,
                         GenreId = 2, //science fiction
                         DirectorId = 3, // Christopher Nolan
                         Price = "$165 Million"
@@ -54,7 +54,7 @@ namespace WebApi.DbOperations
                     new Movie
                     {
                         Name = "The Prestige",
-                        Year = new DateTime(1994, 5, 11),
+                        Year = 1994,
                         GenreId = 3, //mystery
                         DirectorId = 3, // Christopher Nolan
                         Price = "$109 Million"
@@ -66,91 +66,91 @@ namespace WebApi.DbOperations
                     {
                         Name = "Morgan", // esaretin bedeli
                         Surname = "Freeman",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Tim", // esaretin bedeli
                         Surname = "Robbins",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Bob", // esaretin bedeli
                         Surname = "Gunton",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Brad", // fight club
                         Surname = "Pitt",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Edward", // fight club
                         Surname = "Norton",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Helena Bonham", // fight club
                         Surname = "Carter",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Tom", // yesil yol
                         Surname = "Hanks",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Michael Clarke", // yesil yol
                         Surname = "Duncan",
-                        
+
                     },
                     new Actor
                     {
                         Name = "David", // yesil yol
                         Surname = "Morse",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Matthew", // yıldızlar arası
                         Surname = "McConaughey",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Anne", // yıldızlar arası
                         Surname = "Hathaway",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Jessica", // yıldızlar arası
                         Surname = "Chastain",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Christian", // prestij
                         Surname = "Bale",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Hugh", // prestij
                         Surname = "Jackman",
-                        
+
                     },
                     new Actor
                     {
                         Name = "Michael", // prestij
                         Surname = "Caine",
-                        
+
                     }
                 );
 
@@ -230,7 +230,7 @@ namespace WebApi.DbOperations
                         MovieId = 5,
                         ActorId = 15
                     }
-                   
+
                 );
 
                 context.Directors.AddRange(
