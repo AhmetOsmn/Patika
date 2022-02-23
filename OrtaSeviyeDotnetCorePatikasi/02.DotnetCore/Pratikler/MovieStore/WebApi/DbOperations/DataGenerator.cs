@@ -182,7 +182,7 @@ namespace WebApi.DbOperations
                     },
                     new ActorAndMovie
                     {
-                        MovieId = 3,
+                        MovieId = 2,
                         ActorId = 6
                     },
                     new ActorAndMovie

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using WebApi.Models.Entities.ViewModels.For;
 
-namespace WebApi.Models.Entities.ViewModels
+namespace WebApi.Models.Entities.ViewModels.Detail
 {
-    public class MovieViewModel
+    public class MovieDetailViewModel
     {
         public string Name { get; set; }
         public string Year { get; set; }
