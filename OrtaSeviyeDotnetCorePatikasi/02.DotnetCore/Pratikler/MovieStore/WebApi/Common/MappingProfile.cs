@@ -38,9 +38,7 @@ namespace WebApi.Common
             CreateMap<Movie, MovieDetailViewModel>()
                 .ForMember(dest => dest.Actors, opt => opt.MapFrom(src => src.ActorsAndMovies));
 
-            CreateMap<CreateMovieModel, Movie>()
-                .ForMember(dest => dest.ActorsAndMovies, opt => opt.MapFrom(src => src.ActorsIds));
-
+            CreateMap<CreateMovieModel, Movie>();
 
             //ACTOR
             CreateMap<Actor, ActorViewModel>()
@@ -72,7 +70,7 @@ namespace WebApi.Common
 
             CreateMap<ActorAndMovie, ActorViewModelForMovie>()
                 .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Actor.Name + " " + src.Actor.Surname)));
-
+            
         }
     }
 }

@@ -35,10 +35,12 @@ namespace WebApi.Application.MovieOperations.Commands.CreateMovie
             }
             else
             {
-                movie = _mapper.Map<Movie>(Model);
-                
+                movie = _mapper.Map<Movie>(Model); 
+                // suan actor'ler datagenerator ile olusturuluyor.
+                // CreateActorModel ile actorsleri alamadim, bu duzenlenecek.
                 _context.Movies.Add(movie);
                 _context.SaveChanges();
+
             }
         }
 

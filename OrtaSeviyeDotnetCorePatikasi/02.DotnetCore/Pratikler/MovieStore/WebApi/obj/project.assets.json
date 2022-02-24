@@ -1000,26 +1000,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ahmet\\.nuget\\packages\\": {}
+    "/home/ahmet/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Projects\\Patika\\OrtaSeviyeDotnetCorePatikasi\\02.DotnetCore\\Pratikler\\MovieStore\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "/home/ahmet/projects/Patika/OrtaSeviyeDotnetCorePatikasi/02.DotnetCore/Pratikler/MovieStore/WebApi/WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "c:\\Projects\\Patika\\OrtaSeviyeDotnetCorePatikasi\\02.DotnetCore\\Pratikler\\MovieStore\\WebApi\\WebApi.csproj",
-      "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
-      "outputPath": "c:\\Projects\\Patika\\OrtaSeviyeDotnetCorePatikasi\\02.DotnetCore\\Pratikler\\MovieStore\\WebApi\\obj\\",
+      "projectPath": "/home/ahmet/projects/Patika/OrtaSeviyeDotnetCorePatikasi/02.DotnetCore/Pratikler/MovieStore/WebApi/WebApi.csproj",
+      "packagesPath": "/home/ahmet/.nuget/packages/",
+      "outputPath": "/home/ahmet/projects/Patika/OrtaSeviyeDotnetCorePatikasi/02.DotnetCore/Pratikler/MovieStore/WebApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/ahmet/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1085,7 +1083,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
