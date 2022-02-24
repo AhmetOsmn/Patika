@@ -287,6 +287,91 @@ namespace WebApi.DbOperations
                     }
                 );
 
+                context.CustomerAndGenres.AddRange(
+                    new CustomerAndGenre
+                    {
+                        CustomerId = 1,
+                        GenreId = 1
+                    },
+                    new CustomerAndGenre
+                    {
+                        CustomerId = 1,
+                        GenreId = 2
+                    },
+                    new CustomerAndGenre
+                    {
+                        CustomerId = 1,
+                        GenreId = 3
+                    },
+                
+                    new CustomerAndGenre
+                    {
+                        CustomerId = 2,
+                        GenreId = 1
+                    },
+                    new CustomerAndGenre
+                    {
+                        CustomerId = 2,
+                        GenreId = 2
+                    },
+                    
+                    new CustomerAndGenre
+                    {
+                        CustomerId = 3,
+                        GenreId = 1
+                    }
+                );
+                
+                context.CustomerAndMovies.AddRange(
+                    new CustomerAndMovie
+                    {
+                        CustomerId = 1,
+                        MovieId = 1
+                    },
+                    new CustomerAndMovie
+                    {
+                        CustomerId = 1,
+                        MovieId = 2
+                    },
+                    new CustomerAndMovie
+                    {
+                        CustomerId = 1,
+                        MovieId = 3
+                    },
+                    new CustomerAndMovie
+                    {
+                        CustomerId = 1,
+                        MovieId = 4
+                    },
+                    
+                    new CustomerAndMovie
+                    {
+                        CustomerId = 2,
+                        MovieId = 2
+                    },
+                    new CustomerAndMovie
+                    {
+                        CustomerId = 2,
+                        MovieId = 3
+                    },
+                    
+                    new CustomerAndMovie
+                    {
+                        CustomerId = 3,
+                        MovieId = 4
+                    },
+                    new CustomerAndMovie
+                    {
+                        CustomerId = 3,
+                        MovieId = 5
+                    },
+                    new CustomerAndMovie
+                    {
+                        CustomerId = 3,
+                        MovieId = 1
+                    }
+                );
+
                 context.SaveChanges();
             }
         }
