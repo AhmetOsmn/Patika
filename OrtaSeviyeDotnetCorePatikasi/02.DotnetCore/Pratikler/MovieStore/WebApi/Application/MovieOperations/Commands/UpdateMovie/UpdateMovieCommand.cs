@@ -4,6 +4,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DbOperations;
 using WebApi.Models.Entities;
+using WebApi.Models.Entities.Route;
 using WebApi.Models.ViewModels.Update;
 
 namespace WebApi.Application.MovieOperations.Commands.UpdateMovie
@@ -40,6 +41,20 @@ namespace WebApi.Application.MovieOperations.Commands.UpdateMovie
                 movie.GenreId = Model.GenreId == default ? movie.GenreId : Model.GenreId;
                 movie.Price = Model.Price == default ? movie.Price : Model.Price.ToString();
                 movie.Year = Model.Year == default ? movie.Year : Model.Year;
+
+                _context.ActorAndMovies.Where(x => x.MovieId == MovieId).ToList().ForEach(x => _context.ActorAndMovies.Remove(x));                
+
+                foreach (var item in Model.Actors)
+                {
+                    movie.ActorsAndMovies.Add(
+                        new ActorAndMovie
+                        {
+                            ActorId = item,
+                            MovieId = movie.Id
+                        }
+                    );
+
+                }
             
                 _context.SaveChanges();
             }

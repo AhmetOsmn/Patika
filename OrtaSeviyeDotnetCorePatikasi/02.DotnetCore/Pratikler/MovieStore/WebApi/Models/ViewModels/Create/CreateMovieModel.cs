@@ -9,6 +9,8 @@ namespace WebApi.Models.ViewModels.Create
         public int GenreId { get; set; }
         public int DirectorId { get; set; }
         public decimal Price { get; set; }
+        public List<int> Actors { get; set; }
+        
 
     }
 }

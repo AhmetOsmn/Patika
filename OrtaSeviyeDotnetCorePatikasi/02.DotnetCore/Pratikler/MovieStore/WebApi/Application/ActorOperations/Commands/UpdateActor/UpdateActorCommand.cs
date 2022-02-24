@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using WebApi.DbOperations;
 using WebApi.Models.Entities.Route;
@@ -30,11 +31,10 @@ namespace WebApi.Application.ActorOperations.Commands.UpdateActor
             }
             else
             {
-                actor.Name = string.IsNullOrEmpty(Model.Name.Trim()) ? actor.Name : Model.Name;
-                actor.Surname = string.IsNullOrEmpty(Model.Surname.Trim()) ? actor.Surname : Model.Surname;
+                actor.Name = Model.Name == default ? actor.Name : Model.Name;
+                actor.Surname = Model.Surname == default ? actor.Surname : Model.Surname;
 
-                // Bu kisim refactor edilebilir - bu hali ile temizleme yapmiyor
-                actor.ActorsAndMovies.Clear(); // bos listeye esitlenip, alt kisimda tekrar doldurulabilir
+                _context.ActorAndMovies.Where(x => x.ActorId == ActorId).ToList().ForEach(x => _context.ActorAndMovies.Remove(x));                
 
                 foreach (var item in Model.ActedMovies)
                 {

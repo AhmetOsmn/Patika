@@ -35,9 +35,25 @@ namespace WebApi.Application.MovieOperations.Commands.CreateMovie
             }
             else
             {
-                movie = _mapper.Map<Movie>(Model); 
-                // suan actor'ler datagenerator ile olusturuluyor.
-                // CreateActorModel ile actorsleri alamadim, bu duzenlenecek.
+            
+                movie = new Movie();
+                movie.Name = Model.Name;
+                movie.Year = Model.Year;
+                movie.GenreId = Model.GenreId;
+                movie.DirectorId = Model.DirectorId;
+                movie.Price = Model.Price.ToString();
+                
+                foreach (var item in Model.Actors)
+                {
+                    movie.ActorsAndMovies.Add(
+                        new ActorAndMovie
+                        {
+                            ActorId = item,
+                            MovieId = movie.Id
+                        }
+                    );
+                }
+                
                 _context.Movies.Add(movie);
                 _context.SaveChanges();
 
