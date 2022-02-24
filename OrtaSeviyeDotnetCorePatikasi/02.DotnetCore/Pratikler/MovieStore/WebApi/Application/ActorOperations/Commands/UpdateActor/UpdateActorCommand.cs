@@ -34,7 +34,7 @@ namespace WebApi.Application.ActorOperations.Commands.UpdateActor
                 actor.Surname = string.IsNullOrEmpty(Model.Surname.Trim()) ? actor.Surname : Model.Surname;
 
                 // Bu kisim refactor edilebilir - bu hali ile temizleme yapmiyor
-                actor.ActorsAndMovies.Clear();
+                actor.ActorsAndMovies.Clear(); // bos listeye esitlenip, alt kisimda tekrar doldurulabilir
 
                 foreach (var item in Model.ActedMovies)
                 {
