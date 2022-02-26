@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using WebApi.DbOperations;
 using WebApi.Models.ViewModels.Detail;
 
@@ -10,7 +11,7 @@ namespace WebApi.Application.CustomerOperations.Queries.GetCustomerDetail
     {
         private readonly IMovieStoreDbContext _context;
         private readonly IMapper _mapper;
-        public int CustomerId {get; set;}
+        public int CustomerId { get; set; }
 
         public GetCustomerDetailQuery(IMovieStoreDbContext context, IMapper mapper)
         {
@@ -20,8 +21,12 @@ namespace WebApi.Application.CustomerOperations.Queries.GetCustomerDetail
 
         public CustomerDetailViewModel Handle()
         {
-            var customer = _context.Customers.SingleOrDefault(x =>x.IsActive &&  x.Id == CustomerId);
-            if(customer is null)
+            var customer = _context.Customers.Include(x => x.FavoriteGenres)
+                                             .ThenInclude(y => y.Genre)
+                                             .Include(x => x.PurchasedMovies)
+                                             .ThenInclude(y => y.Movie)
+                                             .SingleOrDefault(x => x.IsActive && x.Id == CustomerId);
+            if (customer is null)
             {
                 throw new InvalidOperationException("Aranan müşteri bulunamadı.");
             }

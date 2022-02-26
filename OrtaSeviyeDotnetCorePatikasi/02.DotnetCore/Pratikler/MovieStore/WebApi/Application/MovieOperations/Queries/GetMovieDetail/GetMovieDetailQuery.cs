@@ -22,6 +22,7 @@ namespace WebApi.Application.MovieOperations.Queries.GetMovieDetail
         public MovieDetailViewModel Handle()
         {
             var movie =  _context.Movies.Include(x => x.Directors)
+                                        .ThenInclude(x => x.Director)
                                         .Include(x => x.Genre)
                                         .Include(x => x.ActorsAndMovies)
                                         .ThenInclude(y => y.Actor)
@@ -30,7 +31,8 @@ namespace WebApi.Application.MovieOperations.Queries.GetMovieDetail
             {
                 throw new InvalidOperationException("Aranan film bulunamadı.");
             }
-            return _mapper.Map<MovieDetailViewModel>(movie);
+            var result = _mapper.Map<MovieDetailViewModel>(movie);
+            return result;
         }
     }
 }

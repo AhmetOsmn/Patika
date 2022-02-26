@@ -14,9 +14,8 @@ namespace WebApi.Common
     {
         public MappingProfile()
         {
-            // GENRE
+            // GetGenres
             CreateMap<Genre, GenreViewModel>();
-            CreateMap<Genre, GenreDetailViewModel>();
 
             // GetActors
             CreateMap<Actor, ActorViewModel>()
@@ -79,13 +78,28 @@ namespace WebApi.Common
                         entityActorAndMovie.Movie = model;
                     }
                 });
-            
-            
+             
             CreateMap<ActorAndMovie, ActorViewModelForMovie>()
                 .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Actor.Name + " " + src.Actor.Surname)));
 
             CreateMap<DirectorAndMovie, DirectorViewModelForMovie>()
                 .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Director.Name + " " + src.Director.Surname)));
+
+            // GetActorDetail
+            CreateMap<Actor, ActorDetailViewModel>()
+                .ForMember(desc => desc.Movies, opt => opt.MapFrom(src => src.ActorsAndMovies));
+
+            // GetCustomerDetail
+            CreateMap<Customer, CustomerDetailViewModel>();
+
+            // GetGenreDetail
+            CreateMap<Genre, GenreDetailViewModel>();
+
+            //GetMovieDetail
+            CreateMap<Movie, MovieDetailViewModel>()
+                .ForMember(desc => desc.Actors, opt => opt.MapFrom(src => src.ActorsAndMovies))
+                .ForMember(desc => desc.Director, opt => opt.MapFrom(src => src.Directors));
+                
         }
     }
 }
