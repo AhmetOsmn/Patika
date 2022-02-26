@@ -5,6 +5,7 @@ using WebApi.Models.Entities.ViewModels;
 using WebApi.Models.Entities.ViewModels.Detail;
 using WebApi.Models.Entities.ViewModels.For;
 using WebApi.Models.ViewModels.Create;
+using WebApi.Models.ViewModels.Update;
 
 namespace WebApi.Common
 {
@@ -38,9 +39,9 @@ namespace WebApi.Common
             CreateMap<Movie, MovieDetailViewModel>()
                 .ForMember(dest => dest.Actors, opt => opt.MapFrom(src => src.ActorsAndMovies));
 
-            CreateMap<CreateMovieModel, Movie>()
-                .ForMember(dest => dest.ActorsAndMovies, opt => opt.MapFrom(src => src.ActorsIds));
+            CreateMap<CreateMovieModel, Movie>();
 
+            CreateMap<UpdateMovieModel, Movie>();
 
             //ACTOR
             CreateMap<Actor, ActorViewModel>()
@@ -73,6 +74,9 @@ namespace WebApi.Common
             CreateMap<ActorAndMovie, ActorViewModelForMovie>()
                 .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Actor.Name + " " + src.Actor.Surname)));
 
+            CreateMap<DirectorAndMovie, DirectorViewModelForMovie>()
+                .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Director.Name+ " " + src.Director.Surname)));
+            
         }
     }
 }

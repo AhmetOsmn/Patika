@@ -2,10 +2,12 @@ using AutoMapper;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Application.MovieOperations.Commands.CreateMovie;
+using WebApi.Application.MovieOperations.Commands.UpdateMovie;
 using WebApi.Application.MovieOperations.Queries.GetMovieDetail;
 using WebApi.Application.MovieOperations.Queries.GetMovies;
 using WebApi.DbOperations;
 using WebApi.Models.ViewModels.Create;
+using WebApi.Models.ViewModels.Update;
 
 namespace WebApi.Controllers
 {
@@ -42,6 +44,22 @@ namespace WebApi.Controllers
 
             var movies = query.Handle();
             return Ok(movies);
+        }
+
+        [HttpPut("id")]
+        public IActionResult UpdateMovie([FromBody] UpdateMovieModel updatedMovie, int id)
+        {
+            UpdateMovieCommand command = new UpdateMovieCommand(_context, _mapper);
+            UpdateMovieCommandValidator validator = new UpdateMovieCommandValidator();
+
+            command.MovieId = id;
+            command.Model = updatedMovie;
+
+            validator.ValidateAndThrow(command);
+            
+            command.Handle();
+            
+            return Ok();
         }
 
         [HttpPost]

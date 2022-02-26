@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace WebApi.Models.ViewModels.Create
+namespace WebApi.Models.ViewModels.Update
 {
-     public class CreateMovieModel
+    public class UpdateMovieModel
     {
         public string Name { get; set; }
         public int Year { get; set; }
@@ -11,6 +11,5 @@ namespace WebApi.Models.ViewModels.Create
         public decimal Price { get; set; }
         public List<int> Actors { get; set; }
         
-
     }
 }

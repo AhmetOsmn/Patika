@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WebApi
+<<<<<<< HEAD
 build_property.ProjectDir = c:\Projects\Patika\OrtaSeviyeDotnetCorePatikasi\02.DotnetCore\Pratikler\MovieStore\WebApi\
+=======
+build_property.ProjectDir = /home/ahmet/projects/Patika/OrtaSeviyeDotnetCorePatikasi/02.DotnetCore/Pratikler/MovieStore/WebApi/
+>>>>>>> f28dd23b11e3d24b7a2374ed9c7d7ef522e884c6
