@@ -8,7 +8,7 @@ namespace WebApi.Models.Entities.Route
         public int Id { get; set; }
         public int MovieId { get; set; }
         public int CustomerId { get; set; }
-        public Movie Movie { get; set; }
-        public Customer Customer { get; set; }
+        public virtual Movie Movie { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

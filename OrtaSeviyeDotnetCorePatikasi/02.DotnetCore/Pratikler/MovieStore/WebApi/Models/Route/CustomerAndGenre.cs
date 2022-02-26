@@ -8,8 +8,8 @@ namespace WebApi.Models.Entities.Route
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int GenreId { get; set; }
+        public virtual Genre Genre { get; set; }
         public int CustomerId { get; set; }
-        public Genre Genre { get; set; }
-        public Customer Customer { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

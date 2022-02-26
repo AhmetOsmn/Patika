@@ -5,8 +5,7 @@ namespace WebApi.Models.Entities.ViewModels
 {
      public class CustomerViewModel
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
+        public string FullName { get; set; }
         public string Email { get; set; }
         public ICollection<MovieViewModelForCustomer> PurchasedMovies { get; set; }
         public ICollection<GenreViewModel> FavoriteGenres { get; set; }
