@@ -6,7 +6,6 @@ using WebApi.Models.Entities.ViewModels.Detail;
 using WebApi.Models.Entities.ViewModels.For;
 using WebApi.Models.ViewModels.Create;
 using WebApi.Models.ViewModels.Detail;
-using WebApi.Models.ViewModels.Update;
 
 namespace WebApi.Common
 {
@@ -78,7 +77,7 @@ namespace WebApi.Common
                         entityActorAndMovie.Movie = model;
                     }
                 });
-             
+
             CreateMap<ActorAndMovie, ActorViewModelForMovie>()
                 .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Actor.Name + " " + src.Actor.Surname)));
 
@@ -95,11 +94,29 @@ namespace WebApi.Common
             // GetGenreDetail
             CreateMap<Genre, GenreDetailViewModel>();
 
-            //GetMovieDetail
+            // GetMovieDetail
             CreateMap<Movie, MovieDetailViewModel>()
                 .ForMember(desc => desc.Actors, opt => opt.MapFrom(src => src.ActorsAndMovies))
                 .ForMember(desc => desc.Director, opt => opt.MapFrom(src => src.Directors));
-                
+
+            // CreateGenre
+            CreateMap<CreateGenreModel, Genre>();
+
+            // CreateActor
+            CreateMap<CreateActorModel, Actor>()
+                .ForMember(desc => desc.ActorsAndMovies, opt => opt.MapFrom(src => src.ActedMovies))
+                .AfterMap((model, entity) =>
+                {
+                    foreach (var item in model.ActedMovies)
+                    {
+                      entity.MovieId = item;
+                    }
+                });
+            
+            CreateMap<CreateActorModel, ActorAndMovie>()
+                .ForMember(desc => desc.Actor, opt => opt.MapFrom(src => src));
+            
+            // yarim kaldi devam edilecek, suan CreateActor calismiyor
         }
     }
 }
