@@ -8,7 +8,7 @@ namespace WebApi.Models.Entities.ViewModels
         public string Name { get; set; }
         public string Year { get; set; }
         public GenreViewModel Genre { get; set; }
-        public DirectorViewModelForMovie Director { get; set; }
+        public ICollection<DirectorViewModelForMovie> Director { get; set; }
         public string Price { get; set; }
         public ICollection<ActorViewModelForMovie> Actors { get; set; }
     }

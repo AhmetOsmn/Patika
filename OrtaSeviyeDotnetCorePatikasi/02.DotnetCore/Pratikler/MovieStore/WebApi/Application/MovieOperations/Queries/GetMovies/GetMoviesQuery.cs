@@ -23,14 +23,12 @@ namespace WebApi.Application.MovieOperations.Queries.GetMovies
         {
             var movies = _context.Movies.Where(x => x.IsActive)
                                         .Include(x => x.Genre)
-                                        .Include(x => x.Director)
-                                        .Include(x => x.ActorsAndMovies)
-                                        .ThenInclude(y => y.Actor)
+                                        .Include(x => x.Directors).ThenInclude(y => y.Director)
+                                        .Include(x => x.ActorsAndMovies).ThenInclude(y => y.Actor)
                                         .OrderBy(x => x.Id).ToList<Movie>();
 
             ICollection<MovieViewModel> moviesVM = _mapper.Map<ICollection<MovieViewModel>>(movies);
             return moviesVM;
         }
     }
-
 }

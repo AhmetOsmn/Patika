@@ -24,7 +24,6 @@ namespace WebApi.DbOperations
                         Name = "The Shawshank Redemption",
                         Year = 1994,
                         GenreId = 1, //Drama
-                        DirectorId = 1, // Frank Darabont
                         Price = "$58 Million"
                     },
                     new Movie
@@ -32,7 +31,6 @@ namespace WebApi.DbOperations
                         Name = "Fight Club",
                         Year = 1999,
                         GenreId = 1, //drama
-                        DirectorId = 2, // David Fincher
                         Price = "$100 Million"
                     },
                     new Movie
@@ -40,7 +38,6 @@ namespace WebApi.DbOperations
                         Name = "The Green Mile",
                         Year = 1999,
                         GenreId = 1, //drama
-                        DirectorId = 1, // Frank Darabont
                         Price = "$80 Million"
                     },
                     new Movie
@@ -48,7 +45,6 @@ namespace WebApi.DbOperations
                         Name = "Interstellar",
                         Year = 2014,
                         GenreId = 2, //science fiction
-                        DirectorId = 3, // Christopher Nolan
                         Price = "$165 Million"
                     },
                     new Movie
@@ -56,7 +52,6 @@ namespace WebApi.DbOperations
                         Name = "The Prestige",
                         Year = 1994,
                         GenreId = 3, //mystery
-                        DirectorId = 3, // Christopher Nolan
                         Price = "$109 Million"
                     }
                 );
@@ -151,6 +146,34 @@ namespace WebApi.DbOperations
                         Name = "Michael", // prestij
                         Surname = "Caine",
 
+                    }
+                );
+
+                context.DirectorAndMovies.AddRange(
+                    new DirectorAndMovie
+                    {
+                        MovieId = 1,
+                        DirectorId = 1
+                    },
+                    new DirectorAndMovie
+                    {
+                        MovieId = 2,
+                        DirectorId = 2
+                    },
+                    new DirectorAndMovie
+                    {
+                        MovieId = 3,
+                        DirectorId = 1
+                    },
+                    new DirectorAndMovie
+                    {
+                        MovieId = 4,
+                        DirectorId = 3
+                    },
+                    new DirectorAndMovie
+                    {
+                        MovieId = 5,
+                        DirectorId = 3
                     }
                 );
 

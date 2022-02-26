@@ -61,7 +61,31 @@ namespace WebApi.Common
             CreateMap<CustomerAndGenre, GenreViewModel>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Genre.Name));
 
+            // GetMovies
+            CreateMap<Movie, MovieViewModel>()
+                .ForMember(dest => dest.Actors, opt => opt.MapFrom(src => src.ActorsAndMovies))
+                .AfterMap((model, entity) =>
+                {
+                    foreach (var entityActorAndMovie in model.ActorsAndMovies)
+                    {
+                        entityActorAndMovie.Movie = model;
+                    }
+                })
+                .ForMember(dest => dest.Director, opt => opt.MapFrom(src => src.Directors))
+                .AfterMap((model, entity) =>
+                {
+                    foreach (var entityActorAndMovie in model.ActorsAndMovies)
+                    {
+                        entityActorAndMovie.Movie = model;
+                    }
+                });
+            
+            
+            CreateMap<ActorAndMovie, ActorViewModelForMovie>()
+                .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Actor.Name + " " + src.Actor.Surname)));
 
+            CreateMap<DirectorAndMovie, DirectorViewModelForMovie>()
+                .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Director.Name + " " + src.Director.Surname)));
         }
     }
 }

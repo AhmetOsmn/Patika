@@ -7,8 +7,8 @@ namespace WebApi.Models.Entities.Route
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int MovieId { get; set; }
+        public virtual Movie Movie { get; set; }
         public int DirectorId { get; set; }
-        public Movie Movie { get; set; }
-        public Director Director { get; set; }
+        public virtual Director Director { get; set; }
     }
 }

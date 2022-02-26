@@ -11,8 +11,8 @@ namespace WebApi.Models.Entities
         public string Name { get; set; }
         public string Surname { get; set; }
         public bool IsActive { get; set; } = true;
-        public List<DirectorAndMovie> DirectedMovies { get; set; } = new List<DirectorAndMovie>();
+        public ICollection<DirectorAndMovie> DirectedMovies { get; set; } = new List<DirectorAndMovie>();
         public int MovieId { get; set; }
-        public List<ActorAndMovie> ActedMovies { get; set; } = new List<ActorAndMovie>();
+        // public ICollection<ActorAndMovie> ActedMovies { get; set; } = new List<ActorAndMovie>();
     }
 }

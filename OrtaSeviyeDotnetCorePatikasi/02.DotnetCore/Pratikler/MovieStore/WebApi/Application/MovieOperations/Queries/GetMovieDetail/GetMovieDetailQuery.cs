@@ -21,7 +21,7 @@ namespace WebApi.Application.MovieOperations.Queries.GetMovieDetail
 
         public MovieDetailViewModel Handle()
         {
-            var movie =  _context.Movies.Include(x => x.Director)
+            var movie =  _context.Movies.Include(x => x.Directors)
                                         .Include(x => x.Genre)
                                         .Include(x => x.ActorsAndMovies)
                                         .ThenInclude(y => y.Actor)
