@@ -35,24 +35,24 @@ namespace WebApi.Application.MovieOperations.Commands.CreateMovie
             }
             else
             {
-            
-                movie = new Movie();
-                movie.Name = Model.Name;
-                movie.Year = Model.Year;
-                movie.GenreId = Model.GenreId;
-                movie.DirectorId = Model.DirectorId;
-                movie.Price = Model.Price.ToString();
+                // movie = new Movie();
+                // movie.Name = Model.Name;
+                // movie.Year = Model.Year;
+                // movie.GenreId = Model.GenreId;
+                // movie.DirectorId = Model.DirectorId;
+                // movie.Price = Model.Price.ToString();
                 
-                foreach (var item in Model.Actors)
-                {
-                    movie.ActorsAndMovies.Add(
-                        new ActorAndMovie
-                        {
-                            ActorId = item,
-                            MovieId = movie.Id
-                        }
-                    );
-                }
+                // foreach (var item in Model.Actors)
+                // {
+                //     movie.ActorsAndMovies.Add(
+                //         new ActorAndMovie
+                //         {
+                //             ActorId = item,
+                //             MovieId = movie.Id
+                //         }
+                //     );
+                // }
+                movie = _mapper.Map<Movie>(Model);
                 
                 _context.Movies.Add(movie);
                 _context.SaveChanges();

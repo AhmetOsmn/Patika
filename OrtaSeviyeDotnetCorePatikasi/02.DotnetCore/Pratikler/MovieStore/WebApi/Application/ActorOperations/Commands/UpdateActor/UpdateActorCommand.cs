@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using AutoMapper;
 using WebApi.DbOperations;
 using WebApi.Models.Entities.Route;
 using WebApi.Models.ViewModels.Update;
@@ -9,9 +10,9 @@ namespace WebApi.Application.ActorOperations.Commands.UpdateActor
 {
     public class UpdateActorCommand
     {
+        private readonly IMovieStoreDbContext _context;
         public int ActorId { get; set; }
         public UpdateActorModel Model { get; set; }
-        private readonly IMovieStoreDbContext _context;
 
         public UpdateActorCommand(IMovieStoreDbContext context)
         {
@@ -45,7 +46,6 @@ namespace WebApi.Application.ActorOperations.Commands.UpdateActor
                             MovieId = item
                         }
                     );
-
                 }
                 _context.SaveChanges();
             }

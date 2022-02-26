@@ -51,7 +51,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public IActionResult AddActor([FromBody] CreateActorModel newActor)
         {
-            CreateActorCommand command = new CreateActorCommand(_context);
+            CreateActorCommand command = new CreateActorCommand(_context, _mapper);
             CreateActorCommandValidator validator = new CreateActorCommandValidator();
 
             command.Model = newActor;

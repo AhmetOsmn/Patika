@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using AutoMapper;
 using WebApi.DbOperations;
 using WebApi.Models.Entities;
 using WebApi.Models.ViewModels.Create;
@@ -9,13 +10,15 @@ namespace WebApi.Application.GenreOperations.Commands.CreateGenre
     public class CreateGenreCommand
     {
         private readonly IMovieStoreDbContext _context;
+        private readonly IMapper _mapper;
+        public CreateGenreModel Model { get; set; }
 
-        public CreateGenreCommand(IMovieStoreDbContext context)
+        public CreateGenreCommand(IMovieStoreDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
-        public CreateGenreModel Model { get; set; }
 
         public void Handle()
         {
@@ -34,8 +37,7 @@ namespace WebApi.Application.GenreOperations.Commands.CreateGenre
             else
             {
                 // yoksa
-                genre = new Genre();
-                genre.Name = Model.Name;
+                genre = _mapper.Map<Genre>(Model);
                 _context.Genres.Add(genre); // Db'ye eklendi
                 _context.SaveChanges();
             }

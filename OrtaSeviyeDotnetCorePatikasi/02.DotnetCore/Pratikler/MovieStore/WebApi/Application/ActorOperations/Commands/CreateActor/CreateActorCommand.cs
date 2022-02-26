@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using AutoMapper;
 using WebApi.DbOperations;
 using WebApi.Models.Entities;
 using WebApi.Models.Entities.Route;
@@ -10,11 +11,13 @@ namespace WebApi.Application.ActorOperations.Commands.CreateActor
     public class CreateActorCommand
     {
         private readonly IMovieStoreDbContext _context;
+        private readonly IMapper _mapper;
         public CreateActorModel Model { get; set; }
 
-        public CreateActorCommand(IMovieStoreDbContext context)
+        public CreateActorCommand(IMovieStoreDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public void Handle()
@@ -32,19 +35,20 @@ namespace WebApi.Application.ActorOperations.Commands.CreateActor
             }
             else
             {
-                actor = new Actor();
-                actor.Name = Model.Name;
-                actor.Surname = Model.Surname;
-                foreach (var item in Model.ActedMovies)
-                {
-                    actor.ActorsAndMovies.Add(
-                        new ActorAndMovie
-                        {
-                            ActorId = actor.Id,
-                            MovieId = item
-                        }
-                    );
-                }
+                // actor = new Actor();
+                // actor.Name = Model.Name;
+                // actor.Surname = Model.Surname;
+                // foreach (var item in Model.ActedMovies)
+                // {
+                //     actor.ActorsAndMovies.Add(
+                //         new ActorAndMovie
+                //         {
+                //             ActorId = actor.Id,
+                //             MovieId = item
+                //         }
+                //     );
+                // }
+                actor = _mapper.Map<Actor>(Model);
                 _context.Actors.Add(actor);
                 _context.SaveChanges();
             }

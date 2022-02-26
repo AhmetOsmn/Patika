@@ -274,16 +274,19 @@ namespace WebApi.DbOperations
                     {
                         Name = "Ahmet",
                         Surname = "Sezgin",
+                        Email = "Ahmet@gmail.com",
                     },
                     new Customer
                     {
                         Name = "Osman",
                         Surname = "Sezgin",
+                        Email = "Osman@gmail.com",
                     },
                     new Customer
                     {
                         Name = "Sezgin",
                         Surname = "Sezgin",
+                        Email = "Sezgin@gmail.com",
                     }
                 );
 

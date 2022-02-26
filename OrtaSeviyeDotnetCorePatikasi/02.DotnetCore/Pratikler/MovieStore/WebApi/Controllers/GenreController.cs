@@ -50,7 +50,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public IActionResult AddGenre([FromBody] CreateGenreModel newGenre)
         {
-            CreateGenreCommand command = new CreateGenreCommand(_context);
+            CreateGenreCommand command = new CreateGenreCommand(_context, _mapper);
             CreateGenreCommandValidator validator = new CreateGenreCommandValidator();
 
             command.Model = newGenre;
