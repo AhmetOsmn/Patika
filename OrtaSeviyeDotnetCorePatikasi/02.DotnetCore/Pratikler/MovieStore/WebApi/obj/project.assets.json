@@ -1000,24 +1000,26 @@
     ]
   },
   "packageFolders": {
-    "/home/ahmet/.nuget/packages/": {}
+    "C:\\Users\\Ahmet\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/ahmet/projects/Patika/OrtaSeviyeDotnetCorePatikasi/02.DotnetCore/Pratikler/MovieStore/WebApi/WebApi.csproj",
+      "projectUniqueName": "C:\\Projects\\Patika\\OrtaSeviyeDotnetCorePatikasi\\02.DotnetCore\\Pratikler\\MovieStore\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "/home/ahmet/projects/Patika/OrtaSeviyeDotnetCorePatikasi/02.DotnetCore/Pratikler/MovieStore/WebApi/WebApi.csproj",
-      "packagesPath": "/home/ahmet/.nuget/packages/",
-      "outputPath": "/home/ahmet/projects/Patika/OrtaSeviyeDotnetCorePatikasi/02.DotnetCore/Pratikler/MovieStore/WebApi/obj/",
+      "projectPath": "C:\\Projects\\Patika\\OrtaSeviyeDotnetCorePatikasi\\02.DotnetCore\\Pratikler\\MovieStore\\WebApi\\WebApi.csproj",
+      "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
+      "outputPath": "C:\\Projects\\Patika\\OrtaSeviyeDotnetCorePatikasi\\02.DotnetCore\\Pratikler\\MovieStore\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/ahmet/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1083,8 +1085,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Projects\\Patika\\OrtaSeviyeDotnetCorePatikasi\\02.DotnetCore\\Pratikler\\MovieStore\\WebApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
