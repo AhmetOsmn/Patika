@@ -103,20 +103,12 @@ namespace WebApi.Common
             CreateMap<CreateGenreModel, Genre>();
 
             // CreateActor
-            CreateMap<CreateActorModel, Actor>()
-                .ForMember(desc => desc.ActorsAndMovies, opt => opt.MapFrom(src => src.ActedMovies))
-                .AfterMap((model, entity) =>
-                {
-                    foreach (var item in model.ActedMovies)
-                    {
-                      entity.MovieId = item;
-                    }
-                });
+            CreateMap<CreateActorModel, Actor>();
+
+            // CreateMovie
+            CreateMap<CreateMovieModel, Movie>()
+                .ForMember(desc => desc.Directors, opt => opt.MapFrom(src => src.Actors));
             
-            CreateMap<CreateActorModel, ActorAndMovie>()
-                .ForMember(desc => desc.Actor, opt => opt.MapFrom(src => src));
-            
-            // yarim kaldi devam edilecek, suan CreateActor calismiyor
         }
     }
 }

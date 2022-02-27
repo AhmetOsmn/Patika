@@ -35,9 +35,7 @@ namespace WebApi.Application.CustomerOperations.Commands.CreateCustomer
             }
             else
             {
-                // customer = new Customer();
-                // customer.Name = Model.Name;
-                // customer.Surname = Model.Surname;
+                customer = _mapper.Map<Customer>(Model);
                 // foreach (var item in Model.PurchasedMovies)
                 // {
                 //     customer.PurchasedMovies.Add(
@@ -58,11 +56,9 @@ namespace WebApi.Application.CustomerOperations.Commands.CreateCustomer
                 //         }
                 //     );
                 // }
-                customer = _mapper.Map<Customer>(Model);
                 _context.Customers.Add(customer);
                 _context.SaveChanges();
             }
-
         }
     }
 }

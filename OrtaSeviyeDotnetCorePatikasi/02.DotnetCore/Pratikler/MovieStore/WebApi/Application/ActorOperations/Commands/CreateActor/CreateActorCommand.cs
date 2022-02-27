@@ -35,20 +35,19 @@ namespace WebApi.Application.ActorOperations.Commands.CreateActor
             }
             else
             {
-                // actor = new Actor();
-                // actor.Name = Model.Name;
-                // actor.Surname = Model.Surname;
-                // foreach (var item in Model.ActedMovies)
-                // {
-                //     actor.ActorsAndMovies.Add(
-                //         new ActorAndMovie
-                //         {
-                //             ActorId = actor.Id,
-                //             MovieId = item
-                //         }
-                //     );
-                // }
                 actor = _mapper.Map<Actor>(Model);
+
+                foreach (var item in Model.ActedMovies)
+                {
+                    actor.ActorsAndMovies.Add(
+                        new ActorAndMovie
+                        {
+                            ActorId = actor.Id,
+                            MovieId = item
+                        }
+                    );
+                }
+
                 _context.Actors.Add(actor);
                 _context.SaveChanges();
             }

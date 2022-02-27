@@ -41,24 +41,33 @@ namespace WebApi.Application.MovieOperations.Commands.CreateMovie
                 // movie.GenreId = Model.GenreId;
                 // movie.DirectorId = Model.DirectorId;
                 // movie.Price = Model.Price.ToString();
-                
-                // foreach (var item in Model.Actors)
-                // {
-                //     movie.ActorsAndMovies.Add(
-                //         new ActorAndMovie
-                //         {
-                //             ActorId = item,
-                //             MovieId = movie.Id
-                //         }
-                //     );
-                // }
+
                 movie = _mapper.Map<Movie>(Model);
+
+                foreach (var item in Model.Actors)
+                {
+                    movie.ActorsAndMovies.Add(
+                        new ActorAndMovie
+                        {
+                            ActorId = item,
+                            MovieId = movie.Id
+                        }
+                    );
+                }
+                foreach (var item in Model.Directors)
+                {
+                    movie.Directors.Add(
+                        new DirectorAndMovie
+                        {
+                            DirectorId = item,
+                            MovieId = movie.Id
+                        }
+                    );
+                }
                 
                 _context.Movies.Add(movie);
                 _context.SaveChanges();
-
             }
         }
-
     }
 }

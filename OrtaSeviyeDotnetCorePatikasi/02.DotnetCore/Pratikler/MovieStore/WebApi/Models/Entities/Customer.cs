@@ -13,9 +13,9 @@ namespace WebApi.Models.Entities
         public string Email { get; set; }
         public string Password { get; set; }
         public bool IsActive { get; set; } = true;
-        public List<CustomerAndMovie> PurchasedMovies{ get; set; } = new List<CustomerAndMovie>();
+        public virtual ICollection<CustomerAndMovie> PurchasedMovies{ get; set; } = new List<CustomerAndMovie>();
         public int MovieId { get; set; }
-        public List<CustomerAndGenre> FavoriteGenres { get; set; }= new List<CustomerAndGenre>();
+        public virtual ICollection<CustomerAndGenre> FavoriteGenres { get; set; }= new List<CustomerAndGenre>();
         public int GenreId { get; set; }
     }
 }
