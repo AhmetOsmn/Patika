@@ -54,17 +54,7 @@ namespace WebApi.Application.MovieOperations.Commands.CreateMovie
                         }
                     );
                 }
-                foreach (var item in Model.Directors)
-                {
-                    movie.Directors.Add(
-                        new DirectorAndMovie
-                        {
-                            DirectorId = item,
-                            MovieId = movie.Id
-                        }
-                    );
-                }
-                
+
                 _context.Movies.Add(movie);
                 _context.SaveChanges();
             }

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace WebApi.Models.ViewModels.Create
 {
-     public class CreateMovieModel
+    public class CreateMovieModel
     {
         public string Name { get; set; }
         public int Year { get; set; }

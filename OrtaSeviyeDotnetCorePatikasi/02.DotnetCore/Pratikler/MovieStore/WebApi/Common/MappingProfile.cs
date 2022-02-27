@@ -106,9 +106,9 @@ namespace WebApi.Common
             CreateMap<CreateActorModel, Actor>();
 
             // CreateMovie
-            CreateMap<CreateMovieModel, Movie>()
-                .ForMember(desc => desc.Directors, opt => opt.MapFrom(src => src.Actors));
-            
+            CreateMap<CreateMovieModel, Movie>();
+
+            CreateMap<ActorAndMovie, CreateMovieModel>();
         }
     }
 }
