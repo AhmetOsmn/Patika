@@ -7,7 +7,7 @@ namespace WebApi.Application.MovieOperations.Commands.UpdateMovie
     {
         public UpdateMovieCommandValidator()
         {
-            RuleFor(command => command.Model.Name).NotEmpty().MinimumLength(2); 
+            RuleFor(command => command.Model.Name).MinimumLength(2).When(x => x.Model.Name.Trim() != string.Empty);
             RuleFor(command => command.Model.DirectorId).GreaterThan(0); 
             RuleFor(command => command.Model.GenreId).GreaterThan(0); 
             RuleFor(command => command.Model.Price).GreaterThanOrEqualTo(0); 

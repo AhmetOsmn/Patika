@@ -32,20 +32,23 @@ namespace WebApi.Application.ActorOperations.Commands.UpdateActor
             }
             else
             {
-                actor.Name = Model.Name != default ?Model.Name:  actor.Name;
-                actor.Surname = Model.Surname != default ? Model.Surname : actor.Surname;
+                actor.Name = string.IsNullOrEmpty(Model.Name.Trim()) ? actor.Name : Model.Name;
+                actor.Surname = string.IsNullOrEmpty(Model.Surname.Trim()) ? actor.Surname : Model.Surname;
 
-                _context.ActorAndMovies.Where(x => x.ActorId == ActorId).ToList().ForEach(x => _context.ActorAndMovies.Remove(x));                
-
-                foreach (var item in Model.ActedMovies)
+                if (Model.ActedMovies.Count != 0)
                 {
-                    actor.ActorsAndMovies.Add(
-                        new ActorAndMovie
-                        {
-                            ActorId = actor.Id,
-                            MovieId = item
-                        }
-                    );
+                    _context.ActorAndMovies.Where(x => x.ActorId == ActorId).ToList().ForEach(x => _context.ActorAndMovies.Remove(x));
+
+                    foreach (var item in Model.ActedMovies)
+                    {
+                        actor.ActorsAndMovies.Add(
+                            new ActorAndMovie
+                            {
+                                ActorId = actor.Id,
+                                MovieId = item
+                            }
+                        );
+                    }
                 }
                 _context.SaveChanges();
             }

@@ -36,26 +36,28 @@ namespace WebApi.Application.MovieOperations.Commands.UpdateMovie
             }
             else
             {
-                movie.Name = Model.Name != default ? Model.Name : movie.Name;
-                movie.DirectorId = Model.DirectorId != default ? Model.DirectorId : movie.DirectorId;
-                movie.GenreId = Model.GenreId != default ? Model.GenreId : movie.GenreId;
+                movie.Name = string.IsNullOrEmpty(Model.Name.Trim()) ? movie.Name : Model.Name;
+                movie.DirectorId = Model.DirectorId != 0 ? Model.DirectorId : movie.DirectorId;
+                movie.GenreId = Model.GenreId != 0 ? Model.GenreId : movie.GenreId;
                 movie.Price = Model.Price != default ? Model.Price.ToString() : movie.Price.ToString();
                 movie.Year = Model.Year != default ? Model.Year : movie.Year;
 
-                _context.ActorAndMovies.Where(x => x.MovieId == MovieId).ToList().ForEach(x => _context.ActorAndMovies.Remove(x));                
-
-                foreach (var item in Model.Actors)
+                if (Model.Actors.Count != 0)
                 {
-                    movie.ActorsAndMovies.Add(
-                        new ActorAndMovie
-                        {
-                            ActorId = item,
-                            MovieId = movie.Id
-                        }
-                    );
+                    _context.ActorAndMovies.Where(x => x.MovieId == MovieId).ToList().ForEach(x => _context.ActorAndMovies.Remove(x));
 
+                    foreach (var item in Model.Actors)
+                    {
+                        movie.ActorsAndMovies.Add(
+                            new ActorAndMovie
+                            {
+                                ActorId = item,
+                                MovieId = movie.Id
+                            }
+                        );
+
+                    }
                 }
-            
                 _context.SaveChanges();
             }
         }
