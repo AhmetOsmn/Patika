@@ -35,27 +35,32 @@ namespace WebApi.Application.CustomerOperations.Commands.CreateCustomer
             }
             else
             {
-                customer = _mapper.Map<Customer>(Model);
-                // foreach (var item in Model.PurchasedMovies)
-                // {
-                //     customer.PurchasedMovies.Add(
-                //         new CustomerAndMovie
-                //         {
-                //             CustomerId = customer.Id,
-                //             MovieId = item
-                //         }
-                //     );
-                // }
-                // foreach (var item in Model.FavoriteGenres)
-                // {
-                //     customer.FavoriteGenres.Add(
-                //         new CustomerAndGenre
-                //         {
-                //             CustomerId = customer.Id,
-                //             GenreId = item
-                //         }
-                //     );
-                // }
+                customer = new Customer();
+                customer.Name = Model.Name;
+                customer.Surname = Model.Surname;
+                customer.Email = Model.Email;
+                customer.Password = Model.Password;
+                
+                foreach (var item in Model.PurchasedMovies)
+                {
+                    customer.PurchasedMovies.Add(
+                        new CustomerAndMovie
+                        {
+                            CustomerId = customer.Id,
+                            MovieId = item
+                        }
+                    );
+                }
+                foreach (var item in Model.FavoriteGenres)
+                {
+                    customer.FavoriteGenres.Add(
+                        new CustomerAndGenre
+                        {
+                            CustomerId = customer.Id,
+                            GenreId = item
+                        }
+                    );
+                }
                 _context.Customers.Add(customer);
                 _context.SaveChanges();
             }
