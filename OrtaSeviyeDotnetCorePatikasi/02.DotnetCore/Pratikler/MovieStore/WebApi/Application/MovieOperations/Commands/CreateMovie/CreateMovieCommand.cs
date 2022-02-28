@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using WebApi.DbOperations;
@@ -35,14 +36,22 @@ namespace WebApi.Application.MovieOperations.Commands.CreateMovie
             }
             else
             {
-                // movie = new Movie();
-                // movie.Name = Model.Name;
-                // movie.Year = Model.Year;
-                // movie.GenreId = Model.GenreId;
-                // movie.DirectorId = Model.DirectorId;
-                // movie.Price = Model.Price.ToString();
+                movie = new Movie();
+                movie.Name = Model.Name;
+                movie.Year = Model.Year;
+                movie.GenreId = Model.GenreId;
+                movie.Price = Model.Price.ToString();
 
-                movie = _mapper.Map<Movie>(Model);
+                foreach (var item in Model.Directors)
+                {
+                    movie.Directors.Add(
+                        new DirectorAndMovie
+                        {
+                            DirectorId = item,
+                            MovieId = movie.Id
+                        }
+                    );
+                }
 
                 foreach (var item in Model.Actors)
                 {

@@ -105,10 +105,6 @@ namespace WebApi.Common
             // CreateActor
             CreateMap<CreateActorModel, Actor>();
 
-            // CreateMovie
-            CreateMap<CreateMovieModel, Movie>();
-
-            CreateMap<ActorAndMovie, CreateMovieModel>();
         }
     }
 }
