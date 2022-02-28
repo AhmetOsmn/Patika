@@ -32,8 +32,8 @@ namespace WebApi.Application.ActorOperations.Commands.UpdateActor
             }
             else
             {
-                actor.Name = Model.Name == default ? actor.Name : Model.Name;
-                actor.Surname = Model.Surname == default ? actor.Surname : Model.Surname;
+                actor.Name = Model.Name != default ?Model.Name:  actor.Name;
+                actor.Surname = Model.Surname != default ? Model.Surname : actor.Surname;
 
                 _context.ActorAndMovies.Where(x => x.ActorId == ActorId).ToList().ForEach(x => _context.ActorAndMovies.Remove(x));                
 
