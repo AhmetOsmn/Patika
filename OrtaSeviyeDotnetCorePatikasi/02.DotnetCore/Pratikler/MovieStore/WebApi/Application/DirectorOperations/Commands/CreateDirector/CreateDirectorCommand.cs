@@ -35,11 +35,13 @@ namespace WebApi.Application.DirectorOperations.Commands.CreateDirector
             }
             else
             {
-                director = _mapper.Map<Director>(Model);
+                director = new Director();
+                director.Name = Model.Name;
+                director.Surname = Model.Surname;
 
                 foreach (var item in Model.ActedMovies)
                 {
-                    director.ActorsAndMovies.Add(
+                    director.ActedMovies.Add(
                         new ActorAndMovie
                         {
                             ActorId = director.Id,

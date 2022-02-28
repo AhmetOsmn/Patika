@@ -24,7 +24,7 @@ namespace WebApi.Application.DirectorOperations.Queries
             var directors = _context.Directors.Where(x => x.IsActive)
                                               .Include(x => x.DirectedMovies)
                                               .ThenInclude(y => y.Movie)
-                                              .Include(x => x.ActorsAndMovies)
+                                              .Include(x => x.ActedMovies)
                                               .ThenInclude(y => y.Movie)
                                               .OrderBy(x => x.Id).ToList<Director>();
 

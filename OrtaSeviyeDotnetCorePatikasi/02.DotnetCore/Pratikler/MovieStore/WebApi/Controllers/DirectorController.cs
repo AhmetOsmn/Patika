@@ -6,7 +6,11 @@ using WebApi.Application.ActorOperations.Commands.DeleteActor;
 using WebApi.Application.ActorOperations.Commands.UpdateActor;
 using WebApi.Application.ActorOperations.Queries.GetActorDetail;
 using WebApi.Application.ActorOperations.Queries.GetActors;
+using WebApi.Application.DirectorOperations.Commands.CreateDirector;
+using WebApi.Application.DirectorOperations.Commands.DeleteDirector;
+using WebApi.Application.DirectorOperations.Commands.UpdateDirector;
 using WebApi.Application.DirectorOperations.Queries;
+using WebApi.Application.DirectorOperations.Queries.GetDirectorDetail;
 using WebApi.DbOperations;
 using WebApi.Models.ViewModels.Create;
 using WebApi.Models.ViewModels.Update;
@@ -37,25 +41,25 @@ namespace WebApi.Controllers
         [HttpGet("id")]
         public IActionResult GetDirector(int id)
         {
-            GetActorDetailQuery query = new GetActorDetailQuery(_context, _mapper);
-            GetActorDetailQueryValidator validator = new GetActorDetailQueryValidator();
+            GetDirectorDetailQuery query = new GetDirectorDetailQuery(_context, _mapper);
+            GetDirectorDetailQueryValidator validator = new GetDirectorDetailQueryValidator();
 
-            query.AcorId = id;
+            query.DirectorId = id;
 
             validator.ValidateAndThrow(query);
 
-            var actor = query.Handle();
+            var director = query.Handle();
 
-            return Ok(actor);
+            return Ok(director);
         }
 
         [HttpPost]
-        public IActionResult AddActor([FromBody] CreateActorModel newActor)
+        public IActionResult AddDirector([FromBody] CreateDirectorModel newDirector)
         {
-            CreateActorCommand command = new CreateActorCommand(_context, _mapper);
-            CreateActorCommandValidator validator = new CreateActorCommandValidator();
+            CreateDirectorCommand command = new CreateDirectorCommand(_context, _mapper);
+            CreateDirectorCommandValidator validator = new CreateDirectorCommandValidator();
 
-            command.Model = newActor;
+            command.Model = newDirector;
 
             validator.ValidateAndThrow(command);
 
@@ -65,13 +69,13 @@ namespace WebApi.Controllers
         }
 
         [HttpPut("id")]
-        public IActionResult UpdateActor(int id, [FromBody] UpdateActorModel updatedActor)
+        public IActionResult UpdateDirector(int id, [FromBody] UpdateDirectorModel updatedDirector)
         {
-            UpdateActorCommand command = new UpdateActorCommand(_context);
-            UpdateActorCommandValidator validator = new UpdateActorCommandValidator();
+            UpdateDirectorCommand command = new UpdateDirectorCommand(_context);
+            UpdateDirectorCommandValidator validator = new UpdateDirectorCommandValidator();
 
-            command.ActorId = id;
-            command.Model = updatedActor;
+            command.DirectorId = id;
+            command.Model = updatedDirector;
 
             validator.ValidateAndThrow(command);
 
@@ -83,10 +87,10 @@ namespace WebApi.Controllers
         [HttpDelete("id")]
         public IActionResult DeleteDirector(int id)
         {
-            DeleteActorCommand command = new DeleteActorCommand(_context);
-            DeleteActorCommandValidator validator = new DeleteActorCommandValidator();
+            DeleteDirectorCommand command = new DeleteDirectorCommand(_context);
+            DeleteDirectorCommandValidator validator = new DeleteDirectorCommandValidator();
 
-            command.ActorId = id;
+            command.DirectorId = id;
 
             validator.ValidateAndThrow(command);
 

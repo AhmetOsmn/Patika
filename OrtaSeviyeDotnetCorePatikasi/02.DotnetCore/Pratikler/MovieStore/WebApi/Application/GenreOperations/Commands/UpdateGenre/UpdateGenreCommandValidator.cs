@@ -6,7 +6,7 @@ namespace WebApi.Application.GenreOperations.Commands.UpdateGenre
     {
         public UpdateGenreCommandValidator()
         {
-            RuleFor(command => command.Model.Name).NotEmpty(); // Girilen Id' en az 1 olmali
+            RuleFor(command => command.Model.Name).MinimumLength(3).When(x => x.Model.Name.Trim() != string.Empty);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace WebApi.Application.DirectorOperations.Queries.GetDirectorDetail
         {
             var director = _context.Directors.Include(x => x.DirectedMovies)
                                              .ThenInclude(y => y.Movie)
-                                             .Include(x => x.ActorsAndMovies)
+                                             .Include(x => x.ActedMovies)
                                              .ThenInclude(y => y.Movie)
                                              .SingleOrDefault(x => x.IsActive && x.Id == DirectorId);
 
@@ -31,8 +31,7 @@ namespace WebApi.Application.DirectorOperations.Queries.GetDirectorDetail
             {
                 throw new InvalidOperationException("Aranan yönetmen bulunamadı.");
             }
-            return _mapper.Map<DirectorDetailViewModel>(director
-            );
+            return _mapper.Map<DirectorDetailViewModel>(director);
         }
     }
 }

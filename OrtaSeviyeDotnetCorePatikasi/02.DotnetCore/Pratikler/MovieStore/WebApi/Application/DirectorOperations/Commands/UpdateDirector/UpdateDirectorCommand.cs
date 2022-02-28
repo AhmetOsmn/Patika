@@ -32,32 +32,38 @@ namespace WebApi.Application.DirectorOperations.Commands.UpdateDirector
             }
             else
             {
-                director.Name = Model.Name != default ?Model.Name:  director.Name;
-                director.Surname = Model.Surname != default ? Model.Surname : director.Surname;
+                director.Name = string.IsNullOrEmpty(Model.Name.Trim()) ? director.Name : Model.Name;
+                director.Surname = string.IsNullOrEmpty(Model.Surname.Trim()) ? director.Surname : Model.Surname;
 
-                _context.ActorAndMovies.Where(x => x.ActorId == DirectorId).ToList().ForEach(x => _context.ActorAndMovies.Remove(x));                
-                _context.DirectorAndMovies.Where(x => x.DirectorId == DirectorId).ToList().ForEach(x => _context.DirectorAndMovies.Remove(x));                
-
-                foreach (var item in Model.ActedMovies)
+                if (Model.ActedMovies.Count() != 0)
                 {
-                    director.ActorsAndMovies.Add(
-                        new ActorAndMovie
-                        {
-                            ActorId = director.Id,
-                            MovieId = item
-                        }
-                    );
+                    _context.ActorAndMovies.Where(x => x.ActorId == DirectorId).ToList().ForEach(x => _context.ActorAndMovies.Remove(x));
+                    foreach (var item in Model.ActedMovies)
+                    {
+                        director.ActedMovies.Add(
+                            new ActorAndMovie
+                            {
+                                ActorId = director.Id,
+                                MovieId = item
+                            }
+                        );
+                    }
                 }
 
-                foreach (var item in Model.DirectedMovies)
+                if (Model.DirectedMovies.Count() != 0)
                 {
-                    director.DirectedMovies.Add(
-                        new DirectorAndMovie
-                        {
-                            DirectorId = director.Id,
-                            MovieId = item
-                        }
-                    );
+                    _context.DirectorAndMovies.Where(x => x.DirectorId == DirectorId).ToList().ForEach(x => _context.DirectorAndMovies.Remove(x));
+
+                    foreach (var item in Model.DirectedMovies)
+                    {
+                        director.DirectedMovies.Add(
+                            new DirectorAndMovie
+                            {
+                                DirectorId = director.Id,
+                                MovieId = item
+                            }
+                        );
+                    }
                 }
                 _context.SaveChanges();
             }

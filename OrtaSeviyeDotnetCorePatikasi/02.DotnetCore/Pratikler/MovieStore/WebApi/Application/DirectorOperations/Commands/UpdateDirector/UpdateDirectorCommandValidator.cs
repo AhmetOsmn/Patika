@@ -6,8 +6,8 @@ namespace WebApi.Application.DirectorOperations.Commands.UpdateDirector
     {
         public UpdateDirectorCommandValidator()
         {
-            RuleFor(command => command.Model.Name).NotEmpty().MinimumLength(3);
-            RuleFor(command => command.Model.Surname).NotEmpty().MinimumLength(3);
+            RuleFor(command => command.Model.Name).MinimumLength(3).When(x => x.Model.Name.Trim() != string.Empty);
+            RuleFor(command => command.Model.Name).MinimumLength(3).When(x => x.Model.Name.Trim() != string.Empty);
         }
     }
 }
