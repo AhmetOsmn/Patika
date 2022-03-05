@@ -5,7 +5,7 @@ Projeyi çalıştırmak için şu komutu kullanabilirsiniz
 
 ---
 
-Değişkenlerin kullanımlarını gösteren örneklere yer verildi. Programı çalıştırarak çıktıları inceleyebilirsiniz.
+Değişkenlerin kullanımlarını gösteren örneklere yer verildi.
 
 Ekran görüntüsü
 <br>
