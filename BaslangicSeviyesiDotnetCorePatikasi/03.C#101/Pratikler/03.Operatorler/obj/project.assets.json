@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\Operatorler\\Operatorler.csproj",
+      "projectUniqueName": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\03.Operatorler\\Operatorler.csproj",
       "projectName": "Operatorler",
-      "projectPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\Operatorler\\Operatorler.csproj",
+      "projectPath": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\03.Operatorler\\Operatorler.csproj",
       "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\Operatorler\\obj\\",
+      "outputPath": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\03.Operatorler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",

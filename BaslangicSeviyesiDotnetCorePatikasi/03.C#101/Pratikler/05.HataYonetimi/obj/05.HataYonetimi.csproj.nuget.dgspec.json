@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\05.HataYonetimi\\05.HataYonetimi.csproj": {}
+    "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\05.HataYonetimi\\05.HataYonetimi.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\05.HataYonetimi\\05.HataYonetimi.csproj": {
+    "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\05.HataYonetimi\\05.HataYonetimi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\05.HataYonetimi\\05.HataYonetimi.csproj",
+        "projectUniqueName": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\05.HataYonetimi\\05.HataYonetimi.csproj",
         "projectName": "05.HataYonetimi",
-        "projectPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\05.HataYonetimi\\05.HataYonetimi.csproj",
+        "projectPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\05.HataYonetimi\\05.HataYonetimi.csproj",
         "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\05.HataYonetimi\\obj\\",
+        "outputPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\05.HataYonetimi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",

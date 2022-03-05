@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\14.SinifKavrami\\14.SinifKavrami.csproj",
+      "projectUniqueName": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\14.SinifKavrami\\14.SinifKavrami.csproj",
       "projectName": "14.SinifKavrami",
-      "projectPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\14.SinifKavrami\\14.SinifKavrami.csproj",
+      "projectPath": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\14.SinifKavrami\\14.SinifKavrami.csproj",
       "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\14.SinifKavrami\\obj\\",
+      "outputPath": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\14.SinifKavrami\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",

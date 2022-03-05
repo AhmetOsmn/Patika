@@ -12,8 +12,8 @@ namespace _14.SinifKavrami
             // Kurucu metotlar 
             // SiniflarDers2();
 
-            // Encapsulation
-            // SiniflarDers3();
+            //Encapsulation
+            SiniflarDers3();
 
             // Static sınıf ve üyeleri
             // SiniflarDers4();
@@ -24,20 +24,20 @@ namespace _14.SinifKavrami
             //Enum
             // Sıralı olan sabit verilerde çokça kullanılır. 
             // Günler, aylar vb.
-            System.Console.WriteLine(Gunler.Cuma); // Cuma
-            System.Console.WriteLine((int)Gunler.Cuma); // 5
+            // System.Console.WriteLine(Gunler.Cuma); // Cuma
+            // System.Console.WriteLine((int)Gunler.Cuma); // 5
 
-            System.Console.Write("Sıcaklık derecesini girin: ");
-            int sicaklik = int.Parse(Console.ReadLine());
-            if(sicaklik <= (int)HavaDurumuEnum.normal){
-                System.Console.WriteLine("Dışarıya çıkmak için havanın biraz daha ısınmasını bekleyelim");
-            }
-            else if(sicaklik >= (int)HavaDurumuEnum.sicak){
-                System.Console.WriteLine("Dışarıya çıkmak için çok sıcak bir gün");
-            }
-            else if(sicaklik >= (int)HavaDurumuEnum.normal && sicaklik < (int)HavaDurumuEnum.cokSicak){
-                System.Console.WriteLine("Hadi dışarıya çıkalım");
-            }
+            // System.Console.Write("Sıcaklık derecesini girin: ");
+            // int sicaklik = int.Parse(Console.ReadLine());
+            // if(sicaklik <= (int)HavaDurumuEnum.normal){
+            //     System.Console.WriteLine("Dışarıya çıkmak için havanın biraz daha ısınmasını bekleyelim");
+            // }
+            // else if(sicaklik >= (int)HavaDurumuEnum.sicak){
+            //     System.Console.WriteLine("Dışarıya çıkmak için çok sıcak bir gün");
+            // }
+            // else if(sicaklik >= (int)HavaDurumuEnum.normal && sicaklik < (int)HavaDurumuEnum.cokSicak){
+            //     System.Console.WriteLine("Hadi dışarıya çıkalım");
+            // }
         }
 
         static void SiniflarDers1()

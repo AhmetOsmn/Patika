@@ -10,7 +10,7 @@ namespace _15.OOP
             // InheritanceDersi();
 
             // Polymorphism (çok biçimlilik) ve Sealed Class
-            // PolymorphismDersi();
+            PolymorphismDersi();
 
             // Interface
             // InterfaceDersi1();

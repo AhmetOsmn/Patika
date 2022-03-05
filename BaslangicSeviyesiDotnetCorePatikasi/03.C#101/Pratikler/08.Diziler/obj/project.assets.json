@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\08.Diziler\\08.Diziler.csproj",
+      "projectUniqueName": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\08.Diziler\\08.Diziler.csproj",
       "projectName": "08.Diziler",
-      "projectPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\08.Diziler\\08.Diziler.csproj",
+      "projectPath": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\08.Diziler\\08.Diziler.csproj",
       "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\08.Diziler\\obj\\",
+      "outputPath": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\08.Diziler\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",

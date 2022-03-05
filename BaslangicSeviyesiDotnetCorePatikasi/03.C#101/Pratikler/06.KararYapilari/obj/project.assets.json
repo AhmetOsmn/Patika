@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\06.KararYapilari\\06.KararYapilari.csproj",
+      "projectUniqueName": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\06.KararYapilari\\06.KararYapilari.csproj",
       "projectName": "06.KararYapilari",
-      "projectPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\06.KararYapilari\\06.KararYapilari.csproj",
+      "projectPath": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\06.KararYapilari\\06.KararYapilari.csproj",
       "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\06.KararYapilari\\obj\\",
+      "outputPath": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\06.KararYapilari\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",

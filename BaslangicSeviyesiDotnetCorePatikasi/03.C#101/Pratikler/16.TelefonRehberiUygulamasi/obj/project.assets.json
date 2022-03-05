@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\16.TelefonRehberiUygulamasi\\16.TelefonRehberiUygulamasi.csproj",
+      "projectUniqueName": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\16.TelefonRehberiUygulamasi\\16.TelefonRehberiUygulamasi.csproj",
       "projectName": "16.TelefonRehberiUygulamasi",
-      "projectPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\16.TelefonRehberiUygulamasi\\16.TelefonRehberiUygulamasi.csproj",
+      "projectPath": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\16.TelefonRehberiUygulamasi\\16.TelefonRehberiUygulamasi.csproj",
       "packagesPath": "C:\\Users\\Ahmet\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\Pratikler\\16.TelefonRehberiUygulamasi\\obj\\",
+      "outputPath": "c:\\Projects\\Patika\\BaslangicSeviyesiDotnetCorePatikasi\\03.C#101\\Pratikler\\16.TelefonRehberiUygulamasi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ahmet\\AppData\\Roaming\\NuGet\\NuGet.Config",
