@@ -28,7 +28,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public IActionResult GetMovies()
         {
-            GetMoviesQuery query = new GetMoviesQuery(_context, _mapper);
+            GetMoviesQuery query = new(_context, _mapper);
             var movies = query.Handle();
             return Ok(movies);
         }
@@ -36,8 +36,8 @@ namespace WebApi.Controllers
         [HttpGet("id")]
         public IActionResult GetMovie(int id)
         {
-            GetMovieDetailQuery query = new GetMovieDetailQuery(_context, _mapper);
-            GetMovieDetailQueryValidator validator = new GetMovieDetailQueryValidator();
+            GetMovieDetailQuery query = new(_context, _mapper);
+            GetMovieDetailQueryValidator validator = new();
 
             query.MovieId = id;
 
@@ -50,8 +50,8 @@ namespace WebApi.Controllers
         [HttpPut("id")]
         public IActionResult UpdateMovie([FromBody] UpdateMovieModel updatedMovie, int id)
         {
-            UpdateMovieCommand command = new UpdateMovieCommand(_context, _mapper);
-            UpdateMovieCommandValidator validator = new UpdateMovieCommandValidator();
+            UpdateMovieCommand command = new(_context, _mapper);
+            UpdateMovieCommandValidator validator = new();
 
             command.MovieId = id;
             command.Model = updatedMovie;
@@ -66,8 +66,8 @@ namespace WebApi.Controllers
         [HttpDelete("id")]
         public IActionResult DeleteMovie(int id)
         {
-            DeleteMovieCommand command = new DeleteMovieCommand(_context);
-            DeleteMovieCommandValidator validator = new DeleteMovieCommandValidator();
+            DeleteMovieCommand command = new(_context);
+            DeleteMovieCommandValidator validator = new();
 
             command.MovieId = id;
 
@@ -81,8 +81,8 @@ namespace WebApi.Controllers
         [HttpPost]
         public IActionResult AddMovie([FromBody] CreateMovieModel newMovie)
         {
-            CreateMovieCommand command = new CreateMovieCommand(_context, _mapper);
-            CreateMovieCommandValidator validator = new CreateMovieCommandValidator();
+            CreateMovieCommand command = new(_context);
+            CreateMovieCommandValidator validator = new();
 
             command.Model = newMovie;
 

@@ -6,6 +6,7 @@ using WebApi.Models.Entities.ViewModels.Detail;
 using WebApi.Models.Entities.ViewModels.For;
 using WebApi.Models.ViewModels.Create;
 using WebApi.Models.ViewModels.Detail;
+using WebApi.Models.ViewModels.Get;
 
 namespace WebApi.Common
 {
@@ -16,10 +17,15 @@ namespace WebApi.Common
             // GetGenres
             CreateMap<Genre, GenreViewModel>();
 
+            // GetOrders
+            CreateMap<Order, OrderViewModel>();
+
+            // GetOrderDetail
+            CreateMap<Order, OrderDetailViewModel>();
+
             // GetActors
             CreateMap<Actor, ActorViewModel>()
-                .ForMember(
-                    dest => dest.FullName, opt => opt.MapFrom(src => (src.Name + " " + src.Surname)))
+                .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => (src.Name + " " + src.Surname)))
                 .ForMember(dest => dest.Movies, opt => opt.MapFrom(src => src.ActorsAndMovies))
                 .AfterMap((model, entity) =>
                 {
@@ -31,7 +37,7 @@ namespace WebApi.Common
 
             CreateMap<ActorAndMovie, MovieViewModelForActor>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Movie.Name));
-            
+
             // GetDirectors
             CreateMap<Director, DirectorViewModel>()
                 .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Name + " " + src.Surname)))
@@ -54,7 +60,7 @@ namespace WebApi.Common
 
             CreateMap<DirectorAndMovie, MovieViewModelForActor>()
                 .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.Movie.Name));
-            
+
             // GetCustomers
             CreateMap<Customer, CustomerViewModel>()
                 .ForMember(
@@ -107,14 +113,20 @@ namespace WebApi.Common
             CreateMap<DirectorAndMovie, DirectorViewModelForMovie>()
                 .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Director.Name + " " + src.Director.Surname)));
 
+
             // GetActorDetail
             CreateMap<Actor, ActorDetailViewModel>()
                 .ForMember(desc => desc.Movies, opt => opt.MapFrom(src => src.ActorsAndMovies));
 
+            // OrderDetail
+            CreateMap<Order, OrderDetailViewModel>()
+                .ForMember(desc => desc.PurchasedMovie, opt => opt.MapFrom(src => src.Movie.Name))
+                .ForMember(desc => desc.PurchasingCustomer, opt => opt.MapFrom(src => (src.Customer.Name + " " + src.Customer.Surname)));
+
             // GetDirectorDetail
             CreateMap<Director, DirectorDetailViewModel>()
                 .ForMember(dest => dest.Fullname, opt => opt.MapFrom(src => (src.Name + " " + src.Surname)));
-           
+
             // GetCustomerDetail
             CreateMap<Customer, CustomerDetailViewModel>();
 

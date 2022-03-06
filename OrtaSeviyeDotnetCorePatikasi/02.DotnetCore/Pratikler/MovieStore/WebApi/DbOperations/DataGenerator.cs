@@ -11,395 +11,403 @@ namespace WebApi.DbOperations
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new MovieStoreDbContext(serviceProvider.GetRequiredService<DbContextOptions<MovieStoreDbContext>>()))
+            using var context = new MovieStoreDbContext(serviceProvider.GetRequiredService<DbContextOptions<MovieStoreDbContext>>());
+            if (context.Genres.Any())
             {
-                if (context.Genres.Any())
+                return;
+            }
+
+            context.Movies.AddRange(
+                new Movie
                 {
-                    return;
-                }
-
-                context.Movies.AddRange(
-                    new Movie
-                    {
-                        Name = "The Shawshank Redemption",
-                        Year = 1994,
-                        GenreId = 1, //Drama
+                    Name = "The Shawshank Redemption",
+                    Year = 1994,
+                    GenreId = 1, //Drama
                         Price = "$58 Million"
-                    },
-                    new Movie
-                    {
-                        Name = "Fight Club",
-                        Year = 1999,
-                        GenreId = 1, //drama
+                },
+                new Movie
+                {
+                    Name = "Fight Club",
+                    Year = 1999,
+                    GenreId = 1, //drama
                         Price = "$100 Million"
-                    },
-                    new Movie
-                    {
-                        Name = "The Green Mile",
-                        Year = 1999,
-                        GenreId = 1, //drama
+                },
+                new Movie
+                {
+                    Name = "The Green Mile",
+                    Year = 1999,
+                    GenreId = 1, //drama
                         Price = "$80 Million"
-                    },
-                    new Movie
-                    {
-                        Name = "Interstellar",
-                        Year = 2014,
-                        GenreId = 2, //science fiction
+                },
+                new Movie
+                {
+                    Name = "Interstellar",
+                    Year = 2014,
+                    GenreId = 2, //science fiction
                         Price = "$165 Million"
-                    },
-                    new Movie
-                    {
-                        Name = "The Prestige",
-                        Year = 1994,
-                        GenreId = 3, //mystery
+                },
+                new Movie
+                {
+                    Name = "The Prestige",
+                    Year = 1994,
+                    GenreId = 3, //mystery
                         Price = "$109 Million"
-                    }
-                );
+                }
+            );
 
-                context.Actors.AddRange(
-                    new Actor
-                    {
-                        Name = "Morgan", // esaretin bedeli
+            context.Actors.AddRange(
+                new Actor
+                {
+                    Name = "Morgan", // esaretin bedeli
                         Surname = "Freeman",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Tim", // esaretin bedeli
+                },
+                new Actor
+                {
+                    Name = "Tim", // esaretin bedeli
                         Surname = "Robbins",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Bob", // esaretin bedeli
+                },
+                new Actor
+                {
+                    Name = "Bob", // esaretin bedeli
                         Surname = "Gunton",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Brad", // fight club
+                },
+                new Actor
+                {
+                    Name = "Brad", // fight club
                         Surname = "Pitt",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Edward", // fight club
+                },
+                new Actor
+                {
+                    Name = "Edward", // fight club
                         Surname = "Norton",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Helena Bonham", // fight club
+                },
+                new Actor
+                {
+                    Name = "Helena Bonham", // fight club
                         Surname = "Carter",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Tom", // yesil yol
+                },
+                new Actor
+                {
+                    Name = "Tom", // yesil yol
                         Surname = "Hanks",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Michael Clarke", // yesil yol
+                },
+                new Actor
+                {
+                    Name = "Michael Clarke", // yesil yol
                         Surname = "Duncan",
 
-                    },
-                    new Actor
-                    {
-                        Name = "David", // yesil yol
+                },
+                new Actor
+                {
+                    Name = "David", // yesil yol
                         Surname = "Morse",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Matthew", // yıldızlar arası
+                },
+                new Actor
+                {
+                    Name = "Matthew", // yıldızlar arası
                         Surname = "McConaughey",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Anne", // yıldızlar arası
+                },
+                new Actor
+                {
+                    Name = "Anne", // yıldızlar arası
                         Surname = "Hathaway",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Jessica", // yıldızlar arası
+                },
+                new Actor
+                {
+                    Name = "Jessica", // yıldızlar arası
                         Surname = "Chastain",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Christian", // prestij
+                },
+                new Actor
+                {
+                    Name = "Christian", // prestij
                         Surname = "Bale",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Hugh", // prestij
+                },
+                new Actor
+                {
+                    Name = "Hugh", // prestij
                         Surname = "Jackman",
 
-                    },
-                    new Actor
-                    {
-                        Name = "Michael", // prestij
+                },
+                new Actor
+                {
+                    Name = "Michael", // prestij
                         Surname = "Caine",
 
-                    }
-                );
+                }
+            );
 
-                context.DirectorAndMovies.AddRange(
-                    new DirectorAndMovie
-                    {
-                        MovieId = 1,
-                        DirectorId = 1
-                    },
-                    new DirectorAndMovie
-                    {
-                        MovieId = 2,
-                        DirectorId = 2
-                    },
-                    new DirectorAndMovie
-                    {
-                        MovieId = 3,
-                        DirectorId = 1
-                    },
-                    new DirectorAndMovie
-                    {
-                        MovieId = 4,
-                        DirectorId = 3
-                    },
-                    new DirectorAndMovie
-                    {
-                        MovieId = 5,
-                        DirectorId = 3
-                    }
-                );
+            context.Orders.AddRange(
+                new Order
+                {
+                    PurchasingCustomer = 1,
+                    PurchasedMovie = 1,
+                    Price = 50,
+                    PurchaseDate = new DateTime(2000, 2, 21)
+                }
+            ); ;
 
-                context.ActorAndMovies.AddRange(
-                    new ActorAndMovie
-                    {
-                        MovieId = 1,
-                        ActorId = 1
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 1,
-                        ActorId = 2
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 1,
-                        ActorId = 3
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 2,
-                        ActorId = 4
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 2,
-                        ActorId = 5
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 2,
-                        ActorId = 6
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 3,
-                        ActorId = 7
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 3,
-                        ActorId = 8
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 3,
-                        ActorId = 9
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 4,
-                        ActorId = 10
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 4,
-                        ActorId = 11
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 4,
-                        ActorId = 12
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 5,
-                        ActorId = 13
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 5,
-                        ActorId = 14
-                    },
-                    new ActorAndMovie
-                    {
-                        MovieId = 5,
-                        ActorId = 15
-                    }
+            context.DirectorAndMovies.AddRange(
+                new DirectorAndMovie
+                {
+                    MovieId = 1,
+                    DirectorId = 1
+                },
+                new DirectorAndMovie
+                {
+                    MovieId = 2,
+                    DirectorId = 2
+                },
+                new DirectorAndMovie
+                {
+                    MovieId = 3,
+                    DirectorId = 1
+                },
+                new DirectorAndMovie
+                {
+                    MovieId = 4,
+                    DirectorId = 3
+                },
+                new DirectorAndMovie
+                {
+                    MovieId = 5,
+                    DirectorId = 3
+                }
+            );
 
-                );
+            context.ActorAndMovies.AddRange(
+                new ActorAndMovie
+                {
+                    MovieId = 1,
+                    ActorId = 1
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 1,
+                    ActorId = 2
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 1,
+                    ActorId = 3
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 2,
+                    ActorId = 4
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 2,
+                    ActorId = 5
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 2,
+                    ActorId = 6
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 3,
+                    ActorId = 7
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 3,
+                    ActorId = 8
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 3,
+                    ActorId = 9
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 4,
+                    ActorId = 10
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 4,
+                    ActorId = 11
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 4,
+                    ActorId = 12
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 5,
+                    ActorId = 13
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 5,
+                    ActorId = 14
+                },
+                new ActorAndMovie
+                {
+                    MovieId = 5,
+                    ActorId = 15
+                }
 
-                context.Directors.AddRange(
-                    new Director
-                    {
-                        Name = "Frank",
-                        Surname = "Darabont",
-                    },
-                    new Director
-                    {
-                        Name = "David",
-                        Surname = "Fincher",
-                    },
-                    new Director
-                    {
-                        Name = "Christopher",
-                        Surname = "Nolan",
-                    }
-                );
+            );
 
-                context.Genres.AddRange(
-                    new Genre
-                    {
-                        Name = "Drama",
-                        IsActive = true
-                    },
-                    new Genre
-                    {
-                        Name = "Science Fiction",
-                        IsActive = true
-                    },
-                    new Genre
-                    {
-                        Name = "Mystery",
-                        IsActive = true
-                    }
-                );
+            context.Directors.AddRange(
+                new Director
+                {
+                    Name = "Frank",
+                    Surname = "Darabont",
+                },
+                new Director
+                {
+                    Name = "David",
+                    Surname = "Fincher",
+                },
+                new Director
+                {
+                    Name = "Christopher",
+                    Surname = "Nolan",
+                }
+            );
 
-                context.Customers.AddRange(
-                    new Customer
-                    {
-                        Name = "Ahmet",
-                        Surname = "Sezgin",
-                        Email = "Ahmet@gmail.com",
-                    },
-                    new Customer
-                    {
-                        Name = "Osman",
-                        Surname = "Sezgin",
-                        Email = "Osman@gmail.com",
-                    },
-                    new Customer
-                    {
-                        Name = "Sezgin",
-                        Surname = "Sezgin",
-                        Email = "Sezgin@gmail.com",
-                    }
-                );
+            context.Genres.AddRange(
+                new Genre
+                {
+                    Name = "Drama",
+                    IsActive = true
+                },
+                new Genre
+                {
+                    Name = "Science Fiction",
+                    IsActive = true
+                },
+                new Genre
+                {
+                    Name = "Mystery",
+                    IsActive = true
+                }
+            );
 
-                context.CustomerAndGenres.AddRange(
-                    new CustomerAndGenre
-                    {
-                        CustomerId = 1,
-                        GenreId = 1
-                    },
-                    new CustomerAndGenre
-                    {
-                        CustomerId = 1,
-                        GenreId = 2
-                    },
-                    new CustomerAndGenre
-                    {
-                        CustomerId = 1,
-                        GenreId = 3
-                    },
-                
-                    new CustomerAndGenre
-                    {
-                        CustomerId = 2,
-                        GenreId = 1
-                    },
-                    new CustomerAndGenre
-                    {
-                        CustomerId = 2,
-                        GenreId = 2
-                    },
-                    
-                    new CustomerAndGenre
-                    {
-                        CustomerId = 3,
-                        GenreId = 1
-                    }
-                );
-                
-                context.CustomerAndMovies.AddRange(
-                    new CustomerAndMovie
-                    {
-                        CustomerId = 1,
-                        MovieId = 1
-                    },
-                    new CustomerAndMovie
-                    {
-                        CustomerId = 1,
-                        MovieId = 2
-                    },
-                    new CustomerAndMovie
-                    {
-                        CustomerId = 1,
-                        MovieId = 3
-                    },
-                    new CustomerAndMovie
-                    {
-                        CustomerId = 1,
-                        MovieId = 4
-                    },
-                    
-                    new CustomerAndMovie
-                    {
-                        CustomerId = 2,
-                        MovieId = 2
-                    },
-                    new CustomerAndMovie
-                    {
-                        CustomerId = 2,
-                        MovieId = 3
-                    },
-                    
-                    new CustomerAndMovie
-                    {
-                        CustomerId = 3,
-                        MovieId = 4
-                    },
-                    new CustomerAndMovie
-                    {
-                        CustomerId = 3,
-                        MovieId = 5
-                    },
-                    new CustomerAndMovie
-                    {
-                        CustomerId = 3,
-                        MovieId = 1
-                    }
-                );
+            context.Customers.AddRange(
+                new Customer
+                {
+                    Name = "Ahmet",
+                    Surname = "Sezgin",
+                    Email = "Ahmet@gmail.com",
+                },
+                new Customer
+                {
+                    Name = "Osman",
+                    Surname = "Sezgin",
+                    Email = "Osman@gmail.com",
+                },
+                new Customer
+                {
+                    Name = "Sezgin",
+                    Surname = "Sezgin",
+                    Email = "Sezgin@gmail.com",
+                }
+            );
 
-                context.SaveChanges();
-            }
+            context.CustomerAndGenres.AddRange(
+                new CustomerAndGenre
+                {
+                    CustomerId = 1,
+                    GenreId = 1
+                },
+                new CustomerAndGenre
+                {
+                    CustomerId = 1,
+                    GenreId = 2
+                },
+                new CustomerAndGenre
+                {
+                    CustomerId = 1,
+                    GenreId = 3
+                },
+
+                new CustomerAndGenre
+                {
+                    CustomerId = 2,
+                    GenreId = 1
+                },
+                new CustomerAndGenre
+                {
+                    CustomerId = 2,
+                    GenreId = 2
+                },
+
+                new CustomerAndGenre
+                {
+                    CustomerId = 3,
+                    GenreId = 1
+                }
+            );
+
+            context.CustomerAndMovies.AddRange(
+                new CustomerAndMovie
+                {
+                    CustomerId = 1,
+                    MovieId = 1
+                },
+                new CustomerAndMovie
+                {
+                    CustomerId = 1,
+                    MovieId = 2
+                },
+                new CustomerAndMovie
+                {
+                    CustomerId = 1,
+                    MovieId = 3
+                },
+                new CustomerAndMovie
+                {
+                    CustomerId = 1,
+                    MovieId = 4
+                },
+
+                new CustomerAndMovie
+                {
+                    CustomerId = 2,
+                    MovieId = 2
+                },
+                new CustomerAndMovie
+                {
+                    CustomerId = 2,
+                    MovieId = 3
+                },
+
+                new CustomerAndMovie
+                {
+                    CustomerId = 3,
+                    MovieId = 4
+                },
+                new CustomerAndMovie
+                {
+                    CustomerId = 3,
+                    MovieId = 5
+                },
+                new CustomerAndMovie
+                {
+                    CustomerId = 3,
+                    MovieId = 1
+                }
+            );
+
+            context.SaveChanges();
         }
     }
 }

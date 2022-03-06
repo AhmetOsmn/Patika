@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using WebApi.DbOperations;
@@ -12,13 +11,11 @@ namespace WebApi.Application.MovieOperations.Commands.CreateMovie
     public class CreateMovieCommand
     {
         private readonly IMovieStoreDbContext _context;
-        private readonly IMapper _mapper;
         public CreateMovieModel Model { get; set; }
 
-        public CreateMovieCommand(IMovieStoreDbContext context, IMapper mapper)
+        public CreateMovieCommand(IMovieStoreDbContext context)
         {
             _context = context;
-            _mapper = mapper;
         }
 
         public void Handle()
@@ -36,11 +33,13 @@ namespace WebApi.Application.MovieOperations.Commands.CreateMovie
             }
             else
             {
-                movie = new Movie();
-                movie.Name = Model.Name;
-                movie.Year = Model.Year;
-                movie.GenreId = Model.GenreId;
-                movie.Price = Model.Price.ToString();
+                movie = new Movie
+                {
+                    Name = Model.Name,
+                    Year = Model.Year,
+                    GenreId = Model.GenreId,
+                    Price = Model.Price.ToString()
+                };
 
                 foreach (var item in Model.Directors)
                 {

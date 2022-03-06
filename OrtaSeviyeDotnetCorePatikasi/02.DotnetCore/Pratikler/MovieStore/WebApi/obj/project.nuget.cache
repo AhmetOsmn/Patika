@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gTukByZthLJ4D3GyxfSUphFWg69to4h/LPz6wOps2BqBKH3wzdV6QKfhW5Vevnr/gVQiw7Z6VOC9eEa53AFxZg==",
+  "dgSpecHash": "zOsOrw1sjSm252M/cujvgrl3mK699LD0PxhAF4S1ZXuVlHxEGS70fQ2PNLKmGRNRVO1N0eRRJMxa7czVRZVisQ==",
   "success": true,
-  "projectFilePath": "c:\\Projects\\Patika\\OrtaSeviyeDotnetCorePatikasi\\02.DotnetCore\\Pratikler\\MovieStore\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Projects\\Patika\\OrtaSeviyeDotnetCorePatikasi\\02.DotnetCore\\Pratikler\\MovieStore\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ahmet\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Ahmet\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

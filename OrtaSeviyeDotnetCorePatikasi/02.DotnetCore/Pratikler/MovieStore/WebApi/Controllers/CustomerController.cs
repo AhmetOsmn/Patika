@@ -26,7 +26,7 @@ namespace WebApi.Controllers
         [HttpGet]
         public IActionResult GetCustomers()
         {
-            GetCustomersQuery query = new GetCustomersQuery(_context, _mapper);
+            GetCustomersQuery query = new(_context, _mapper);
             var customers = query.Handle();
             return Ok(customers);
         }
@@ -34,8 +34,8 @@ namespace WebApi.Controllers
         [HttpGet("id")]
         public IActionResult GetCustomer(int id)
         {
-            GetCustomerDetailQuery query = new GetCustomerDetailQuery(_context, _mapper);
-            GetCustomerDetailQueryValidator validator = new GetCustomerDetailQueryValidator();
+            GetCustomerDetailQuery query = new(_context, _mapper);
+            GetCustomerDetailQueryValidator validator = new();
 
             query.CustomerId = id;
 
@@ -48,8 +48,8 @@ namespace WebApi.Controllers
         [HttpDelete("id")]
         public IActionResult DeleteCustomer(int id)
         {
-            DeleteCustomerCommand command = new DeleteCustomerCommand(_context);
-            DeleteCustomerCommandValidator validator = new DeleteCustomerCommandValidator();
+            DeleteCustomerCommand command = new(_context);
+            DeleteCustomerCommandValidator validator = new();
 
             command.CustomerId = id;
 
@@ -63,8 +63,8 @@ namespace WebApi.Controllers
         [HttpPost]
         public IActionResult AddCustomer([FromBody] CreateCustomerModel newCustomer)
         {
-            CreateCustomerCommand command = new CreateCustomerCommand(_context, _mapper);
-            CreateCustomerCommandValidator validator = new CreateCustomerCommandValidator();
+            CreateCustomerCommand command = new(_context, _mapper);
+            CreateCustomerCommandValidator validator = new();
 
             command.Model = newCustomer;
 
